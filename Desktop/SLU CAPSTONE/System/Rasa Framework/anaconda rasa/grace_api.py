@@ -10,7 +10,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
 import logging
-from database import Database, ChurchInfo, ChurchHistory
+from database import Database, ChurchInfo, ChurchHistory, StatementOfBelief
 
 app = Flask(__name__)
 CORS(app)
@@ -40,6 +40,7 @@ FALLBACK_RESPONSES = {
     "utter_goodbye": "Bye",
     "utter_iamabot": "I am a bot, powered by Rasa.",
     "utter_history": "Arise and Build For Christ Ministries (ABCMI) was founded in 1986 by Rev. Marino S. Coyoy and Elizabeth L. Coyoy as a house church in Quirino Hill. It has since grown into a thriving ministry with multiple church plants across the Philippines.",
+    "utter_statement_of_belief": "ABCMI Church believes in the One True God, the Deity of Christ, the Scripture as Inspired by God, the Fall of Man and hope for Salvation, and more. Ask me for the full list!",
 }
 
 # Intent keywords for simple classification
@@ -47,6 +48,7 @@ INTENT_KEYWORDS = {
     "ask_mission": ["mission", "stand for", "aim", "accomplish", "goal"],
     "ask_vision": ["vision", "future", "dream", "where", "becoming"],
     "ask_history": ["history", "founded", "started", "background", "milestone", "years", "how old", "who founded", "began", "abcmi"],
+    "ask_statement_of_belief": ["believe", "belief", "beliefs", "doctrine", "faith statement", "articles of faith", "core beliefs", "what do you stand for spiritually"],
     "goodbye": ["bye", "goodbye", "see you", "farewell", "exit", "quit"],
     "greet": ["hello", "hi", "hey", "greet", "start", "begin"],
 }
@@ -67,8 +69,8 @@ def classify_intent(user_input):
 def get_response_for_intent(intent):
     """Map intent to response - fetches from database for mission/vision"""
     
-    # Always try database first for mission/vision/history
-    if intent in ["ask_mission", "ask_vision", "ask_history"]:
+    # Always try database first for mission/vision/history/beliefs
+    if intent in ["ask_mission", "ask_vision", "ask_history", "ask_statement_of_belief"]:
         try:
             temp_db = Database()
             if temp_db.connect():
@@ -93,6 +95,15 @@ def get_response_for_intent(intent):
                         for item in history:
                             lines.append(f"• {item['year']}: {item['event']}")
                         return "\n".join(lines)
+                elif intent == "ask_statement_of_belief":
+                    statements = StatementOfBelief.get_all(temp_db)
+                    if statements:
+                        logger.info("✓ Statement of belief fetched from database")
+                        temp_db.disconnect()
+                        lines = ["Here is what ABCMI Church believes:\n"]
+                        for item in statements:
+                            lines.append(f"{item['item_number']}. {item['statement']}")
+                        return "\n".join(lines)
 
                 temp_db.disconnect()
             else:
@@ -106,6 +117,7 @@ def get_response_for_intent(intent):
         "ask_mission": FALLBACK_RESPONSES["utter_mission"],
         "ask_vision": FALLBACK_RESPONSES["utter_vision"],
         "ask_history": FALLBACK_RESPONSES["utter_history"],
+        "ask_statement_of_belief": FALLBACK_RESPONSES["utter_statement_of_belief"],
         "goodbye": FALLBACK_RESPONSES["utter_goodbye"],
     }
     return intent_to_response.get(intent, "I'm not sure how to respond to that. Could you rephrase?")

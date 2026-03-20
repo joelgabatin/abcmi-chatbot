@@ -26,3 +26,8 @@ rules:
   steps:
   - intent: ask_history
   - action: action_get_history
+
+- rule: Answer statement of belief question anytime the user asks
+  steps:
+  - intent: ask_statement_of_belief
+  - action: action_get_statement_of_belief

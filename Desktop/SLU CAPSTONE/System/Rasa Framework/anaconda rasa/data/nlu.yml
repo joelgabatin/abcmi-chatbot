@@ -99,7 +99,7 @@ nlu:
     - what is your mission?
     - what is our mission?
     - what does the church aim to do?
-    - what is Grace Church's mission?
+    - what is ABCMI Church's mission?
 
 - intent: ask_vision
   examples: |
@@ -108,7 +108,7 @@ nlu:
     - tell me about the vision
     - what is your vision?
     - what is our vision?
-    - what is Grace Church's vision?
+    - what is ABCMI Church's vision?
     - where do you want to go?
     - what is the church's future goal?
 
@@ -126,3 +126,20 @@ nlu:
     - what happened in the church over the years?
     - church history please
     - tell me about ABCMI history
+
+- intent: ask_statement_of_belief
+  examples: |
+    - what does the church believe?
+    - what is the statement of belief?
+    - what are the beliefs of the church?
+    - tell me about your beliefs
+    - what do you believe in?
+    - what is ABCMI's statement of belief?
+    - what are your core beliefs?
+    - what does ABCMI believe?
+    - tell me the church's beliefs
+    - what are the doctrines of the church?
+    - what is the church's faith statement?
+    - do you believe in Jesus?
+    - what are the articles of faith?
+    - tell me what the church stands for spiritually

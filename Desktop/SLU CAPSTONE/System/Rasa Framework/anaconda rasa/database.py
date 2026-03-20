@@ -97,6 +97,28 @@ class SiteSettings:
         return SiteSettings.update_about(db, {"vision": vision})
 
 
+class StatementOfBelief:
+    """Statement of Belief Data Model — reads from the statement_of_belief table"""
+
+    TABLE_NAME = "statement_of_belief"
+
+    @staticmethod
+    def get_all(db):
+        """Get all statements ordered by display_order, skipping test entries"""
+        try:
+            response = (
+                db.client.table(StatementOfBelief.TABLE_NAME)
+                .select("item_number, statement")
+                .gt("item_number", 0)
+                .order("display_order")
+                .execute()
+            )
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error fetching statement of belief: {e}")
+            return []
+
+
 class ChurchHistory:
     """Church History Data Model — reads from the church_history table"""
 

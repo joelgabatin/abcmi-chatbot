@@ -11,6 +11,7 @@ intents:
   - ask_mission
   - ask_vision
   - ask_history
+  - ask_statement_of_belief
 
 responses:
   utter_greet:
@@ -36,6 +37,7 @@ actions:
   - action_get_mission
   - action_get_vision
   - action_get_history
+  - action_get_statement_of_belief
 
 session_config:
   session_expiration_time: 60
