@@ -42,3 +42,10 @@ stories:
   - action: utter_greet
   - intent: ask_vision
   - action: action_get_vision
+
+- story: ask history
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_history
+  - action: action_get_history

@@ -97,6 +97,27 @@ class SiteSettings:
         return SiteSettings.update_about(db, {"vision": vision})
 
 
+class ChurchHistory:
+    """Church History Data Model — reads from the church_history table"""
+
+    TABLE_NAME = "church_history"
+
+    @staticmethod
+    def get_all(db):
+        """Get all church history records ordered by display_order"""
+        try:
+            response = (
+                db.client.table(ChurchHistory.TABLE_NAME)
+                .select("year, event")
+                .order("display_order")
+                .execute()
+            )
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error fetching church history: {e}")
+            return []
+
+
 class ChurchInfo:
     """Church Information Data Model (legacy — kept for backwards compatibility)"""
 

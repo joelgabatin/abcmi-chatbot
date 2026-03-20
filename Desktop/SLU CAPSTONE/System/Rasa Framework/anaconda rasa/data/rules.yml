@@ -21,3 +21,8 @@ rules:
   steps:
   - intent: ask_vision
   - action: action_get_vision
+
+- rule: Answer history question anytime the user asks
+  steps:
+  - intent: ask_history
+  - action: action_get_history

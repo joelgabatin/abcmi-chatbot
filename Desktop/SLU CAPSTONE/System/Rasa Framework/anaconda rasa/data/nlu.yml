@@ -111,3 +111,18 @@ nlu:
     - what is Grace Church's vision?
     - where do you want to go?
     - what is the church's future goal?
+
+- intent: ask_history
+  examples: |
+    - what is the history of the church?
+    - tell me about the church history
+    - how did the church start?
+    - when was the church founded?
+    - what is the background of Grace Church?
+    - how old is the church?
+    - who founded the church?
+    - what are the milestones of the church?
+    - give me a brief history of the church
+    - what happened in the church over the years?
+    - church history please
+    - tell me about ABCMI history

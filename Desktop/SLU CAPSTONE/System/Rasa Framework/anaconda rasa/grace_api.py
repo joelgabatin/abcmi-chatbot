@@ -10,7 +10,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
 import logging
-from database import Database, ChurchInfo
+from database import Database, ChurchInfo, ChurchHistory
 
 app = Flask(__name__)
 CORS(app)
@@ -39,12 +39,14 @@ FALLBACK_RESPONSES = {
     "utter_vision": "Our vision is to be a thriving community of faith where all people feel welcomed, valued, and empowered to live out their God-given purpose and transform the world with God's love.",
     "utter_goodbye": "Bye",
     "utter_iamabot": "I am a bot, powered by Rasa.",
+    "utter_history": "Arise and Build For Christ Ministries (ABCMI) was founded in 1986 by Rev. Marino S. Coyoy and Elizabeth L. Coyoy as a house church in Quirino Hill. It has since grown into a thriving ministry with multiple church plants across the Philippines.",
 }
 
 # Intent keywords for simple classification
 INTENT_KEYWORDS = {
     "ask_mission": ["mission", "stand for", "aim", "accomplish", "goal"],
     "ask_vision": ["vision", "future", "dream", "where", "becoming"],
+    "ask_history": ["history", "founded", "started", "background", "milestone", "years", "how old", "who founded", "began", "abcmi"],
     "goodbye": ["bye", "goodbye", "see you", "farewell", "exit", "quit"],
     "greet": ["hello", "hi", "hey", "greet", "start", "begin"],
 }
@@ -65,36 +67,45 @@ def classify_intent(user_input):
 def get_response_for_intent(intent):
     """Map intent to response - fetches from database for mission/vision"""
     
-    # Always try database first for mission/vision
-    if intent in ["ask_mission", "ask_vision"]:
+    # Always try database first for mission/vision/history
+    if intent in ["ask_mission", "ask_vision", "ask_history"]:
         try:
-            # Create a fresh database connection if needed
             temp_db = Database()
             if temp_db.connect():
                 if intent == "ask_mission":
                     mission = ChurchInfo.get_mission(temp_db)
                     if mission:
-                        logger.info(f"✓ Mission fetched from database")
+                        logger.info("✓ Mission fetched from database")
                         temp_db.disconnect()
                         return mission
                 elif intent == "ask_vision":
                     vision = ChurchInfo.get_vision(temp_db)
                     if vision:
-                        logger.info(f"✓ Vision fetched from database")
+                        logger.info("✓ Vision fetched from database")
                         temp_db.disconnect()
                         return vision
-                
+                elif intent == "ask_history":
+                    history = ChurchHistory.get_all(temp_db)
+                    if history:
+                        logger.info("✓ Church history fetched from database")
+                        temp_db.disconnect()
+                        lines = ["Here is the history of our church:\n"]
+                        for item in history:
+                            lines.append(f"• {item['year']}: {item['event']}")
+                        return "\n".join(lines)
+
                 temp_db.disconnect()
             else:
                 logger.warning(f"Could not connect to database - using fallback for {intent}")
         except Exception as e:
             logger.warning(f"Database error fetching {intent}: {e} - using fallback")
-    
+
     # Fallback to hardcoded responses
     intent_to_response = {
         "greet": FALLBACK_RESPONSES["utter_greet"],
         "ask_mission": FALLBACK_RESPONSES["utter_mission"],
         "ask_vision": FALLBACK_RESPONSES["utter_vision"],
+        "ask_history": FALLBACK_RESPONSES["utter_history"],
         "goodbye": FALLBACK_RESPONSES["utter_goodbye"],
     }
     return intent_to_response.get(intent, "I'm not sure how to respond to that. Could you rephrase?")
