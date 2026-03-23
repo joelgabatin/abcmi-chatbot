@@ -12,6 +12,8 @@ intents:
   - ask_vision
   - ask_history
   - ask_statement_of_belief
+  - ask_driving_force
+  - ask_core_values
 
 responses:
   utter_greet:
@@ -38,6 +40,8 @@ actions:
   - action_get_vision
   - action_get_history
   - action_get_statement_of_belief
+  - action_get_driving_force
+  - action_get_core_values
 
 session_config:
   session_expiration_time: 60

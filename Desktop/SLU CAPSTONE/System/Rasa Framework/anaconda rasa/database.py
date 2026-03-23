@@ -6,9 +6,9 @@ For Grace Church Chatbot - Supabase Backend
 from supabase import create_client, Client
 
 # Supabase Configuration
-SUPABASE_URL = "https://mddptbrpkswbmkovsldw.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1kZHB0YnJwa3N3Ym1rb3ZzbGR3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3Mjc5MDIsImV4cCI6MjA4OTMwMzkwMn0.XolzOBVy4NoEzKcnM0lm8DPm57WNVb5CLpdU7-LtXZ0"
-
+NEXT_PUBLIC_SUPABASE_URL="https://hxeyrlacblbbfflfyqyb.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4ZXlybGFjYmxiYmZmbGZ5cXliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwODE2MDksImV4cCI6MjA4OTY1NzYwOX0.kE-8Dj2o1jUIIvLOlB21r0jq_Fo5NDXXiotiYp37Nto"
+SUPABASE_SERVICE_ROLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4ZXlybGFjYmxiYmZmbGZ5cXliIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NDA4MTYwOSwiZXhwIjoyMDg5NjU3NjA5fQ.SlRUHp8XfvCjaHjuuQdKB4SwWEnxaq03AgTWae3arns"
 
 class Database:
     """Supabase database connection handler"""
@@ -20,9 +20,9 @@ class Database:
     def connect(self):
         """Establish connection to Supabase"""
         try:
-            self.client = create_client(SUPABASE_URL, SUPABASE_KEY)
+            self.client = create_client(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)
             # Test connection with a lightweight query
-            self.client.table("about_section").select("id").limit(1).execute()
+            self.client.table("church_VMD").select("id").limit(1).execute()
             self._connected = True
             print("[OK] Connected to Supabase database")
             return True
@@ -41,81 +41,89 @@ class Database:
 
 
 class SiteSettings:
-    """Site Settings Data Model — reads from the about_section table"""
+    """Site Settings Data Model — reads from the church_VMD table"""
 
-    TABLE_NAME = "about_section"
+    TABLE_NAME = "church_VMD"
 
     @staticmethod
     def get_about(db):
-        """Get the about section row from about_section table"""
+        """Get the VMD row from church_VMD table"""
         try:
             response = (
                 db.client.table(SiteSettings.TABLE_NAME)
-                .select("mission, vision")
+                .select("mission_body, vision_body, driving_force")
                 .limit(1)
                 .execute()
             )
             return response.data[0] if response.data else None
         except Exception as e:
-            print(f"[ERROR] Error fetching about section: {e}")
+            print(f"[ERROR] Error fetching VMD: {e}")
             return None
 
     @staticmethod
     def get_mission(db):
-        """Get church mission from about_section"""
+        """Get church mission from church_VMD"""
         about = SiteSettings.get_about(db)
         if about:
-            return about.get("mission")
+            return about.get("mission_body")
         return None
 
     @staticmethod
     def get_vision(db):
-        """Get church vision from about_section"""
+        """Get church vision from church_VMD"""
         about = SiteSettings.get_about(db)
         if about:
-            return about.get("vision")
+            return about.get("vision_body")
         return None
 
     @staticmethod
     def update_about(db, about_data):
-        """Update the about_section row with new data"""
+        """Update the church_VMD row with new data"""
         try:
-            db.client.table(SiteSettings.TABLE_NAME).update(about_data).neq("id", "00000000-0000-0000-0000-000000000000").execute()
+            db.client.table(SiteSettings.TABLE_NAME).update(about_data).eq("id", 1).execute()
             return True
         except Exception as e:
-            print(f"[ERROR] Error updating about section: {e}")
+            print(f"[ERROR] Error updating VMD: {e}")
             return False
 
     @staticmethod
     def update_mission(db, mission):
-        """Update only the mission field in about_section"""
-        return SiteSettings.update_about(db, {"mission": mission})
+        """Update only the mission field in church_VMD"""
+        return SiteSettings.update_about(db, {"mission_body": mission})
+
+    @staticmethod
+    def get_driving_force(db):
+        """Get church driving force from church_VMD"""
+        about = SiteSettings.get_about(db)
+        if about:
+            return about.get("driving_force")
+        return None
 
     @staticmethod
     def update_vision(db, vision):
-        """Update only the vision field in about_section"""
-        return SiteSettings.update_about(db, {"vision": vision})
+        """Update only the vision field in church_VMD"""
+        return SiteSettings.update_about(db, {"vision_body": vision})
 
 
 class StatementOfBelief:
-    """Statement of Belief Data Model — reads from the statement_of_belief table"""
+    """Statement of Belief Data Model — reads from the church_beliefs table"""
 
-    TABLE_NAME = "statement_of_belief"
+    TABLE_NAME = "church_beliefs"
 
     @staticmethod
     def get_all(db):
-        """Get all statements ordered by display_order, skipping test entries"""
+        """Get all beliefs ordered by sort_order"""
         try:
             response = (
                 db.client.table(StatementOfBelief.TABLE_NAME)
-                .select("item_number, statement")
-                .gt("item_number", 0)
-                .order("display_order")
+                .select("id, belief")
+                .order("sort_order")
                 .execute()
             )
-            return response.data if response.data else []
+            # Normalize to item_number/statement for compatibility with grace_api.py
+            return [{"item_number": i + 1, "statement": row["belief"]} for i, row in enumerate(response.data)] if response.data else []
         except Exception as e:
-            print(f"[ERROR] Error fetching statement of belief: {e}")
+            print(f"[ERROR] Error fetching church beliefs: {e}")
             return []
 
 
@@ -131,12 +139,33 @@ class ChurchHistory:
             response = (
                 db.client.table(ChurchHistory.TABLE_NAME)
                 .select("year, event")
-                .order("display_order")
+                .order("sort_order")
                 .execute()
             )
             return response.data if response.data else []
         except Exception as e:
             print(f"[ERROR] Error fetching church history: {e}")
+            return []
+
+
+class ChurchCoreValues:
+    """Church Core Values Data Model — reads from the church_core_values table"""
+
+    TABLE_NAME = "church_core_values"
+
+    @staticmethod
+    def get_all(db):
+        """Get all core values ordered by sort_order"""
+        try:
+            response = (
+                db.client.table(ChurchCoreValues.TABLE_NAME)
+                .select("title")
+                .order("sort_order")
+                .execute()
+            )
+            return [{"title": row["title"]} for row in response.data] if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error fetching church core values: {e}")
             return []
 
 

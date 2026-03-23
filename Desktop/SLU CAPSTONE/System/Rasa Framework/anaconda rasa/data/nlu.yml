@@ -135,7 +135,6 @@ nlu:
     - tell me about your beliefs
     - what do you believe in?
     - what is ABCMI's statement of belief?
-    - what are your core beliefs?
     - what does ABCMI believe?
     - tell me the church's beliefs
     - what are the doctrines of the church?
@@ -143,3 +142,29 @@ nlu:
     - do you believe in Jesus?
     - what are the articles of faith?
     - tell me what the church stands for spiritually
+
+- intent: ask_driving_force
+  examples: |
+    - what is the driving force of the church?
+    - what drives the church?
+    - what is the church's driving force?
+    - what propels the church forward?
+    - what motivates the church?
+    - what is ABCMI's driving force?
+    - what drives ABCMI?
+    - tell me the driving force of the church
+    - what is the force that drives the church?
+    - what motivates ABCMI Church?
+
+- intent: ask_core_values
+  examples: |
+    - what are the core values of the church?
+    - what are the church's core values?
+    - tell me about the core values
+    - what values does the church hold?
+    - what are ABCMI's core values?
+    - what are your values?
+    - what values guide the church?
+    - list the core values of the church
+    - what does the church value?
+    - what are the values of ABCMI Church?

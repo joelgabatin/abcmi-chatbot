@@ -31,3 +31,13 @@ rules:
   steps:
   - intent: ask_statement_of_belief
   - action: action_get_statement_of_belief
+
+- rule: Answer driving force question anytime the user asks
+  steps:
+  - intent: ask_driving_force
+  - action: action_get_driving_force
+
+- rule: Answer core values question anytime the user asks
+  steps:
+  - intent: ask_core_values
+  - action: action_get_core_values

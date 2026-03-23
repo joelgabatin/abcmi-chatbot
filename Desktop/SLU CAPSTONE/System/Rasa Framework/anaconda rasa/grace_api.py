@@ -10,7 +10,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
 import logging
-from database import Database, ChurchInfo, ChurchHistory, StatementOfBelief
+from database import Database, SiteSettings, ChurchHistory, StatementOfBelief, ChurchCoreValues
 
 app = Flask(__name__)
 CORS(app)
@@ -35,12 +35,13 @@ except Exception as e:
 # Fallback responses if database is unavailable
 FALLBACK_RESPONSES = {
     "utter_greet": "Welcome to Grace Church! I'm here to help. How are you doing today?",
-    "utter_mission": "Our mission at Grace Church is to spread God's love, serve our community with compassion, and equip believers to grow in faith and make a positive impact in the world.",
-    "utter_vision": "Our vision is to be a thriving community of faith where all people feel welcomed, valued, and empowered to live out their God-given purpose and transform the world with God's love.",
-    "utter_goodbye": "Bye",
-    "utter_iamabot": "I am a bot, powered by Rasa.",
-    "utter_history": "Arise and Build For Christ Ministries (ABCMI) was founded in 1986 by Rev. Marino S. Coyoy and Elizabeth L. Coyoy as a house church in Quirino Hill. It has since grown into a thriving ministry with multiple church plants across the Philippines.",
-    "utter_statement_of_belief": "ABCMI Church believes in the One True God, the Deity of Christ, the Scripture as Inspired by God, the Fall of Man and hope for Salvation, and more. Ask me for the full list!",
+    "utter_mission": "Our mission is to glorify God by making disciples of all nations.",
+    "utter_vision": "Our vision is to be a Christ-centered community transforming lives through the Gospel.",
+    "utter_history": "ABCMI Church has a rich history of serving the community. Please contact us for more details.",
+    "utter_statement_of_belief": "We believe in the authority of Scripture, the Trinity, salvation through Jesus Christ, and the resurrection.",
+    "utter_driving_force": "The driving force of our church is rooted in faith and service. Please contact us for more details.",
+    "utter_core_values": "Our core values guide everything we do. Please contact us for more details.",
+    "utter_goodbye": "God bless you! Feel free to return if you have more questions. Goodbye!",
 }
 
 # Intent keywords for simple classification
@@ -48,7 +49,9 @@ INTENT_KEYWORDS = {
     "ask_mission": ["mission", "stand for", "aim", "accomplish", "goal"],
     "ask_vision": ["vision", "future", "dream", "where", "becoming"],
     "ask_history": ["history", "founded", "started", "background", "milestone", "years", "how old", "who founded", "began", "abcmi"],
-    "ask_statement_of_belief": ["believe", "belief", "beliefs", "doctrine", "faith statement", "articles of faith", "core beliefs", "what do you stand for spiritually"],
+    "ask_statement_of_belief": ["believe", "belief", "beliefs", "doctrine", "faith statement", "articles of faith", "what do you stand for spiritually"],
+    "ask_driving_force": ["driving force", "what drives", "motivates the church", "driving the church", "what propels"],
+    "ask_core_values": ["core values", "core value", "values of the church", "church values", "what are your values", "what values"],
     "goodbye": ["bye", "goodbye", "see you", "farewell", "exit", "quit"],
     "greet": ["hello", "hi", "hey", "greet", "start", "begin"],
 }
@@ -70,18 +73,18 @@ def get_response_for_intent(intent):
     """Map intent to response - fetches from database for mission/vision"""
     
     # Always try database first for mission/vision/history/beliefs
-    if intent in ["ask_mission", "ask_vision", "ask_history", "ask_statement_of_belief"]:
+    if intent in ["ask_mission", "ask_vision", "ask_history", "ask_statement_of_belief", "ask_driving_force", "ask_core_values"]:
         try:
             temp_db = Database()
             if temp_db.connect():
                 if intent == "ask_mission":
-                    mission = ChurchInfo.get_mission(temp_db)
+                    mission = SiteSettings.get_mission(temp_db)
                     if mission:
                         logger.info("✓ Mission fetched from database")
                         temp_db.disconnect()
                         return mission
                 elif intent == "ask_vision":
-                    vision = ChurchInfo.get_vision(temp_db)
+                    vision = SiteSettings.get_vision(temp_db)
                     if vision:
                         logger.info("✓ Vision fetched from database")
                         temp_db.disconnect()
@@ -104,6 +107,21 @@ def get_response_for_intent(intent):
                         for item in statements:
                             lines.append(f"{item['item_number']}. {item['statement']}")
                         return "\n".join(lines)
+                elif intent == "ask_driving_force":
+                    driving_force = SiteSettings.get_driving_force(temp_db)
+                    if driving_force:
+                        logger.info("✓ Driving force fetched from database")
+                        temp_db.disconnect()
+                        return driving_force
+                elif intent == "ask_core_values":
+                    core_values = ChurchCoreValues.get_all(temp_db)
+                    if core_values:
+                        logger.info("✓ Core values fetched from database")
+                        temp_db.disconnect()
+                        lines = ["Here are the core values of ABCMI Church:\n"]
+                        for i, item in enumerate(core_values, 1):
+                            lines.append(f"{i}. {item['title']}")
+                        return "\n".join(lines)
 
                 temp_db.disconnect()
             else:
@@ -118,6 +136,8 @@ def get_response_for_intent(intent):
         "ask_vision": FALLBACK_RESPONSES["utter_vision"],
         "ask_history": FALLBACK_RESPONSES["utter_history"],
         "ask_statement_of_belief": FALLBACK_RESPONSES["utter_statement_of_belief"],
+        "ask_driving_force": FALLBACK_RESPONSES["utter_driving_force"],
+        "ask_core_values": FALLBACK_RESPONSES["utter_core_values"],
         "goodbye": FALLBACK_RESPONSES["utter_goodbye"],
     }
     return intent_to_response.get(intent, "I'm not sure how to respond to that. Could you rephrase?")

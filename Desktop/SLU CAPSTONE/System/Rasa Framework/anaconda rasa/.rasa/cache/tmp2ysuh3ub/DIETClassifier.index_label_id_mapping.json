@@ -1,0 +1,15 @@
+{
+  "0": "affirm",
+  "1": "ask_core_values",
+  "2": "ask_driving_force",
+  "3": "ask_history",
+  "4": "ask_mission",
+  "5": "ask_statement_of_belief",
+  "6": "ask_vision",
+  "7": "bot_challenge",
+  "8": "deny",
+  "9": "goodbye",
+  "10": "greet",
+  "11": "mood_great",
+  "12": "mood_unhappy"
+}
