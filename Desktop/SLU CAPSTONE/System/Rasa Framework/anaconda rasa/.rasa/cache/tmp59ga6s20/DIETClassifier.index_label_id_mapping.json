@@ -1,0 +1,13 @@
+{
+  "0": "affirm",
+  "1": "ask_history",
+  "2": "ask_mission",
+  "3": "ask_statement_of_belief",
+  "4": "ask_vision",
+  "5": "bot_challenge",
+  "6": "deny",
+  "7": "goodbye",
+  "8": "greet",
+  "9": "mood_great",
+  "10": "mood_unhappy"
+}

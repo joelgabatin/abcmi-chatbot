@@ -135,7 +135,6 @@ nlu:
     - tell me about your beliefs
     - what do you believe in?
     - what is ABCMI's statement of belief?
-    - what are your core beliefs?
     - what does ABCMI believe?
     - tell me the church's beliefs
     - what are the doctrines of the church?
@@ -143,3 +142,176 @@ nlu:
     - do you believe in Jesus?
     - what are the articles of faith?
     - tell me what the church stands for spiritually
+
+- intent: ask_driving_force
+  examples: |
+    - what is the driving force of the church?
+    - what drives the church?
+    - what is the church's driving force?
+    - what propels the church forward?
+    - what motivates the church?
+    - what is ABCMI's driving force?
+    - what drives ABCMI?
+    - tell me the driving force of the church
+    - what is the force that drives the church?
+    - what motivates ABCMI Church?
+
+- intent: ask_core_values
+  examples: |
+    - what are the core values of the church?
+    - what are the church's core values?
+    - tell me about the core values
+    - what values does the church hold?
+    - what are ABCMI's core values?
+    - what are your values?
+    - what values guide the church?
+    - list the core values of the church
+    - what does the church value?
+    - what are the values of ABCMI Church?
+
+- intent: ask_branches
+  examples: |
+    - where are your branches?
+    - branches of ABCMI
+    - what are the church branches?
+    - what are the branches of ABCMI?
+    - where is the church located?
+    - find a church near me
+    - what branches does ABCMI have?
+    - where can I find a Grace Church?
+    - list all branches
+    - church locations
+    - where are you located?
+    - how do I find a branch?
+    - what are the locations of ABCMI?
+    - I want to find a church near me
+    - show me the branches
+    - show me the brances of ABCMI
+
+- intent: ask_total_branches
+  examples: |
+    - how many branches does ABCMI have?
+    - how many branches are there?
+    - total number of branches
+    - what is the total branch count?
+    - how many church branches does ABCMI have?
+    - give me the total count of branches
+    - how many ABCMI branches are there in total?
+    - number of branches of ABCMI
+
+- intent: ask_local_branches
+  examples: |
+    - how many local branches does ABCMI have?
+    - how many local branches are there?
+    - what are the local branches of ABCMI?
+    - list the local branches
+    - show me the local branches
+    - what are the branches here in the Philippines?
+    - how many church branches are in the Philippines?
+    - local branches of ABCMI
+    - give me the list of local branches
+    - name the local branches
+
+- intent: ask_international_branches
+  examples: |
+    - how many international branches does ABCMI have?
+    - how many international branches are there?
+    - what are the international branches of ABCMI?
+    - list the international branches
+    - show me the international branches
+    - what are the overseas branches?
+    - how many branches abroad?
+    - international branches of ABCMI
+    - give me the list of international branches
+    - name the international branches
+
+- intent: select_region
+  examples: |
+    - CAR
+    - CAR region
+    - Cordillera
+    - Cordillera Administrative Region
+    - I'm in CAR
+    - Region I
+    - Region 1
+    - Ilocos
+    - Ilocos region
+    - Region I please
+    - Region II
+    - Region 2
+    - Cagayan Valley
+    - Region II please
+    - Region III
+    - Region 3
+    - Central Luzon
+    - Region III please
+    - International
+    - international branch
+    - abroad
+    - overseas
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+
+- intent: select_branch
+  examples: |
+    - ABCMI Main Church
+    - Camp 8 Branch
+    - San Carlos Branch
+    - Kias Branch
+    - Patiacan Branch
+    - Dianawan Branch
+    - 1
+    - 2
+    - 3
+
+- intent: ask_pastors
+  examples: |
+    - who are the pastors of the church?
+    - who are your pastors?
+    - list all pastors
+    - name the pastors of ABCMI
+    - who are the pastors of ABCMI?
+    - who are the church pastors?
+    - show me the pastors
+    - tell me about the pastors
+    - all pastors of the church
+    - who leads the church?
+    - who are your church leaders?
+    - give me the list of pastors
+    - who are the pastors and their branches?
+    - list all pastors and their assigned branches
+
+- intent: ask_specific_pastor
+  examples: |
+    - is [Joel Gabatin](pastor_name) your pastor?
+    - is [John Smith](pastor_name) a pastor of ABCMI?
+    - is [Mark Dela Cruz](pastor_name) one of your pastors?
+    - do you have a pastor named [Joel Gabatin](pastor_name)?
+    - is [Joel Gabatin](pastor_name) pastoring a branch?
+    - is [Joel Gabatin](pastor_name) a pastor here?
+    - is [Ana Cruz](pastor_name) a pastor?
+    - is [Ben Santos](pastor_name) your pastor?
+    - does [Joel Gabatin](pastor_name) pastor a church?
+    - is [Maria Reyes](pastor_name) pastoring a branch?
+    - is [Pedro Santos](pastor_name) assigned as a pastor?
+    - is [Grace Lim](pastor_name) one of the pastors?
+
+- intent: ask_pastor_branch_schedule
+  examples: |
+    - what is the service schedule?
+    - what is the branch service schedule?
+    - when are the services?
+    - what time is the service?
+    - what time does service start?
+    - give me the service schedule
+    - what is the schedule of the branch?
+    - tell me the service schedule
+    - when is the worship service?
+    - what day is the service?
+    - when does the branch have service?
+    - what time is the worship service?
+    - what is the church service schedule?
+    - when does service start?

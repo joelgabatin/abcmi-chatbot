@@ -12,6 +12,42 @@ intents:
   - ask_vision
   - ask_history
   - ask_statement_of_belief
+  - ask_driving_force
+  - ask_core_values
+  - ask_branches
+  - ask_total_branches
+  - ask_local_branches
+  - ask_international_branches
+  - select_region
+  - select_branch
+  - ask_pastors
+  - ask_specific_pastor
+  - ask_pastor_branch_schedule
+
+entities:
+  - pastor_name
+
+slots:
+  selected_region_id:
+    type: float
+    mappings:
+      - type: custom
+  selected_region_name:
+    type: text
+    mappings:
+      - type: custom
+  last_pastor_name:
+    type: text
+    mappings:
+      - type: custom
+  last_branch_id:
+    type: float
+    mappings:
+      - type: custom
+  last_branch_name:
+    type: text
+    mappings:
+      - type: custom
 
 responses:
   utter_greet:
@@ -34,10 +70,19 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
 actions:
+  - action_get_branches
+  - action_get_total_branches
+  - action_get_local_branches
+  - action_get_international_branches
   - action_get_mission
   - action_get_vision
   - action_get_history
   - action_get_statement_of_belief
+  - action_get_driving_force
+  - action_get_core_values
+  - action_get_all_pastors
+  - action_find_pastor
+  - action_get_pastor_branch_schedule
 
 session_config:
   session_expiration_time: 60

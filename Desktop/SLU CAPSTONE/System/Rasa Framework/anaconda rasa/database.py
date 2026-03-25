@@ -4,11 +4,7 @@ For Grace Church Chatbot - Supabase Backend
 """
 
 from supabase import create_client, Client
-
-# Supabase Configuration
-SUPABASE_URL = "https://mddptbrpkswbmkovsldw.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1kZHB0YnJwa3N3Ym1rb3ZzbGR3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3Mjc5MDIsImV4cCI6MjA4OTMwMzkwMn0.XolzOBVy4NoEzKcnM0lm8DPm57WNVb5CLpdU7-LtXZ0"
-
+from config import NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 class Database:
     """Supabase database connection handler"""
@@ -20,9 +16,9 @@ class Database:
     def connect(self):
         """Establish connection to Supabase"""
         try:
-            self.client = create_client(SUPABASE_URL, SUPABASE_KEY)
+            self.client = create_client(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)
             # Test connection with a lightweight query
-            self.client.table("about_section").select("id").limit(1).execute()
+            self.client.table("church_vmd").select("id").limit(1).execute()
             self._connected = True
             print("[OK] Connected to Supabase database")
             return True
@@ -41,81 +37,89 @@ class Database:
 
 
 class SiteSettings:
-    """Site Settings Data Model — reads from the about_section table"""
+    """Site Settings Data Model — reads from the church_vmd table"""
 
-    TABLE_NAME = "about_section"
+    TABLE_NAME = "church_vmd"
 
     @staticmethod
     def get_about(db):
-        """Get the about section row from about_section table"""
+        """Get the VMD row from church_vmd table"""
         try:
             response = (
                 db.client.table(SiteSettings.TABLE_NAME)
-                .select("mission, vision")
+                .select("mission_body, vision_body, driving_force")
                 .limit(1)
                 .execute()
             )
             return response.data[0] if response.data else None
         except Exception as e:
-            print(f"[ERROR] Error fetching about section: {e}")
+            print(f"[ERROR] Error fetching VMD: {e}")
             return None
 
     @staticmethod
     def get_mission(db):
-        """Get church mission from about_section"""
+        """Get church mission from church_vmd"""
         about = SiteSettings.get_about(db)
         if about:
-            return about.get("mission")
+            return about.get("mission_body")
         return None
 
     @staticmethod
     def get_vision(db):
-        """Get church vision from about_section"""
+        """Get church vision from church_vmd"""
         about = SiteSettings.get_about(db)
         if about:
-            return about.get("vision")
+            return about.get("vision_body")
         return None
 
     @staticmethod
     def update_about(db, about_data):
-        """Update the about_section row with new data"""
+        """Update the church_vmd row with new data"""
         try:
-            db.client.table(SiteSettings.TABLE_NAME).update(about_data).neq("id", "00000000-0000-0000-0000-000000000000").execute()
+            db.client.table(SiteSettings.TABLE_NAME).update(about_data).eq("id", 1).execute()
             return True
         except Exception as e:
-            print(f"[ERROR] Error updating about section: {e}")
+            print(f"[ERROR] Error updating VMD: {e}")
             return False
 
     @staticmethod
     def update_mission(db, mission):
-        """Update only the mission field in about_section"""
-        return SiteSettings.update_about(db, {"mission": mission})
+        """Update only the mission field in church_vmd"""
+        return SiteSettings.update_about(db, {"mission_body": mission})
+
+    @staticmethod
+    def get_driving_force(db):
+        """Get church driving force from church_vmd"""
+        about = SiteSettings.get_about(db)
+        if about:
+            return about.get("driving_force")
+        return None
 
     @staticmethod
     def update_vision(db, vision):
-        """Update only the vision field in about_section"""
-        return SiteSettings.update_about(db, {"vision": vision})
+        """Update only the vision field in church_vmd"""
+        return SiteSettings.update_about(db, {"vision_body": vision})
 
 
 class StatementOfBelief:
-    """Statement of Belief Data Model — reads from the statement_of_belief table"""
+    """Statement of Belief Data Model — reads from the church_beliefs table"""
 
-    TABLE_NAME = "statement_of_belief"
+    TABLE_NAME = "church_beliefs"
 
     @staticmethod
     def get_all(db):
-        """Get all statements ordered by display_order, skipping test entries"""
+        """Get all beliefs ordered by sort_order"""
         try:
             response = (
                 db.client.table(StatementOfBelief.TABLE_NAME)
-                .select("item_number, statement")
-                .gt("item_number", 0)
-                .order("display_order")
+                .select("id, belief")
+                .order("sort_order")
                 .execute()
             )
-            return response.data if response.data else []
+            # Normalize to item_number/statement for compatibility with grace_api.py
+            return [{"item_number": i + 1, "statement": row["belief"]} for i, row in enumerate(response.data)] if response.data else []
         except Exception as e:
-            print(f"[ERROR] Error fetching statement of belief: {e}")
+            print(f"[ERROR] Error fetching church beliefs: {e}")
             return []
 
 
@@ -131,12 +135,224 @@ class ChurchHistory:
             response = (
                 db.client.table(ChurchHistory.TABLE_NAME)
                 .select("year, event")
-                .order("display_order")
+                .order("sort_order")
                 .execute()
             )
             return response.data if response.data else []
         except Exception as e:
             print(f"[ERROR] Error fetching church history: {e}")
+            return []
+
+
+class ChurchCoreValues:
+    """Church Core Values Data Model — reads from the church_core_values table"""
+
+    TABLE_NAME = "church_core_values"
+
+    @staticmethod
+    def get_all(db):
+        """Get all core values ordered by sort_order"""
+        try:
+            response = (
+                db.client.table(ChurchCoreValues.TABLE_NAME)
+                .select("title")
+                .order("sort_order")
+                .execute()
+            )
+            return [{"title": row["title"]} for row in response.data] if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error fetching church core values: {e}")
+            return []
+
+
+class ChurchBranch:
+    """Church Branch Data Model — reads from branches, regions, pastors, service_schedules tables"""
+
+    @staticmethod
+    def get_all_regions(db):
+        """Get all regions"""
+        try:
+            response = (
+                db.client.table("regions")
+                .select("id, name")
+                .order("name")
+                .execute()
+            )
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error fetching regions: {e}")
+            return []
+
+    @staticmethod
+    def get_branches_by_region(db, region_id):
+        """Get all active branches in a region"""
+        try:
+            response = (
+                db.client.table("branches")
+                .select("id, name, location, established")
+                .eq("region_id", region_id)
+                .eq("status", "active")
+                .order("name")
+                .execute()
+            )
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error fetching branches by region: {e}")
+            return []
+
+    @staticmethod
+    def get_branch_details(db, branch_id):
+        """Get full branch details including pastors and service schedules"""
+        try:
+            branch_resp = (
+                db.client.table("branches")
+                .select("id, name, location")
+                .eq("id", branch_id)
+                .limit(1)
+                .execute()
+            )
+            branch = branch_resp.data[0] if branch_resp.data else None
+            if not branch:
+                return None
+
+            pastor_resp = (
+                db.client.table("pastors")
+                .select("name, role")
+                .eq("branch_id", branch_id)
+                .eq("status", "active")
+                .execute()
+            )
+            branch["pastors"] = pastor_resp.data if pastor_resp.data else []
+
+            schedule_resp = (
+                db.client.table("service_schedules")
+                .select("day, time, type, description")
+                .eq("branch_id", branch_id)
+                .execute()
+            )
+            branch["schedules"] = schedule_resp.data if schedule_resp.data else []
+
+            return branch
+        except Exception as e:
+            print(f"[ERROR] Error fetching branch details: {e}")
+            return None
+
+    @staticmethod
+    def get_total_count(db):
+        """Get total count of all active branches"""
+        try:
+            response = (
+                db.client.table("branches")
+                .select("id")
+                .eq("status", "active")
+                .execute()
+            )
+            return len(response.data) if response.data is not None else 0
+        except Exception as e:
+            print(f"[ERROR] Error counting total branches: {e}")
+            return None
+
+    @staticmethod
+    def get_local_branches(db):
+        """Get all active local branches (excludes International region)"""
+        try:
+            int_resp = (
+                db.client.table("regions")
+                .select("id")
+                .eq("name", "International")
+                .execute()
+            )
+            int_region_id = int_resp.data[0]["id"] if int_resp.data else None
+
+            query = (
+                db.client.table("branches")
+                .select("id, name, location")
+                .eq("status", "active")
+                .order("name")
+            )
+            if int_region_id:
+                query = query.neq("region_id", int_region_id)
+            response = query.execute()
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error fetching local branches: {e}")
+            return []
+
+    @staticmethod
+    def get_international_branches(db):
+        """Get all active branches in the International region"""
+        try:
+            int_resp = (
+                db.client.table("regions")
+                .select("id")
+                .eq("name", "International")
+                .execute()
+            )
+            if not int_resp.data:
+                return []
+            int_region_id = int_resp.data[0]["id"]
+            response = (
+                db.client.table("branches")
+                .select("id, name, location")
+                .eq("status", "active")
+                .eq("region_id", int_region_id)
+                .order("name")
+                .execute()
+            )
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error fetching international branches: {e}")
+            return []
+
+
+class Pastor:
+    """Pastor Data Model — reads from the pastors table with branch info"""
+
+    @staticmethod
+    def get_all_with_branches(db):
+        """Get all active pastors joined with their branch name and location"""
+        try:
+            response = (
+                db.client.table("pastors")
+                .select("id, name, role, branch_id, branches(name, location)")
+                .eq("status", "active")
+                .order("name")
+                .execute()
+            )
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error fetching all pastors: {e}")
+            return []
+
+    @staticmethod
+    def find_by_name(db, name):
+        """Find active pastors by name (case-insensitive partial match)"""
+        try:
+            response = (
+                db.client.table("pastors")
+                .select("id, name, role, branch_id, branches(name, location)")
+                .eq("status", "active")
+                .ilike("name", f"%{name}%")
+                .execute()
+            )
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error finding pastor '{name}': {e}")
+            return []
+
+    @staticmethod
+    def get_branch_schedule(db, branch_id):
+        """Get all service schedules for a given branch"""
+        try:
+            response = (
+                db.client.table("service_schedules")
+                .select("day, time, type, description")
+                .eq("branch_id", branch_id)
+                .execute()
+            )
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERROR] Error fetching schedule for branch {branch_id}: {e}")
             return []
 
 
