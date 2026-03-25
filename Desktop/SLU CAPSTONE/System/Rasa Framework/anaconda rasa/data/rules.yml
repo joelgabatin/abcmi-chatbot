@@ -2,6 +2,11 @@ version: "3.1"
 
 rules:
 
+- rule: Say hello when user greets
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -41,3 +46,38 @@ rules:
   steps:
   - intent: ask_core_values
   - action: action_get_core_values
+
+- rule: Start branch search when user asks about branches
+  steps:
+  - intent: ask_branches
+  - action: action_get_branches
+
+- rule: Answer total branch count
+  steps:
+  - intent: ask_total_branches
+  - action: action_get_total_branches
+
+- rule: Answer local branches question
+  steps:
+  - intent: ask_local_branches
+  - action: action_get_local_branches
+
+- rule: Answer international branches question
+  steps:
+  - intent: ask_international_branches
+  - action: action_get_international_branches
+
+- rule: Answer who are the pastors
+  steps:
+  - intent: ask_pastors
+  - action: action_get_all_pastors
+
+- rule: Answer specific pastor query
+  steps:
+  - intent: ask_specific_pastor
+  - action: action_find_pastor
+
+- rule: Answer pastor branch schedule follow-up
+  steps:
+  - intent: ask_pastor_branch_schedule
+  - action: action_get_pastor_branch_schedule

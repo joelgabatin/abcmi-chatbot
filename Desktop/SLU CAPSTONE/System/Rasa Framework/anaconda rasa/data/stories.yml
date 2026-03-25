@@ -70,3 +70,55 @@ stories:
   - action: utter_greet
   - intent: ask_core_values
   - action: action_get_core_values
+
+- story: ask total branches
+  steps:
+  - intent: ask_total_branches
+  - action: action_get_total_branches
+
+- story: ask local branches
+  steps:
+  - intent: ask_local_branches
+  - action: action_get_local_branches
+
+- story: ask international branches
+  steps:
+  - intent: ask_international_branches
+  - action: action_get_international_branches
+
+- story: find branch by region
+  steps:
+  - intent: ask_branches
+  - action: action_get_branches
+  - intent: select_region
+  - action: action_get_branches
+  - intent: select_branch
+  - action: action_get_branches
+
+- story: ask all pastors
+  steps:
+  - intent: ask_pastors
+  - action: action_get_all_pastors
+
+- story: check specific pastor then get schedule
+  steps:
+  - intent: ask_specific_pastor
+  - action: action_find_pastor
+  - intent: ask_pastor_branch_schedule
+  - action: action_get_pastor_branch_schedule
+
+- story: greet then ask pastors
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_pastors
+  - action: action_get_all_pastors
+
+- story: greet then check specific pastor then get schedule
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_specific_pastor
+  - action: action_find_pastor
+  - intent: ask_pastor_branch_schedule
+  - action: action_get_pastor_branch_schedule

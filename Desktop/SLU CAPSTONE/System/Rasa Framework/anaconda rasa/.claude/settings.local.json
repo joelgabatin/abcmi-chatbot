@@ -19,7 +19,8 @@
       "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -m pip install \"supabase==1.2.1\" 2>&1)",
       "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -m pip install \"supabase==1.2.0\" 2>&1)",
       "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"from supabase import create_client; print\\(''supabase import OK''\\)\")",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"from sanic import Sanic; print\\(''sanic import OK''\\)\")"
+      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"from sanic import Sanic; print\\(''sanic import OK''\\)\")",
+      "Bash(conda run:*)"
     ]
   },
   "hooks": {
