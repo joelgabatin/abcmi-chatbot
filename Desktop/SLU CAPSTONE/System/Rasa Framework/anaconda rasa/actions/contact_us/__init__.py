@@ -1,8 +1,6 @@
-from .actions import (
-    ActionGetEmail,
-    ActionGetPhoneNumber,
-    ActionGetOfficeHours,
-    ActionGetOfficeAddress,
-    ActionGetSocialMedia,
-    ActionGetSpecificSocialMedia,
-)
+from .action_get_email import ActionGetEmail
+from .action_get_office_address import ActionGetOfficeAddress
+from .action_get_office_hours import ActionGetOfficeHours
+from .action_get_phone_number import ActionGetPhoneNumber
+from .action_get_social_media import ActionGetSocialMedia
+from .action_get_specific_social_media import ActionGetSpecificSocialMedia
