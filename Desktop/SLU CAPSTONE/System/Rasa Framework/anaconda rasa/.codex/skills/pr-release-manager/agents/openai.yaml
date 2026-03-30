@@ -1,0 +1,3 @@
+display_name: PR Release Manager
+short_description: Create a branch, commit changes, open a GitHub PR, and merge to main for verified updates.
+default_prompt: Use the local PR automation agent to publish a verified update by creating a branch, opening a pull request, and merging it into main.
