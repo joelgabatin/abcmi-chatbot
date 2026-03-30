@@ -1,0 +1,62 @@
+version: "3.1"
+
+# ── Custom Actions ─────────────────────────────────────────────────────────────
+# Implementations live in actions/<feature>/actions.py
+actions:
+  # Prayer — actions/prayer/
+  - validate_prayer_form
+  - action_process_prayer
+
+  # Events — actions/events/
+  - action_get_upcoming_events
+  - action_get_past_events
+  - action_register_event
+  - action_get_event_time
+  - action_get_event_date
+  - action_get_event_location
+  - action_get_event_slots
+
+  # Fallback
+  - action_default_fallback
+
+  # About church — actions/about_church/actions.py
+  - action_get_mission
+  - action_get_vision
+  - action_get_history
+  - action_get_statement_of_belief
+  - action_get_specific_belief
+  - action_get_driving_force
+  - action_get_core_values
+  - action_get_church_founders
+
+  # Branches — actions/branches/actions.py
+  - action_get_branches
+  - action_get_total_branches
+  - action_get_local_branches
+  - action_get_international_branches
+  - action_get_branch_schedule
+  - action_get_branch_location
+
+  # Ministries — actions/ministries/
+  - action_get_all_ministries
+  - action_get_ministry_description
+  - action_get_ministry_join_info
+
+  # Pastors — actions/pastors/actions.py
+  - action_get_all_pastors
+  - action_find_pastor
+  - action_get_pastor_branch_schedule
+  - action_get_resident_pastor_of_branch
+  - action_get_main_branch
+  - action_get_branches_by_region
+  - action_get_pastors_by_region
+  - action_get_senior_pastor
+  - action_get_administrative_pastor
+
+  # Contact Us — actions/contact_us/actions.py
+  - action_get_email
+  - action_get_phone_number
+  - action_get_office_hours
+  - action_get_office_address
+  - action_get_social_media
+  - action_get_specific_social_media

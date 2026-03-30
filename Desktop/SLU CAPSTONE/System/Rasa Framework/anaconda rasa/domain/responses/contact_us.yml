@@ -1,0 +1,12 @@
+version: "3.1"
+responses:
+  utter_email:
+    - text: "You can reach us via email at info@gracechurch.com."
+  utter_phone_number:
+    - text: "Our phone number is +1 (555) 123-4567."
+  utter_office_hours:
+    - text: "Our office hours are Monday to Friday, from 9 AM to 5 PM."
+  utter_office_address:
+    - text: "Our main office is located at 123 Grace Street, City, State, 12345."
+  utter_social_media:
+    - text: "We currently do not have any social media links available in our system settings."

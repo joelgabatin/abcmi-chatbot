@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer statement of belief question anytime the user asks
+  steps:
+  - intent: ask_statement_of_belief
+  - action: action_get_statement_of_belief

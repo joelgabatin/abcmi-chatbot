@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_event_slots
+  examples: |
+    - how many slots are available for [Youth Camp 2026](event_name)?
+    - what are the slots available for [Youth Camp 2026](event_name)?
+    - are there slots left for [Easter Celebration](event_name)?
+    - how many seats are available for [Leadership Conference](event_name)?
+    - what is the available slots for [Youth Camp 2026](event_name)?
+    - is [Easter Celebration](event_name) still open for registration?
+    - how many slots left for [Leadership Conference](event_name)?
+    - are there still slots for [Youth Camp 2026](event_name)?
+    - slots available for [Easter Celebration](event_name)
+    - how many participants can join [Leadership Conference](event_name)?
+    - is [Youth Camp 2026](event_name) fully booked?
+    - are there available slots for [Easter Celebration](event_name)?
+    - how many spots are left for [Leadership Conference](event_name)?
+    - check slots for [Youth Camp 2026](event_name)
+    - remaining slots for [Easter Celebration](event_name)

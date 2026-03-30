@@ -1,0 +1,25 @@
+version: "3.1"
+
+rules:
+
+- rule: How to send prayer request
+  steps:
+  - intent: ask_how_to_send_prayer
+  - action: utter_how_to_send_prayer
+
+- rule: Activate prayer form
+  steps:
+  - intent: ask_prayer_request
+  - action: utter_prayer_welcome
+  - action: prayer_form
+  - active_loop: prayer_form
+
+- rule: Submit prayer form
+  condition:
+  - active_loop: prayer_form
+  steps:
+  - action: prayer_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_process_prayer

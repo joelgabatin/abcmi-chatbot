@@ -1,0 +1,69 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1774599881.378398    1084 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1774599882.996509    1084 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-27 16:24:43 [1;30mWARNING [0m [34mrasa.utils.installation_utils[0m  - [33m{"warning": "TensorFlow is installed but Rasa was not installed with TensorFlow support, i.e. additional packages required to use NLU components have not been installed. For the most reliable setup, delete your current virtual environment, create a new one, and install Rasa again. Please follow the instructions at https://rasa.com/docs/pro/installation/python", "event": "installation_utils.tensorflow_installation", "level": "warning"}[0m
+2026-03-27 16:24:43 [1;30mWARNING [0m [34mrasa.utils.installation_utils[0m  - [33m{"warning": "TensorFlow is installed but Rasa was not installed with TensorFlow support, i.e. additional packages required to use NLU components have not been installed. For the most reliable setup, delete your current virtual environment, create a new one, and install Rasa again. Please follow the instructions at https://rasa.com/docs/pro/installation/python", "event": "installation_utils.tensorflow_installation", "level": "warning"}[0m
+2026-03-27 16:24:43 [1;30mINFO    [0m [34mrasa.tracing.backend_tracing_config[0m  - {"filename": "C:\\Users\\Acer Nitro 5\\Desktop\\GITHUB REPOSITORIES\\RASA DEVELOPMENT VERSIONS\\abcmi-chatbot\\Desktop\\SLU CAPSTONE\\System\\Rasa Framework\\anaconda rasa\\endpoints.yml", "event_info": "No backend tracing configuration found in endpoints.yml. Supported backend tracing types are 'jaeger' and 'otlp'. Backend tracing will not be configured.", "event": "endpoint.read.no_backend_tracing_config", "level": "info"}
+2026-03-27 16:24:44 [1;30mINFO    [0m [34mroot[0m  - Starting Rasa server on http://0.0.0.0:5005
+[93mC:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\shared\core\slot_mappings.py:181: FutureWarning: The `custom` slot mapping type is deprecated and will be removed in Rasa Pro 4.0.0. Please use the `controlled` slot mapping type instead.
+  rasa.shared.utils.io.raise_deprecation_warning(
+[0m2026-03-27 16:24:44 [1;30mWARNING [0m [34mrasa.utils.installation_utils[0m  - [33m{"warning": "TensorFlow is installed but Rasa was not installed with TensorFlow support, i.e. additional packages required to use NLU components have not been installed. For the most reliable setup, delete your current virtual environment, create a new one, and install Rasa again. Please follow the instructions at https://rasa.com/docs/pro/installation/python", "event": "installation_utils.tensorflow_installation", "level": "warning"}[0m
+2026-03-27 16:24:44 [1;30mWARNING [0m [34mrasa.utils.installation_utils[0m  - [33m{"warning": "TensorFlow is installed but Rasa was not installed with TensorFlow support, i.e. additional packages required to use NLU components have not been installed. For the most reliable setup, delete your current virtual environment, create a new one, and install Rasa again. Please follow the instructions at https://rasa.com/docs/pro/installation/python", "event": "installation_utils.tensorflow_installation", "level": "warning"}[0m
+2026-03-27 16:24:44 [1;30mWARNING [0m [34mrasa.utils.installation_utils[0m  - [33m{"warning": "TensorFlow is installed but Rasa was not installed with TensorFlow support, i.e. additional packages required to use NLU components have not been installed. For the most reliable setup, delete your current virtual environment, create a new one, and install Rasa again. Please follow the instructions at https://rasa.com/docs/pro/installation/python", "event": "installation_utils.tensorflow_installation", "level": "warning"}[0m
+2026-03-27 16:24:44 [1;30mWARNING [0m [34mrasa.utils.installation_utils[0m  - [33m{"warning": "TensorFlow is installed but Rasa was not installed with TensorFlow support, i.e. additional packages required to use NLU components have not been installed. For the most reliable setup, delete your current virtual environment, create a new one, and install Rasa again. Please follow the instructions at https://rasa.com/docs/pro/installation/python", "event": "installation_utils.tensorflow_installation", "level": "warning"}[0m
+2026-03-27 16:24:44 [1;30mWARNING [0m [34mrasa.utils.installation_utils[0m  - [33m{"warning": "TensorFlow is installed but Rasa was not installed with TensorFlow support, i.e. additional packages required to use NLU components have not been installed. For the most reliable setup, delete your current virtual environment, create a new one, and install Rasa again. Please follow the instructions at https://rasa.com/docs/pro/installation/python", "event": "installation_utils.tensorflow_installation", "level": "warning"}[0m
+2026-03-27 16:25:01 [1;30mINFO    [0m [34mrasa.core.processor[0m  - {"event_info": "Loading model.", "model_path": "models/20260327-162235-swarm-recall.tar.gz", "event": "rasa.core.processor.load_model", "level": "info"}
+[93mC:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\shared\core\slot_mappings.py:181: FutureWarning: The `custom` slot mapping type is deprecated and will be removed in Rasa Pro 4.0.0. Please use the `controlled` slot mapping type instead.
+  rasa.shared.utils.io.raise_deprecation_warning(
+[0m2026-03-27 16:25:01 [1;30mINFO    [0m [34mrasa.shared.core.domain[0m  - {"event": "domain.from_yaml.validating", "level": "info"}
+2026-03-27 16:25:01 [1;30mERROR   [0m [34mrasa.core.agent[0m  - [31mCould not load model due to Error initializing graph component for node run_LogisticRegressionClassifier6..[0m
+Traceback (most recent call last):
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\engine\graph.py", line 444, in _load_component
+    self._component: GraphComponent = constructor(  # type: ignore[no-redef]
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\nlu\classifiers\logistic_regression_classifier.py", line 208, in load
+    unknown_types = sio.get_untrusted_types(file=classifier_file)
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\skops\io\_persist.py", line 231, in get_untrusted_types
+    with ZipFile(content, "r") as zip_file:
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\zipfile.py", line 1270, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ACERNI~1\\AppData\\Local\\Temp\\tmp8xi8hrbl\\train_LogisticRegressionClassifier6\\train_LogisticRegressionClassifier6.skops'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\core\agent.py", line 279, in load_agent
+    agent.load_model(model_path)
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\core\agent.py", line 401, in load_model
+    self.processor = MessageProcessor(
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\core\processor.py", line 153, in __init__
+    self.model_filename, self.model_metadata, self.graph_runner = self._load_model(
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\core\processor.py", line 202, in _load_model
+    metadata, runner = loader.load_predict_graph_runner(
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\engine\loader.py", line 53, in load_predict_graph_runner
+    runner = graph_runner_class.create(
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\engine\runner\dask.py", line 53, in create
+    return cls(graph_schema, model_storage, execution_context, hooks)
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\engine\runner\dask.py", line 39, in __init__
+    self._instantiated_nodes: Dict[Text, GraphNode] = self._instantiate_nodes(
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\engine\runner\dask.py", line 62, in _instantiate_nodes
+    return {
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\engine\runner\dask.py", line 63, in <dictcomp>
+    node_name: GraphNode.from_schema_node(
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\engine\graph.py", line 621, in from_schema_node
+    return cls(
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\engine\graph.py", line 431, in __init__
+    self._load_component()
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\rasa\engine\graph.py", line 457, in _load_component
+    raise GraphComponentException(
+rasa.engine.exceptions.GraphComponentException: Error initializing graph component for node run_LogisticRegressionClassifier6.
+2026-03-27 16:25:01 [1;30mINFO    [0m [34mroot[0m  - Rasa server is up and running.
+2026-03-27 16:25:01 [1;30mINFO    [0m [34msanic.server[0m  - Starting worker [20852]
+2026-03-27 16:25:26 [1;30mERROR   [0m [34mrasa.server[0m  - [31mNo agent loaded. To continue processing, a model of a trained agent needs to be loaded.[0m
+2026-03-27 16:27:46 [1;30mERROR   [0m [34mrasa.server[0m  - [31mNo agent loaded. To continue processing, a model of a trained agent needs to be loaded.[0m
+2026-03-27 16:29:46 [1;30mERROR   [0m [34mrasa.server[0m  - [31mNo agent loaded. To continue processing, a model of a trained agent needs to be loaded.[0m
+2026-03-27 16:30:45 [1;30mERROR   [0m [34mrasa.server[0m  - [31mNo agent loaded. To continue processing, a model of a trained agent needs to be loaded.[0m
+2026-03-27 16:31:04 [1;30mERROR   [0m [34mrasa.server[0m  - [31mNo agent loaded. To continue processing, a model of a trained agent needs to be loaded.[0m
+2026-03-27 16:31:19 [1;30mERROR   [0m [34mrasa.server[0m  - [31mNo agent loaded. To continue processing, a model of a trained agent needs to be loaded.[0m
+ERROR conda.cli.main_run:execute(142): `conda run rasa run --enable-api --cors * --endpoints endpoints.yml -m models/20260327-162235-swarm-recall.tar.gz` failed. (See above for error)
+[2026-03-27 16:25:01 +0800] [20852] [INFO] Starting worker [20852]

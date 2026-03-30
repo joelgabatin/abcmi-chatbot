@@ -1,0 +1,17 @@
+version: "3.1"
+
+nlu:
+- intent: ask_specific_pastor
+  examples: |
+    - is [Joel Gabatin](pastor_name) your pastor?
+    - is [John Smith](pastor_name) a pastor of ABCMI?
+    - is [Mark Dela Cruz](pastor_name) one of your pastors?
+    - do you have a pastor named [Joel Gabatin](pastor_name)?
+    - is [Joel Gabatin](pastor_name) pastoring a branch?
+    - is [Joel Gabatin](pastor_name) a pastor here?
+    - is [Ana Cruz](pastor_name) a pastor?
+    - is [Ben Santos](pastor_name) your pastor?
+    - does [Joel Gabatin](pastor_name) pastor a church?
+    - is [Maria Reyes](pastor_name) pastoring a branch?
+    - is [Pedro Santos](pastor_name) assigned as a pastor?
+    - is [Grace Lim](pastor_name) one of the pastors?

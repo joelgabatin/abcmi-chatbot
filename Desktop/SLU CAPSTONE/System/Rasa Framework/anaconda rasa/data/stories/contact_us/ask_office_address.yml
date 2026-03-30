@@ -1,0 +1,6 @@
+version: "3.1"
+stories:
+  - story: ask office address
+    steps:
+      - intent: ask_office_address
+      - action: action_get_office_address

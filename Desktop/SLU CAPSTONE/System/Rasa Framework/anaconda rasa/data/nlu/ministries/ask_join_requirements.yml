@@ -1,0 +1,16 @@
+version: "3.1"
+nlu:
+  - intent: ask_join_requirements
+    examples: |
+      - How do I sign up for a ministry?
+      - What are the requirements to join a ministry?
+      - How can I get involved in a ministry?
+      - What do I need to join a church group?
+      - How do I become a member of a ministry?
+      - What are the steps to join a ministry?
+      - Is there a process to join a ministry?
+      - How do I volunteer for a ministry?
+      - What are the requirements to be part of a ministry?
+      - How can I participate in a ministry?
+      - I want to join a ministry, what should I do?
+      - What is needed to join a ministry?

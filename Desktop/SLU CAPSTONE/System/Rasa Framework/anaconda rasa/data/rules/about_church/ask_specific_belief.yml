@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer specific belief question anytime the user asks
+  steps:
+  - intent: ask_specific_belief
+  - action: action_get_specific_belief

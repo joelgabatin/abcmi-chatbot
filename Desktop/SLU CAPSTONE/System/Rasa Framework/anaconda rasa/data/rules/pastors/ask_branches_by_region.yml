@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer branches by region query
+  steps:
+  - intent: ask_branches_by_region
+  - action: action_get_branches_by_region

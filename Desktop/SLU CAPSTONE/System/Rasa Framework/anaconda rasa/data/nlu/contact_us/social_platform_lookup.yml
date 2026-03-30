@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - lookup: social_platform
+    examples: |
+      - Facebook
+      - TikTok
+      - Instagram
+      - YouTube
+      - Spotify

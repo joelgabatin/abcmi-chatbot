@@ -3,7 +3,7 @@
 Update mission, vision, or other church content stored in the Supabase database.
 
 ```bash
-conda run -n rasa310 python admin.py
+conda run -n rasa310 python scripts/admin.py
 ```
 
 **Admin panel options:**

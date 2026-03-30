@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer event time query
+  steps:
+  - intent: ask_event_time
+  - action: action_get_event_time

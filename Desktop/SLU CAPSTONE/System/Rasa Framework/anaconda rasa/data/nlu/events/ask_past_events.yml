@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_past_events
+  examples: |
+    - what are the past activities of the church?
+    - what past events has ABCMI held?
+    - show me past church activities
+    - what activities has the church done before?
+    - list the past events of ABCMI
+    - what are the previous events of the church?
+    - what events did ABCMI already have?
+    - tell me about past church activities
+    - what are the church's past events?
+    - show past activities of ABCMI
+    - what activities did the church hold before?
+    - what are the previous activities of ABCMI?
+    - give me the list of past events
+    - what church events already happened?
+    - what are the concluded events of ABCMI?

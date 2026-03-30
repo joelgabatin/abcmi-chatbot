@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_international_branches
+  examples: |
+    - how many international branches does ABCMI have?
+    - how many international branches are there?
+    - what are the international branches of ABCMI?
+    - list the international branches
+    - show me the international branches
+    - what are the overseas branches?
+    - how many branches abroad?
+    - international branches of ABCMI
+    - give me the list of international branches
+    - name the international branches

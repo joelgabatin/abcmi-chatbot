@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_total_branches
+  examples: |
+    - how many branches does ABCMI have?
+    - how many branches are there?
+    - total number of branches
+    - what is the total branch count?
+    - how many church branches does ABCMI have?
+    - give me the total count of branches
+    - how many ABCMI branches are there in total?
+    - number of branches of ABCMI

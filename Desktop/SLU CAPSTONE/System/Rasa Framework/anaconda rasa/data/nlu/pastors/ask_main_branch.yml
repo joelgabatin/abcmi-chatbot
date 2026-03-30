@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_main_branch
+  examples: |
+    - what is the main branch of ABCMI?
+    - where is the main branch of ABCMI?
+    - which branch is the main branch?
+    - what is the headquarters of ABCMI?
+    - where is the ABCMI main church?
+    - tell me about the main branch
+    - what is ABCMI's main branch?
+    - where is ABCMI's headquarters located?
+    - which is the central branch of ABCMI?
+    - what is the mother church of ABCMI?
+    - where is the main ABCMI church?
+    - what is the primary branch of ABCMI?
+    - what is the main church of ABCMI?
+    - tell me the main branch of Grace Church
+    - where is the central church of ABCMI?

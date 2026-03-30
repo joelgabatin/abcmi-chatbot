@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_branches_by_region
+  examples: |
+    - what are the branches in [CAR](region_name)?
+    - what are the branches located in [CAR](region_name)?
+    - which branches are in [CAR](region_name) region?
+    - list the branches in [CAR](region_name)
+    - show me branches in [CAR](region_name)
+    - what ABCMI branches are in [CAR](region_name)?
+    - branches in [Metro Manila](region_name)
+    - what are the branches in [Metro Manila](region_name)?
+    - are there any branches in [Baguio](region_name)?
+    - which ABCMI branches are located in [CAR](region_name)?
+    - list all branches in [Metro Manila](region_name)
+    - what branches does ABCMI have in [car](region_name)?
+    - can you show me branches in [baguio](region_name)?
+    - branches located in [car](region_name) region
+    - what are the ABCMI churches in [car](region_name)?

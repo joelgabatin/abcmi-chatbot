@@ -1,0 +1,744 @@
+FILEHEADER = {
+  magic: lCRF
+  size: 28648
+  type: FOMC
+  version: 100
+  num_features: 0
+  num_labels: 10
+  num_attrs: 277
+  off_features: 0x30
+  off_labels: 0x21D4
+  off_attrs: 0x2B84
+  off_labelrefs: 0x6018
+  off_attrrefs: 0x60E0
+}
+
+LABELS = {
+      0: O
+      1: U-branch_name
+      2: B-branch_name
+      3: L-branch_name
+      4: U-region_name
+      5: B-region_name
+      6: L-region_name
+      7: B-pastor_name
+      8: L-pastor_name
+      9: I-pastor_name
+}
+
+ATTRIBUTES = {
+      0: BOS
+      1: 0:bias:bias
+      2: 0:upper
+      3: 0:title
+      4: 0:digit
+      5: 1:title
+      6: 1:upper
+      7: -1:title
+      8: -1:upper
+      9: 0:low:abcmi
+     10: 0:prefix5:ABCMI
+     11: 0:prefix2:AB
+     12: 0:suffix5:ABCMI
+     13: 0:suffix3:CMI
+     14: 0:suffix2:MI
+     15: EOS
+     16: 1:low:the
+     17: 0:low:the
+     18: 0:prefix5:the
+     19: 0:prefix2:th
+     20: 0:suffix5:the
+     21: 0:suffix3:the
+     22: 0:suffix2:he
+     23: -1:low:the
+     24: 1:low:of
+     25: 0:low:of
+     26: 0:prefix5:of
+     27: 0:prefix2:of
+     28: 0:suffix5:of
+     29: 0:suffix3:of
+     30: 0:suffix2:of
+     31: -1:low:of
+     32: 0:low:is
+     33: 0:prefix5:is
+     34: 0:prefix2:is
+     35: 0:suffix5:is
+     36: 0:suffix3:is
+     37: 0:suffix2:is
+     38: -1:low:is
+     39: 0:low:grace
+     40: 0:prefix5:Grace
+     41: 0:prefix2:Gr
+     42: 0:suffix5:Grace
+     43: 0:suffix3:ace
+     44: 0:suffix2:ce
+     45: 1:low:church
+     46: -1:low:grace
+     47: 0:low:church
+     48: 0:prefix5:Churc
+     49: 0:prefix2:Ch
+     50: 0:suffix5:hurch
+     51: 0:suffix3:rch
+     52: 0:suffix2:ch
+     53: 0:suffix2:es
+     54: 0:prefix5:pasto
+     55: 0:prefix2:pa
+     56: 0:suffix2:as
+     57: -1:low:abcmi
+     58: -1:low:does
+     59: 1:low:hold
+     60: 0:suffix3:nes
+     61: 0:suffix2:ve
+     62: 1:low:a
+     63: 0:prefix2:br
+     64: 0:low:in
+     65: 0:prefix5:in
+     66: 0:prefix2:in
+     67: 0:suffix5:in
+     68: 0:suffix3:in
+     69: 0:suffix2:in
+     70: -1:low:in
+     71: 0:suffix3:ion
+     72: 0:suffix2:on
+     73: 0:suffix2:im
+     74: -1:low:to
+     75: 0:low:jesus
+     76: 0:prefix5:Jesus
+     77: 0:prefix2:Je
+     78: 0:suffix5:Jesus
+     79: 0:suffix3:sus
+     80: 0:suffix2:us
+     81: 0:suffix2:th
+     82: 0:low:bible
+     83: 0:prefix5:Bible
+     84: 0:prefix2:Bi
+     85: 0:suffix5:Bible
+     86: 0:suffix3:ble
+     87: 0:suffix2:le
+     88: 0:suffix3:nal
+     89: 0:suffix2:al
+     90: 0:low:god
+     91: 0:prefix5:God
+     92: 0:prefix2:Go
+     93: 0:suffix5:God
+     94: 0:suffix3:God
+     95: 0:suffix2:od
+     96: 1:low:one
+     97: 0:suffix3:ith
+     98: 0:suffix2:an
+     99: 0:low:i
+    100: 0:prefix5:I
+    101: 0:prefix2:I
+    102: 0:suffix5:I
+    103: 0:suffix3:I
+    104: 0:suffix2:I
+    105: 0:low:ansagan
+    106: 0:prefix5:Ansag
+    107: 0:prefix2:An
+    108: 0:suffix5:sagan
+    109: 0:suffix3:gan
+    110: 1:low:branch
+    111: 0:low:branch
+    112: 0:prefix5:branc
+    113: 0:suffix5:ranch
+    114: 0:suffix3:nch
+    115: 1:low:address
+    116: 0:suffix3:can
+    117: 0:low:camp
+    118: 0:prefix5:Camp
+    119: 0:prefix2:Ca
+    120: 0:suffix5:Camp
+    121: 0:suffix3:amp
+    122: 0:suffix2:mp
+    123: 1:low:8
+    124: -1:low:camp
+    125: 0:low:8
+    126: 0:prefix5:8
+    127: 0:prefix2:8
+    128: 0:suffix5:8
+    129: 0:suffix3:8
+    130: 0:suffix2:8
+    131: 0:low:main
+    132: 0:prefix5:Main
+    133: 0:prefix2:Ma
+    134: 0:suffix5:Main
+    135: 0:suffix3:ain
+    136: -1:low:main
+    137: 0:low:kias
+    138: 0:prefix5:Kias
+    139: 0:prefix2:Ki
+    140: 0:suffix5:Kias
+    141: 0:suffix3:ias
+    142: 0:low:patiacan
+    143: 0:prefix5:Patia
+    144: 0:prefix2:Pa
+    145: 0:suffix5:iacan
+    146: 0:low:dianawan
+    147: 0:prefix5:Diana
+    148: 0:prefix2:Di
+    149: 0:suffix5:nawan
+    150: 0:suffix3:wan
+    151: 0:low:san
+    152: 0:prefix5:San
+    153: 0:prefix2:Sa
+    154: 0:suffix5:San
+    155: 0:suffix3:San
+    156: 1:low:carlos
+    157: -1:low:san
+    158: 0:low:carlos
+    159: 0:prefix5:Carlo
+    160: 0:suffix5:arlos
+    161: 0:suffix3:los
+    162: 0:suffix2:os
+    163: 1:low:service
+    164: -1:low:at
+    165: 0:low:international
+    166: 0:suffix5:ional
+    167: 0:low:philippines
+    168: 0:prefix5:Phili
+    169: 0:prefix2:Ph
+    170: 0:suffix5:pines
+    171: 0:prefix5:Branc
+    172: 0:prefix2:Br
+    173: 0:low:1
+    174: 0:prefix5:1
+    175: 0:prefix2:1
+    176: 0:suffix5:1
+    177: 0:suffix3:1
+    178: 0:suffix2:1
+    179: 0:low:2
+    180: 0:prefix5:2
+    181: 0:prefix2:2
+    182: 0:suffix5:2
+    183: 0:suffix3:2
+    184: 0:suffix2:2
+    185: 0:low:car
+    186: 0:prefix5:CAR
+    187: 0:prefix2:CA
+    188: 0:suffix5:CAR
+    189: 0:suffix3:CAR
+    190: 0:suffix2:AR
+    191: 1:low:region
+    192: 0:low:region
+    193: 0:suffix5:egion
+    194: -1:low:administrative
+    195: 0:prefix5:Regio
+    196: 0:prefix2:Re
+    197: -1:low:region
+    198: 1:low:1
+    199: 1:low:2
+    200: 0:prefix5:Inter
+    201: 0:prefix2:In
+    202: 0:suffix3:yes
+    203: 0:suffix2:el
+    204: 0:low:metro
+    205: 0:prefix5:Metro
+    206: 0:prefix2:Me
+    207: 0:suffix5:Metro
+    208: 0:suffix3:tro
+    209: 0:suffix2:ro
+    210: 1:low:manila
+    211: -1:low:metro
+    212: 0:low:manila
+    213: 0:prefix5:Manil
+    214: 0:suffix5:anila
+    215: 0:suffix3:ila
+    216: 0:suffix2:la
+    217: 0:low:baguio
+    218: 0:prefix5:Bagui
+    219: 0:prefix2:Ba
+    220: 0:suffix5:aguio
+    221: 0:suffix3:uio
+    222: 0:suffix2:io
+    223: -1:low:oversees
+    224: 0:low:joel
+    225: 0:prefix5:Joel
+    226: 0:prefix2:Jo
+    227: 0:suffix5:Joel
+    228: 0:suffix3:oel
+    229: 1:low:gabatin
+    230: -1:low:joel
+    231: 0:low:gabatin
+    232: 0:prefix5:Gabat
+    233: 0:prefix2:Ga
+    234: 0:suffix5:batin
+    235: 0:suffix3:tin
+    236: -1:low:john
+    237: 0:low:smith
+    238: 0:prefix5:Smith
+    239: 0:prefix2:Sm
+    240: 0:suffix5:Smith
+    241: 0:low:mark
+    242: 0:prefix5:Mark
+    243: 0:suffix5:Mark
+    244: 0:suffix3:ark
+    245: 0:suffix2:rk
+    246: 1:low:dela
+    247: -1:low:mark
+    248: 0:low:dela
+    249: 0:prefix5:Dela
+    250: 0:prefix2:De
+    251: 0:suffix5:Dela
+    252: 0:suffix3:ela
+    253: 1:low:cruz
+    254: 0:low:cruz
+    255: 0:prefix5:Cruz
+    256: 0:prefix2:Cr
+    257: 0:suffix5:Cruz
+    258: 0:suffix3:ruz
+    259: 0:suffix2:uz
+    260: -1:low:named
+    261: 1:low:pastoring
+    262: 1:low:santos
+    263: 0:low:santos
+    264: 0:prefix5:Santo
+    265: 0:suffix5:antos
+    266: 0:suffix3:tos
+    267: -1:low:maria
+    268: 0:low:reyes
+    269: 0:prefix5:Reyes
+    270: 0:suffix5:Reyes
+    271: 1:low:lim
+    272: 0:low:lim
+    273: 0:prefix5:Lim
+    274: 0:prefix2:Li
+    275: 0:suffix5:Lim
+    276: 0:suffix3:Lim
+}
+
+TRANSITIONS = {
+  (1) O --> O: 2.280356
+  (1) O --> U-branch_name: 0.657260
+  (1) O --> B-branch_name: 0.595384
+  (1) O --> L-branch_name: -1.102405
+  (1) O --> U-region_name: 0.384711
+  (1) O --> B-region_name: 0.082630
+  (1) O --> L-region_name: -1.079180
+  (1) O --> L-pastor_name: -1.471623
+  (1) O --> I-pastor_name: -0.716530
+  (1) U-branch_name --> L-branch_name: -0.001490
+  (1) B-branch_name --> O: -1.012230
+  (1) B-branch_name --> L-branch_name: 3.362393
+  (1) B-branch_name --> L-pastor_name: -0.069050
+  (1) L-branch_name --> O: 0.332923
+  (1) U-region_name --> O: -0.264656
+  (1) B-region_name --> O: -0.871493
+  (1) B-region_name --> L-region_name: 2.720094
+  (1) B-pastor_name --> O: -0.937611
+  (1) B-pastor_name --> L-branch_name: -0.129497
+  (1) B-pastor_name --> L-pastor_name: 2.264899
+  (1) B-pastor_name --> I-pastor_name: 0.703212
+  (1) L-pastor_name --> O: 0.956317
+  (1) L-pastor_name --> L-pastor_name: -0.140120
+  (1) I-pastor_name --> O: -0.293681
+  (1) I-pastor_name --> L-pastor_name: 0.618199
+}
+
+STATE_FEATURES = {
+  (0) BOS --> O: 4.780728
+  (0) 0:bias:bias --> O: 3.849379
+  (0) 0:bias:bias --> U-branch_name: -0.362449
+  (0) 0:bias:bias --> B-branch_name: -0.359764
+  (0) 0:bias:bias --> U-region_name: -0.252525
+  (0) 0:bias:bias --> B-region_name: -0.215228
+  (0) 0:bias:bias --> B-pastor_name: -0.048775
+  (0) 0:bias:bias --> I-pastor_name: -0.069734
+  (0) 0:upper --> O: 0.091348
+  (0) 0:upper --> U-region_name: 0.443940
+  (0) 0:title --> O: -3.649777
+  (0) 0:title --> U-branch_name: 0.868760
+  (0) 0:title --> B-branch_name: 0.080401
+  (0) 0:title --> B-region_name: 0.005915
+  (0) 0:title --> L-region_name: -0.000031
+  (0) 0:title --> B-pastor_name: 0.320372
+  (0) 0:title --> L-pastor_name: 0.680510
+  (0) 0:digit --> O: -1.150783
+  (0) 0:digit --> L-branch_name: 0.318492
+  (0) 0:digit --> L-region_name: 0.938815
+  (0) 1:title --> O: 1.327132
+  (0) 1:title --> U-branch_name: -1.346789
+  (0) 1:title --> B-branch_name: 0.083369
+  (0) 1:title --> L-branch_name: -0.995235
+  (0) 1:title --> U-region_name: -0.140007
+  (0) 1:title --> B-pastor_name: 1.138500
+  (0) 1:title --> L-pastor_name: -0.362631
+  (0) 1:title --> I-pastor_name: 0.195718
+  (0) 1:upper --> O: 0.309182
+  (0) -1:title --> O: -0.001499
+  (0) -1:title --> U-branch_name: -0.416283
+  (0) -1:title --> B-branch_name: -0.090991
+  (0) -1:title --> L-branch_name: 0.771800
+  (0) -1:title --> U-region_name: -0.147395
+  (0) -1:title --> B-region_name: -0.100262
+  (0) -1:title --> L-region_name: 0.645882
+  (0) -1:title --> B-pastor_name: -0.398680
+  (0) -1:title --> L-pastor_name: 0.867345
+  (0) -1:title --> I-pastor_name: 0.005247
+  (0) -1:upper --> O: 1.047624
+  (0) -1:upper --> B-branch_name: -0.804077
+  (0) 0:low:abcmi --> O: 0.140417
+  (0) 0:prefix5:ABCMI --> O: 0.140417
+  (0) 0:prefix2:AB --> O: 0.140417
+  (0) 0:suffix5:ABCMI --> O: 0.140417
+  (0) 0:suffix3:CMI --> O: 0.140417
+  (0) 0:suffix2:MI --> O: 0.140417
+  (0) EOS --> O: 2.472284
+  (0) EOS --> U-branch_name: 0.018019
+  (0) EOS --> U-region_name: 0.407864
+  (0) EOS --> L-region_name: 0.316394
+  (0) EOS --> L-pastor_name: -0.180358
+  (0) 1:low:the --> O: 0.346078
+  (0) 0:low:the --> O: 0.285374
+  (0) 0:prefix5:the --> O: 0.285374
+  (0) 0:prefix2:th --> O: 0.349052
+  (0) 0:suffix5:the --> O: 0.285374
+  (0) 0:suffix3:the --> O: 0.285374
+  (0) 0:suffix2:he --> O: 0.285374
+  (0) -1:low:the --> O: 0.240171
+  (0) -1:low:the --> B-branch_name: 0.257249
+  (0) 1:low:of --> O: 0.107800
+  (0) 0:low:of --> O: 0.038546
+  (0) 0:prefix5:of --> O: 0.038546
+  (0) 0:prefix2:of --> O: 0.045741
+  (0) 0:suffix5:of --> O: 0.038546
+  (0) 0:suffix3:of --> O: 0.038546
+  (0) 0:suffix2:of --> O: 0.038546
+  (0) -1:low:of --> O: -0.918910
+  (0) -1:low:of --> U-branch_name: 0.408590
+  (0) -1:low:of --> B-branch_name: 0.320717
+  (0) -1:low:of --> U-region_name: 0.446228
+  (0) 0:low:is --> O: 0.001312
+  (0) 0:prefix5:is --> O: 0.001312
+  (0) 0:prefix2:is --> O: 0.001312
+  (0) 0:suffix5:is --> O: 0.001312
+  (0) 0:suffix3:is --> O: 0.001312
+  (0) 0:suffix2:is --> O: 0.004717
+  (0) -1:low:is --> O: -1.320668
+  (0) -1:low:is --> B-pastor_name: 2.009751
+  (0) 0:low:grace --> O: 0.130467
+  (0) 0:prefix5:Grace --> O: 0.065696
+  (0) 0:prefix2:Gr --> O: 0.065696
+  (0) 0:suffix5:Grace --> O: 0.065696
+  (0) 0:suffix3:ace --> O: 0.130467
+  (0) 0:suffix2:ce --> O: 0.354533
+  (0) 1:low:church --> O: 0.245041
+  (0) 1:low:church --> B-branch_name: 0.161652
+  (0) -1:low:grace --> O: 0.314519
+  (0) -1:low:grace --> L-pastor_name: 0.021238
+  (0) 0:low:church --> O: 0.146279
+  (0) 0:low:church --> L-branch_name: 0.304593
+  (0) 0:prefix5:Churc --> O: 0.000821
+  (0) 0:prefix5:Churc --> L-branch_name: 0.361319
+  (0) 0:prefix2:Ch --> O: 0.329370
+  (0) 0:prefix2:Ch --> L-branch_name: 0.306447
+  (0) 0:suffix5:hurch --> O: 0.146279
+  (0) 0:suffix5:hurch --> L-branch_name: 0.304593
+  (0) 0:suffix3:rch --> O: 0.146279
+  (0) 0:suffix3:rch --> L-branch_name: 0.304593
+  (0) 0:suffix2:ch --> O: 0.894308
+  (0) 0:suffix2:ch --> L-branch_name: 0.057831
+  (0) 0:suffix2:es --> O: 0.133167
+  (0) 0:suffix2:es --> L-pastor_name: 0.065055
+  (0) 0:prefix5:pasto --> O: 0.031149
+  (0) 0:prefix2:pa --> O: 0.046326
+  (0) 0:suffix2:as --> O: -0.194176
+  (0) 0:suffix2:as --> U-branch_name: 0.719463
+  (0) -1:low:abcmi --> O: 0.881121
+  (0) -1:low:does --> O: -0.363536
+  (0) -1:low:does --> U-branch_name: 0.093895
+  (0) 1:low:hold --> L-branch_name: 0.000177
+  (0) 0:suffix3:nes --> O: 0.000407
+  (0) 0:suffix2:ve --> O: 0.173462
+  (0) 1:low:a --> L-pastor_name: 0.315390
+  (0) 0:prefix2:br --> O: 0.090740
+  (0) 0:low:in --> O: 0.111088
+  (0) 0:prefix5:in --> O: 0.111088
+  (0) 0:prefix2:in --> O: 0.281797
+  (0) 0:suffix5:in --> O: 0.111088
+  (0) 0:suffix3:in --> O: 0.111088
+  (0) 0:suffix2:in --> O: -0.014676
+  (0) 0:suffix2:in --> B-branch_name: 0.419805
+  (0) 0:suffix2:in --> L-pastor_name: 0.317189
+  (0) -1:low:in --> O: -1.388963
+  (0) -1:low:in --> U-region_name: 1.397521
+  (0) -1:low:in --> B-region_name: 1.529280
+  (0) 0:suffix3:ion --> O: 0.141991
+  (0) 0:suffix3:ion --> B-region_name: 0.366090
+  (0) 0:suffix2:on --> O: 0.390262
+  (0) 0:suffix2:on --> B-region_name: 0.346893
+  (0) 0:suffix2:im --> O: -0.039374
+  (0) 0:suffix2:im --> L-pastor_name: 0.171143
+  (0) -1:low:to --> O: -0.000135
+  (0) 0:low:jesus --> O: 0.316654
+  (0) 0:prefix5:Jesus --> O: 0.316654
+  (0) 0:prefix2:Je --> O: 0.316654
+  (0) 0:suffix5:Jesus --> O: 0.316654
+  (0) 0:suffix3:sus --> O: 0.316654
+  (0) 0:suffix2:us --> O: 0.316654
+  (0) 0:suffix2:th --> L-pastor_name: 0.074755
+  (0) 0:low:bible --> O: 0.005691
+  (0) 0:prefix5:Bible --> O: 0.005691
+  (0) 0:prefix2:Bi --> O: 0.005691
+  (0) 0:suffix5:Bible --> O: 0.005691
+  (0) 0:suffix3:ble --> O: 0.000754
+  (0) 0:suffix2:le --> O: 0.094286
+  (0) 0:suffix3:nal --> U-region_name: 0.637620
+  (0) 0:suffix2:al --> U-region_name: 0.554091
+  (0) 0:low:god --> O: 0.220929
+  (0) 0:prefix5:God --> O: 0.220929
+  (0) 0:prefix2:Go --> O: 0.220929
+  (0) 0:suffix5:God --> O: 0.220929
+  (0) 0:suffix3:God --> O: 0.220929
+  (0) 0:suffix2:od --> O: 0.259046
+  (0) 1:low:one --> O: -0.287756
+  (0) 1:low:one --> L-pastor_name: 0.643852
+  (0) 0:suffix3:ith --> L-pastor_name: 0.076276
+  (0) 0:suffix2:an --> O: -1.194686
+  (0) 0:suffix2:an --> U-branch_name: 2.162205
+  (0) 0:suffix2:an --> B-branch_name: 0.233315
+  (0) 0:low:i --> O: 0.266073
+  (0) 0:prefix5:I --> O: 0.266073
+  (0) 0:prefix2:I --> O: 0.266073
+  (0) 0:suffix5:I --> O: 0.266073
+  (0) 0:suffix3:I --> O: 0.266073
+  (0) 0:suffix2:I --> O: 0.266073
+  (0) 0:low:ansagan --> U-branch_name: 0.747040
+  (0) 0:prefix5:Ansag --> U-branch_name: 0.747040
+  (0) 0:prefix2:An --> U-branch_name: 0.713305
+  (0) 0:suffix5:sagan --> U-branch_name: 0.747040
+  (0) 0:suffix3:gan --> U-branch_name: 0.747040
+  (0) 1:low:branch --> U-branch_name: 0.689036
+  (0) 0:low:branch --> O: 0.360242
+  (0) 0:prefix5:branc --> O: 0.080315
+  (0) 0:suffix5:ranch --> O: 0.360242
+  (0) 0:suffix3:nch --> O: 0.360242
+  (0) 1:low:address --> L-branch_name: 0.054630
+  (0) 0:suffix3:can --> O: -0.034372
+  (0) 0:suffix3:can --> U-branch_name: 0.456186
+  (0) 0:low:camp --> O: -0.000216
+  (0) 0:low:camp --> B-branch_name: 0.480103
+  (0) 0:prefix5:Camp --> O: -0.000216
+  (0) 0:prefix5:Camp --> B-branch_name: 0.480103
+  (0) 0:prefix2:Ca --> B-branch_name: 0.420530
+  (0) 0:prefix2:Ca --> L-branch_name: 0.403007
+  (0) 0:suffix5:Camp --> O: -0.000216
+  (0) 0:suffix5:Camp --> B-branch_name: 0.480103
+  (0) 0:suffix3:amp --> O: -0.000216
+  (0) 0:suffix3:amp --> B-branch_name: 0.480103
+  (0) 0:suffix2:mp --> O: -0.000216
+  (0) 0:suffix2:mp --> B-branch_name: 0.480103
+  (0) 1:low:8 --> O: -0.000216
+  (0) 1:low:8 --> B-branch_name: 0.480103
+  (0) -1:low:camp --> O: -0.191704
+  (0) -1:low:camp --> L-branch_name: 0.482735
+  (0) 0:low:8 --> O: -0.191704
+  (0) 0:low:8 --> L-branch_name: 0.482735
+  (0) 0:prefix5:8 --> O: -0.191704
+  (0) 0:prefix5:8 --> L-branch_name: 0.482735
+  (0) 0:prefix2:8 --> O: -0.191704
+  (0) 0:prefix2:8 --> L-branch_name: 0.482735
+  (0) 0:suffix5:8 --> O: -0.191704
+  (0) 0:suffix5:8 --> L-branch_name: 0.482735
+  (0) 0:suffix3:8 --> O: -0.191704
+  (0) 0:suffix3:8 --> L-branch_name: 0.482735
+  (0) 0:suffix2:8 --> O: -0.191704
+  (0) 0:suffix2:8 --> L-branch_name: 0.482735
+  (0) 0:low:main --> O: -0.036994
+  (0) 0:low:main --> B-branch_name: 0.561278
+  (0) 0:prefix5:Main --> O: -0.136613
+  (0) 0:prefix5:Main --> B-branch_name: 0.626740
+  (0) 0:prefix2:Ma --> O: -0.933460
+  (0) 0:prefix2:Ma --> B-branch_name: 0.352602
+  (0) 0:prefix2:Ma --> L-region_name: 0.344314
+  (0) 0:prefix2:Ma --> B-pastor_name: 0.171320
+  (0) 0:suffix5:Main --> O: -0.136613
+  (0) 0:suffix5:Main --> B-branch_name: 0.626740
+  (0) 0:suffix3:ain --> O: -0.036994
+  (0) 0:suffix3:ain --> B-branch_name: 0.561278
+  (0) -1:low:main --> O: -0.460351
+  (0) -1:low:main --> L-branch_name: 1.105825
+  (0) 0:low:kias --> O: -0.230802
+  (0) 0:low:kias --> U-branch_name: 0.742431
+  (0) 0:prefix5:Kias --> O: -0.230802
+  (0) 0:prefix5:Kias --> U-branch_name: 0.742431
+  (0) 0:prefix2:Ki --> O: -0.230802
+  (0) 0:prefix2:Ki --> U-branch_name: 0.742431
+  (0) 0:suffix5:Kias --> O: -0.230802
+  (0) 0:suffix5:Kias --> U-branch_name: 0.742431
+  (0) 0:suffix3:ias --> O: -0.230802
+  (0) 0:suffix3:ias --> U-branch_name: 0.742431
+  (0) 0:low:patiacan --> O: -0.083728
+  (0) 0:low:patiacan --> U-branch_name: 0.470186
+  (0) 0:prefix5:Patia --> O: -0.083728
+  (0) 0:prefix5:Patia --> U-branch_name: 0.470186
+  (0) 0:prefix2:Pa --> O: -0.083728
+  (0) 0:prefix2:Pa --> U-branch_name: 0.470186
+  (0) 0:suffix5:iacan --> O: -0.083728
+  (0) 0:suffix5:iacan --> U-branch_name: 0.470186
+  (0) 0:low:dianawan --> O: -0.081414
+  (0) 0:low:dianawan --> U-branch_name: 0.455408
+  (0) 0:prefix5:Diana --> O: -0.081414
+  (0) 0:prefix5:Diana --> U-branch_name: 0.455408
+  (0) 0:prefix2:Di --> O: -0.081414
+  (0) 0:prefix2:Di --> U-branch_name: 0.455408
+  (0) 0:suffix5:nawan --> O: -0.081414
+  (0) 0:suffix5:nawan --> U-branch_name: 0.455408
+  (0) 0:suffix3:wan --> O: -0.081414
+  (0) 0:suffix3:wan --> U-branch_name: 0.455408
+  (0) 0:low:san --> B-branch_name: 0.487228
+  (0) 0:prefix5:San --> B-branch_name: 0.487228
+  (0) 0:prefix2:Sa --> B-branch_name: 0.472272
+  (0) 0:prefix2:Sa --> L-pastor_name: 0.298962
+  (0) 0:suffix5:San --> B-branch_name: 0.487228
+  (0) 0:suffix3:San --> B-branch_name: 0.487228
+  (0) 1:low:carlos --> B-branch_name: 0.487228
+  (0) -1:low:san --> L-branch_name: 0.431988
+  (0) 0:low:carlos --> L-branch_name: 0.431988
+  (0) 0:prefix5:Carlo --> L-branch_name: 0.431988
+  (0) 0:suffix5:arlos --> L-branch_name: 0.431988
+  (0) 0:suffix3:los --> L-branch_name: 0.431988
+  (0) 0:suffix2:os --> L-branch_name: 0.307895
+  (0) 1:low:service --> O: 0.003325
+  (0) -1:low:at --> U-branch_name: 0.607983
+  (0) -1:low:at --> B-branch_name: 0.479218
+  (0) 0:low:international --> O: -0.090964
+  (0) 0:low:international --> U-region_name: 0.717595
+  (0) 0:suffix5:ional --> O: -0.087897
+  (0) 0:suffix5:ional --> U-region_name: 0.716478
+  (0) 0:low:philippines --> O: 0.000003
+  (0) 0:prefix5:Phili --> O: 0.000003
+  (0) 0:prefix2:Ph --> O: 0.000003
+  (0) 0:suffix5:pines --> O: 0.000003
+  (0) 0:prefix5:Branc --> O: 0.009834
+  (0) 0:prefix2:Br --> O: 0.009834
+  (0) 0:low:1 --> O: -0.058811
+  (0) 0:low:1 --> L-region_name: 0.241469
+  (0) 0:prefix5:1 --> O: -0.058811
+  (0) 0:prefix5:1 --> L-region_name: 0.241469
+  (0) 0:prefix2:1 --> O: -0.058811
+  (0) 0:prefix2:1 --> L-region_name: 0.241469
+  (0) 0:suffix5:1 --> O: -0.058811
+  (0) 0:suffix5:1 --> L-region_name: 0.241469
+  (0) 0:suffix3:1 --> O: -0.058811
+  (0) 0:suffix3:1 --> L-region_name: 0.241469
+  (0) 0:suffix2:1 --> O: -0.058811
+  (0) 0:suffix2:1 --> L-region_name: 0.241469
+  (0) 0:low:2 --> O: -0.059007
+  (0) 0:low:2 --> L-region_name: 0.303399
+  (0) 0:prefix5:2 --> O: -0.059007
+  (0) 0:prefix5:2 --> L-region_name: 0.303399
+  (0) 0:prefix2:2 --> O: -0.059007
+  (0) 0:prefix2:2 --> L-region_name: 0.303399
+  (0) 0:suffix5:2 --> O: -0.059007
+  (0) 0:suffix5:2 --> L-region_name: 0.303399
+  (0) 0:suffix3:2 --> O: -0.059007
+  (0) 0:suffix3:2 --> L-region_name: 0.303399
+  (0) 0:suffix2:2 --> O: -0.059007
+  (0) 0:suffix2:2 --> L-region_name: 0.303399
+  (0) 0:low:car --> O: -0.388168
+  (0) 0:low:car --> U-region_name: 0.831802
+  (0) 0:prefix5:CAR --> O: -0.388168
+  (0) 0:prefix5:CAR --> U-region_name: 0.831802
+  (0) 0:prefix2:CA --> O: -0.388168
+  (0) 0:prefix2:CA --> U-region_name: 0.831802
+  (0) 0:suffix5:CAR --> O: -0.388168
+  (0) 0:suffix5:CAR --> U-region_name: 0.831802
+  (0) 0:suffix3:CAR --> O: -0.388168
+  (0) 0:suffix3:CAR --> U-region_name: 0.831802
+  (0) 0:suffix2:AR --> O: -0.388168
+  (0) 0:suffix2:AR --> U-region_name: 0.831802
+  (0) 1:low:region --> O: -0.323820
+  (0) 1:low:region --> U-region_name: 0.376474
+  (0) 1:low:region --> L-region_name: 0.076919
+  (0) 0:low:region --> B-region_name: 0.429158
+  (0) 0:suffix5:egion --> B-region_name: 0.429158
+  (0) -1:low:administrative --> O: 0.060982
+  (0) 0:prefix5:Regio --> B-region_name: 0.505839
+  (0) 0:prefix2:Re --> B-region_name: 0.500411
+  (0) -1:low:region --> O: -0.255785
+  (0) -1:low:region --> L-region_name: 0.960039
+  (0) 1:low:1 --> B-region_name: 0.103971
+  (0) 1:low:2 --> B-region_name: 0.192642
+  (0) 0:prefix5:Inter --> O: -0.257067
+  (0) 0:prefix5:Inter --> U-region_name: 0.861732
+  (0) 0:prefix2:In --> O: -0.257067
+  (0) 0:prefix2:In --> U-region_name: 0.861732
+  (0) 0:suffix3:yes --> L-pastor_name: 0.130190
+  (0) 0:suffix2:el --> O: -0.212012
+  (0) 0:suffix2:el --> B-pastor_name: 0.343504
+  (0) 0:low:metro --> B-region_name: 0.353922
+  (0) 0:prefix5:Metro --> B-region_name: 0.353922
+  (0) 0:prefix2:Me --> B-region_name: 0.353922
+  (0) 0:suffix5:Metro --> B-region_name: 0.353922
+  (0) 0:suffix3:tro --> B-region_name: 0.353922
+  (0) 0:suffix2:ro --> B-region_name: 0.329638
+  (0) 1:low:manila --> B-region_name: 0.353922
+  (0) -1:low:metro --> L-region_name: 0.404192
+  (0) 0:low:manila --> L-region_name: 0.404192
+  (0) 0:prefix5:Manil --> L-region_name: 0.404192
+  (0) 0:suffix5:anila --> L-region_name: 0.404192
+  (0) 0:suffix3:ila --> L-region_name: 0.404192
+  (0) 0:suffix2:la --> L-region_name: 0.367078
+  (0) 0:suffix2:la --> I-pastor_name: 0.500701
+  (0) 0:low:baguio --> U-region_name: 0.727178
+  (0) 0:prefix5:Bagui --> U-region_name: 0.727178
+  (0) 0:prefix2:Ba --> U-region_name: 0.727178
+  (0) 0:suffix5:aguio --> U-region_name: 0.727178
+  (0) 0:suffix3:uio --> U-region_name: 0.727178
+  (0) 0:suffix2:io --> U-region_name: 0.727178
+  (0) -1:low:oversees --> U-branch_name: 0.016451
+  (0) 0:low:joel --> B-pastor_name: 0.344129
+  (0) 0:prefix5:Joel --> B-pastor_name: 0.344129
+  (0) 0:prefix2:Jo --> B-pastor_name: 0.820570
+  (0) 0:suffix5:Joel --> B-pastor_name: 0.344129
+  (0) 0:suffix3:oel --> B-pastor_name: 0.344129
+  (0) 1:low:gabatin --> B-pastor_name: 0.344129
+  (0) -1:low:joel --> L-pastor_name: 0.405372
+  (0) 0:low:gabatin --> L-pastor_name: 0.405372
+  (0) 0:prefix5:Gabat --> L-pastor_name: 0.405372
+  (0) 0:prefix2:Ga --> L-pastor_name: 0.405372
+  (0) 0:suffix5:batin --> L-pastor_name: 0.405372
+  (0) 0:suffix3:tin --> L-pastor_name: 0.405372
+  (0) -1:low:john --> L-pastor_name: 0.077868
+  (0) 0:low:smith --> L-pastor_name: 0.077868
+  (0) 0:prefix5:Smith --> L-pastor_name: 0.077868
+  (0) 0:prefix2:Sm --> L-pastor_name: 0.077868
+  (0) 0:suffix5:Smith --> L-pastor_name: 0.077868
+  (0) 0:low:mark --> B-pastor_name: 0.033228
+  (0) 0:prefix5:Mark --> B-pastor_name: 0.033228
+  (0) 0:suffix5:Mark --> B-pastor_name: 0.033228
+  (0) 0:suffix3:ark --> B-pastor_name: 0.033228
+  (0) 0:suffix2:rk --> B-pastor_name: 0.033228
+  (0) 1:low:dela --> B-pastor_name: 0.033228
+  (0) -1:low:mark --> I-pastor_name: 0.528317
+  (0) 0:low:dela --> I-pastor_name: 0.528317
+  (0) 0:prefix5:Dela --> I-pastor_name: 0.528317
+  (0) 0:prefix2:De --> I-pastor_name: 0.528317
+  (0) 0:suffix5:Dela --> I-pastor_name: 0.528317
+  (0) 0:suffix3:ela --> I-pastor_name: 0.528317
+  (0) 1:low:cruz --> I-pastor_name: 0.519085
+  (0) 0:low:cruz --> L-pastor_name: 0.277591
+  (0) 0:prefix5:Cruz --> L-pastor_name: 0.277591
+  (0) 0:prefix2:Cr --> L-pastor_name: 0.277591
+  (0) 0:suffix5:Cruz --> L-pastor_name: 0.277591
+  (0) 0:suffix3:ruz --> L-pastor_name: 0.277591
+  (0) 0:suffix2:uz --> L-pastor_name: 0.277591
+  (0) -1:low:named --> B-pastor_name: 0.078259
+  (0) 1:low:pastoring --> L-pastor_name: 0.163007
+  (0) 1:low:santos --> B-pastor_name: 0.314476
+  (0) 0:low:santos --> L-pastor_name: 0.325773
+  (0) 0:prefix5:Santo --> L-pastor_name: 0.325773
+  (0) 0:suffix5:antos --> L-pastor_name: 0.325773
+  (0) 0:suffix3:tos --> L-pastor_name: 0.325773
+  (0) -1:low:maria --> L-pastor_name: 0.128046
+  (0) 0:low:reyes --> L-pastor_name: 0.128046
+  (0) 0:prefix5:Reyes --> L-pastor_name: 0.128046
+  (0) 0:suffix5:Reyes --> L-pastor_name: 0.128046
+  (0) 1:low:lim --> B-pastor_name: 0.215906
+  (0) 0:low:lim --> L-pastor_name: 0.171743
+  (0) 0:prefix5:Lim --> L-pastor_name: 0.171743
+  (0) 0:prefix2:Li --> L-pastor_name: 0.171743
+  (0) 0:suffix5:Lim --> L-pastor_name: 0.171743
+  (0) 0:suffix3:Lim --> L-pastor_name: 0.171743
+}
+

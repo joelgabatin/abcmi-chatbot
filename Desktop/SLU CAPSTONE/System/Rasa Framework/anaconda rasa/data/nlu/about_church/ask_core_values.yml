@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_core_values
+  examples: |
+    - what are the core values of the church?
+    - what are the church's core values?
+    - tell me about the core values
+    - what values does the church hold?
+    - what are ABCMI's core values?
+    - what are your values?
+    - what values guide the church?
+    - list the core values of the church
+    - what does the church value?
+    - what are the values of ABCMI Church?

@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_register_event
+  examples: |
+    - register me in [Youth Camp 2026](event_name)
+    - I want to register for [Youth Camp 2026](event_name)
+    - sign me up for [Easter Celebration](event_name)
+    - how do I register for [Youth Camp 2026](event_name)?
+    - can I register for [Leadership Conference](event_name)?
+    - I would like to join [Youth Camp 2026](event_name)
+    - register me for [Easter Celebration](event_name)
+    - how can I sign up for [Leadership Conference](event_name)?
+    - enroll me in [Youth Camp 2026](event_name)
+    - I want to join [Easter Celebration](event_name)
+    - sign me up for [Youth Camp 2026](event_name)
+    - how do I enroll for [Leadership Conference](event_name)?
+    - register me to [Easter Celebration](event_name)
+    - I want to participate in [Youth Camp 2026](event_name)
+    - can you register me for [Leadership Conference](event_name)?

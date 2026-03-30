@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer international branches question
+  steps:
+  - intent: ask_international_branches
+  - action: action_get_international_branches

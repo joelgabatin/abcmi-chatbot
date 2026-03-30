@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_driving_force
+  examples: |
+    - what is the driving force of the church?
+    - what drives the church?
+    - what is the church's driving force?
+    - what propels the church forward?
+    - what motivates the church?
+    - what is ABCMI's driving force?
+    - what drives ABCMI?
+    - tell me the driving force of the church
+    - what is the force that drives the church?
+    - what motivates ABCMI Church?

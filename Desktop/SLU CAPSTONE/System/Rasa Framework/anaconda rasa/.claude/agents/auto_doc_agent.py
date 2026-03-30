@@ -12,7 +12,7 @@ import json
 import os
 import re
 import subprocess
-import sys
+import sys 
 import textwrap
 from datetime import datetime
 from pathlib import Path
@@ -25,12 +25,9 @@ DOCS_DIR     = PROJECT_ROOT / ".claude" / "docs" / "features"
 FEATURE_FILES = {
     "grace_api.py",
     "database.py",
-    "admin.py",
-    "seed.py",
-    "migrate.py",
-    "run_grace_chatbot.py",
+    "config.py",
 }
-FEATURE_DIRS  = {"actions", "data"}          # watch all files inside these dirs
+FEATURE_DIRS  = {"actions", "data", "scripts", "frontend", "api"}  # watch all files inside these dirs
 FEATURE_EXTS  = {".py", ".yml", ".yaml"}
 
 

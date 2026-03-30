@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_resident_pastor_of_branch
+  examples: |
+    - who is the resident pastor of [Ansagan](branch_name)?
+    - who is the pastor of [Ansagan](branch_name) branch?
+    - who leads the [Ansagan](branch_name) branch?
+    - who is the resident pastor at [Camp 8](branch_name)?
+    - who is the pastor in charge of [Kias](branch_name)?
+    - who is the head pastor of [Patiacan](branch_name) branch?
+    - who pastors the [Dianawan](branch_name) branch?
+    - who is the resident pastor of [Main Church](branch_name)?
+    - who leads the [San Carlos](branch_name) congregation?
+    - tell me the resident pastor of [Ansagan](branch_name)
+    - what pastor is assigned to [Camp 8](branch_name)?
+    - who is the pastor serving at [Kias](branch_name) branch?
+    - who is the resident pastor of [Patiacan](branch_name) branch?
+    - give me the name of the resident pastor at [Ansagan](branch_name)
+    - which pastor oversees [Dianawan](branch_name)?

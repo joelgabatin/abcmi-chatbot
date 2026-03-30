@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_office_address
+    examples: |
+      - What is your office address?
+      - Where is your office located?
+      - Can you give me your address?
+      - Office location
+      - How do I get to your office?

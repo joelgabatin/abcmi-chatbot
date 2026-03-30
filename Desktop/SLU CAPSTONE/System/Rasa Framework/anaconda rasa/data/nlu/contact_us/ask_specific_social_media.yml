@@ -1,0 +1,15 @@
+version: "3.1"
+nlu:
+  - intent: ask_specific_social_media
+    examples: |
+      - Do you have [Facebook](social_platform)?
+      - Do you have [TikTok](social_platform)?
+      - Do you have [Instagram](social_platform)?
+      - Do you have [YouTube](social_platform)?
+      - Do you have [Spotify](social_platform)?
+      - What is your [Facebook](social_platform) page?
+      - Can I get your [TikTok](social_platform) link?
+      - Do you have an official [Instagram](social_platform) account?
+      - Where can I find your [YouTube](social_platform) channel?
+      - Are you on [Spotify](social_platform)?
+      - Do you have social media or [Facebook](social_platform)?

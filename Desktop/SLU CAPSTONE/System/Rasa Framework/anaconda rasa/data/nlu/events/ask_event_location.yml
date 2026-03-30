@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_event_location
+  examples: |
+    - where is [Youth Camp 2026](event_name) located?
+    - where will [Youth Camp 2026](event_name) be held?
+    - what is the location of [Easter Celebration](event_name)?
+    - where is [Leadership Conference](event_name)?
+    - what is the venue of [Youth Camp 2026](event_name)?
+    - where is [Easter Celebration](event_name) taking place?
+    - where can I find [Leadership Conference](event_name)?
+    - what is the address of [Youth Camp 2026](event_name)?
+    - where will [Easter Celebration](event_name) happen?
+    - venue of [Leadership Conference](event_name)
+    - where is [Youth Camp 2026](event_name) going to be held?
+    - where exactly is [Easter Celebration](event_name)?
+    - give me the location of [Leadership Conference](event_name)
+    - where is the [Youth Camp 2026](event_name) event?
+    - what is the place of [Easter Celebration](event_name)?

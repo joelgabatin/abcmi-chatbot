@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer pastor branch schedule follow-up
+  steps:
+  - intent: ask_pastor_branch_schedule
+  - action: action_get_pastor_branch_schedule

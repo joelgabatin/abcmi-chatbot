@@ -1,0 +1,71 @@
+version: "3.1"
+
+# ── Intents ────────────────────────────────────────────────────────────────────
+# Training examples live in data/nlu/<feature>/<feature>.yml
+intents:
+  # Greetings & social
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+  # Church identity (about_church)
+  - ask_mission
+  - ask_vision
+  - ask_history
+  - ask_statement_of_belief
+  - ask_specific_belief
+  - ask_driving_force
+  - ask_core_values
+  - ask_church_founders
+
+  # Branches
+  - ask_branches
+  - ask_total_branches
+  - ask_local_branches
+  - ask_international_branches
+  - select_region
+  - select_branch
+  - ask_branch_schedule
+  - ask_branch_location
+
+  # Prayer
+  - ask_prayer_request
+  - ask_how_to_send_prayer
+
+  # Ministries
+  - ask_all_ministries
+  - ask_ministry_description
+  - ask_join_ministry
+  - ask_join_requirements
+
+  # Events
+  - ask_upcoming_events
+  - ask_past_events
+  - ask_register_event
+  - ask_event_time
+  - ask_event_date
+  - ask_event_location
+  - ask_event_slots
+
+  # Pastors
+  - ask_pastors
+  - ask_specific_pastor
+  - ask_pastor_branch_schedule
+  - ask_resident_pastor_of_branch
+  - ask_main_branch
+  - ask_branches_by_region
+  - ask_pastors_by_region
+  - ask_senior_pastor
+  - ask_administrative_pastor
+
+  # Contact Us
+  - ask_email
+  - ask_phone_number
+  - ask_office_hours
+  - ask_office_address
+  - ask_social_media
+  - ask_specific_social_media

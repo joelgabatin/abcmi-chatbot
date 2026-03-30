@@ -1,0 +1,21 @@
+version: "3.1"
+
+nlu:
+- intent: ask_branches
+  examples: |
+    - where are your branches?
+    - branches of ABCMI
+    - what are the church branches?
+    - what are the branches of ABCMI?
+    - where is the church located?
+    - find a church near me
+    - what branches does ABCMI have?
+    - where can I find a Grace Church?
+    - list all branches
+    - church locations
+    - where are you located?
+    - how do I find a branch?
+    - what are the locations of ABCMI?
+    - I want to find a church near me
+    - show me the branches
+    - show me the brances of ABCMI

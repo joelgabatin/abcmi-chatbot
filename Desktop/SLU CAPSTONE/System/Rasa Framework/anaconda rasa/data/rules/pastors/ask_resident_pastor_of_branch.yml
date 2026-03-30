@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer resident pastor of branch query
+  steps:
+  - intent: ask_resident_pastor_of_branch
+  - action: action_get_resident_pastor_of_branch

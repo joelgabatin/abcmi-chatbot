@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer when a specific event is happening
+  steps:
+  - intent: ask_event_date
+  - action: action_get_event_date

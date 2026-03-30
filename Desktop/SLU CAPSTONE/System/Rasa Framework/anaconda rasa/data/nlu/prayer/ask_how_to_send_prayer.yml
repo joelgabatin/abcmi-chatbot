@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_how_to_send_prayer
+  examples: |
+    - how can I send a prayer request?
+    - how do I send a prayer request?
+    - how do I submit a prayer request?
+    - where can I send my prayer request?
+    - what are the ways to send a prayer request?
+    - how can I request a prayer?
+    - how to submit prayer request
+    - how can I submit my prayer request?
+    - is there a way to send a prayer request?
+    - where do I go to send a prayer request?
+    - can I send a prayer request online?
+    - how do I request prayer from the church?
+    - what is the process for submitting a prayer request?
+    - I want to send a prayer request, how?
+    - how to request prayer

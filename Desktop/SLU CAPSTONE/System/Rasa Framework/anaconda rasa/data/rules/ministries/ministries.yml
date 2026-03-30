@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+
+- rule: General ministry join requirements
+  steps:
+  - intent: ask_join_requirements
+  - action: utter_ministry_join_requirements
+
+- rule: List all ministries
+  steps:
+  - intent: ask_all_ministries
+  - action: action_get_all_ministries
+
+- rule: Describe a ministry
+  steps:
+  - intent: ask_ministry_description
+  - action: action_get_ministry_description
+
+- rule: Join a specific ministry
+  steps:
+  - intent: ask_join_ministry
+  - action: action_get_ministry_join_info

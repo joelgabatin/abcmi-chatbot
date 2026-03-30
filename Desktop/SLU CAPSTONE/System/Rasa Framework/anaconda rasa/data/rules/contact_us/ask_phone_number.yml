@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: answer phone number query
+    steps:
+      - intent: ask_phone_number
+      - action: action_get_phone_number

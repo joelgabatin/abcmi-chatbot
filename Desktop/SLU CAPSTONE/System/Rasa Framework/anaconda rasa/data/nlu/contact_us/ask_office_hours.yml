@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_office_hours
+    examples: |
+      - What are your office hours?
+      - When are you open?
+      - What time do you open and close?
+      - Office timings
+      - When can I visit the office?

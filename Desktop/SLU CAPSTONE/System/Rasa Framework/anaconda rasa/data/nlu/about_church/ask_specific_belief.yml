@@ -1,0 +1,41 @@
+version: "3.1"
+
+nlu:
+- intent: ask_specific_belief
+  examples: |
+    - does the church believe in the holy trinity?
+    - do you believe in the holy trinity?
+    - does ABCMI believe in the holy trinity?
+    - is the holy trinity part of the church's beliefs?
+    - does the church believe in the holy spirit?
+    - do you believe in the holy spirit?
+    - does the church believe in Jesus Christ?
+    - does ABCMI believe in Jesus?
+    - does the church believe in salvation?
+    - do you believe in salvation?
+    - does ABCMI believe in salvation?
+    - does the church believe in the virgin birth?
+    - do you believe in the virgin birth?
+    - does the church believe in the resurrection?
+    - do you believe in the resurrection?
+    - does the church believe in the Bible?
+    - does ABCMI believe in the Bible?
+    - does the church believe in heaven?
+    - does the church believe in hell?
+    - does the church believe in heaven and hell?
+    - does ABCMI believe in heaven and hell?
+    - does the church believe in eternal life?
+    - do you believe in eternal life?
+    - does the church believe in baptism?
+    - does ABCMI believe in baptism?
+    - does the church believe in the second coming of Jesus?
+    - does ABCMI believe in the second coming?
+    - does the church believe in grace?
+    - does ABCMI believe in grace?
+    - does the church believe in prayer?
+    - is prayer part of the church's beliefs?
+    - does the church believe in repentance?
+    - does ABCMI believe in repentance?
+    - is the holy trinity a belief of ABCMI?
+    - does the church believe in God?
+    - does ABCMI believe in one God?

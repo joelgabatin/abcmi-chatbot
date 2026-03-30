@@ -1,26 +1,21 @@
 {
   "permissions": {
     "allow": [
-      "Bash(conda run -n rasa210 python -c \":*)",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa210/python.exe\" -c \":*)",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \":*)",
-      "Skill(update-config)",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"\nimport requests, json\n\nSUPABASE_URL = 'https://hxeyrlacblbbfflfyqyb.supabase.co'\nTOKEN = 'sbp_d015af5b3ab0cd13cc09da20ea1e2101194c689d'\n\nheaders = {\n    'apikey': TOKEN,\n    'Authorization': f'Bearer {TOKEN}',\n    'Accept': 'application/openapi+json'\n}\n\nr = requests.get\\(f'{SUPABASE_URL}/rest/v1/', headers=headers\\)\nprint\\('Status:', r.status_code\\)\nif r.status_code == 200:\n    data = r.json\\(\\)\n    paths = data.get\\('paths', {}\\)\n    tables = [p.strip\\('/'\\) for p in paths.keys\\(\\) if p.strip\\('/'\\)]\n    print\\('Tables/Views:'\\)\n    for t in sorted\\(tables\\):\n        print\\(' -', t\\)\n    print\\(\\)\n    print\\('Total:', len\\(tables\\)\\)\nelse:\n    print\\(r.text[:500]\\)\n\")",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"\nimport requests, json\n\nPROJECT_REF = 'hxeyrlacblbbfflfyqyb'\nTOKEN = 'sbp_d015af5b3ab0cd13cc09da20ea1e2101194c689d'\nheaders = {'Authorization': f'Bearer {TOKEN}', 'Content-Type': 'application/json'}\n\ntables = ['church_VMD', 'church_beliefs', 'church_core_values', 'church_history', 'profiles']\n\nfor table in tables:\n    r = requests.post\\(\n        f'https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query',\n        headers=headers,\n        json={'query': f\\\\\"SELECT * FROM {table} LIMIT 3;\\\\\"}\n    \\)\n    print\\(f'=== {table} ==='\\)\n    try:\n        data = r.json\\(\\)\n        print\\(json.dumps\\(data, indent=2\\)\\)\n    except:\n        print\\(r.text\\)\n    print\\(\\)\n\")",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"\nimport requests, json\n\nPROJECT_REF = 'hxeyrlacblbbfflfyqyb'\nTOKEN = 'sbp_d015af5b3ab0cd13cc09da20ea1e2101194c689d'\nheaders = {'Authorization': f'Bearer {TOKEN}', 'Content-Type': 'application/json'}\n\nr = requests.post\\(\n    f'https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query',\n    headers=headers,\n    json={'query': 'SELECT * FROM \\\\\"church_VMD\\\\\" LIMIT 3;'}\n\\)\nprint\\(json.dumps\\(r.json\\(\\), indent=2\\)\\)\n\")",
+      "Bash(conda run:*)",
+      "Bash(start frontend/*)",
       "mcp__supabase__list_tables",
       "mcp__supabase__execute_sql",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"import sanic; print\\(''sanic:'', sanic.__version__\\)\")",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"import websockets; print\\(''websockets:'', websockets.__version__\\)\")",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"import rasa_sdk; print\\(''rasa_sdk:'', rasa_sdk.__version__\\)\")",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -m pip install \"websockets==10.4\" 2>&1)",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"from sanic import Sanic; print\\('sanic import OK'\\)\" 2>&1)",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -m pip show supabase realtime sanic rasa-sdk)",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -m pip install \"supabase==1.2.1\" 2>&1)",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -m pip install \"supabase==1.2.0\" 2>&1)",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"from supabase import create_client; print\\(''supabase import OK''\\)\")",
-      "Bash(\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" -c \"from sanic import Sanic; print\\(''sanic import OK''\\)\")",
-      "Bash(conda run:*)"
+      "mcp__supabase__apply_migration",
+      "Bash(grep -r domain 'C:\\\\Users\\\\Acer Nitro 5\\\\Desktop\\\\GITHUB REPOSITORIES\\\\RASA DEVELOPMENT VERSIONS\\\\abcmi-chatbot\\\\Desktop\\\\SLU CAPSTONE\\\\System\\\\Rasa Framework\\\\anaconda rasa' --include=*.yml --include=*.py --include=*.sh --include=*.bat -l)",
+      "Bash(grep -r domain.yml 'C:\\\\Users\\\\Acer Nitro 5\\\\Desktop\\\\GITHUB REPOSITORIES\\\\RASA DEVELOPMENT VERSIONS\\\\abcmi-chatbot\\\\Desktop\\\\SLU CAPSTONE\\\\System\\\\Rasa Framework\\\\anaconda rasa' --include=*.yml --include=*.py --include=*.sh --include=*.bat -l)",
+      "Bash(find '/c/Users/Acer Nitro 5/anaconda3/envs/RASA-310/lib/site-packages' -name METADATA -path */rasa_pro*)",
+      "Bash(xargs grep:*)",
+      "Bash(find '/c/Users/Acer Nitro 5/anaconda3/envs/RASA-310/lib/site-packages' -name METADATA -path *rasa*)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Acer Nitro 5\\Desktop\\GITHUB REPOSITORIES\\RASA DEVELOPMENT VERSIONS\\abcmi-chatbot\\Desktop\\SLU CAPSTONE\\System\\Rasa Framework\\anaconda rasa\\actions",
+      "C:\\Users\\Acer Nitro 5\\Desktop\\GITHUB REPOSITORIES\\RASA DEVELOPMENT VERSIONS\\abcmi-chatbot\\Desktop\\SLU CAPSTONE\\System\\Rasa Framework\\anaconda rasa\\scripts",
+      "C:\\Users\\Acer Nitro 5\\.claude"
     ]
   },
   "hooks": {
@@ -31,6 +26,10 @@
           {
             "type": "command",
             "command": "\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" \".claude/agents/error_log_agent.py\""
+          },
+          {
+            "type": "command",
+            "command": "\"/c/Users/Acer Nitro 5/anaconda3/envs/rasa310/python.exe\" \".claude/agents/db_health_agent.py\""
           }
         ]
       }
