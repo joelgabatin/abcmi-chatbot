@@ -1,0 +1,1 @@
+from .ministry import Ministry
