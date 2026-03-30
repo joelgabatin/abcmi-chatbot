@@ -1,0 +1,34 @@
+version: "3.1"
+
+nlu:
+- intent: ask_pastors_by_region
+  examples: |
+    - who are the pastors in [CAR](region_name)?
+    - who are the pastors in [CAR](region_name) region?
+    - who are the resident pastors in [CAR](region_name)?
+    - list the pastors in [Region 1](region_name)
+    - show me pastors in [Region 1](region_name)
+    - what pastors serve in [International](region_name)?
+    - who are the pastors of [International](region_name)?
+    - who are the resident pastors of [International](region_name)?
+    - pastors in [Region 2](region_name) region
+    - which pastors are assigned in [Region 2](region_name)?
+    - who leads the branches in [Region 2](region_name)?
+    - list all pastors in [Region 2](region_name) region
+    - who are the pastors serving in [CAR](region_name)?
+    - give me the pastors in [Baguio](region_name)
+    - what are the names of the pastors in [CAR](region_name)?
+    - who leads the branches in [REGION 1](region_name)?
+    - who are the pastors in [REGION 1](region_name)?
+    - list the pastors in [REGION 1](region_name)
+    - who are the pastors in [REGION 2](region_name)?
+    - pastors in [REGION 2](region_name)
+    - who leads the branches in [INTERNATIONAL](region_name)?
+    - who are the pastors in [INTERNATIONAL](region_name)?
+    - who are the pastors in [region 1](region_name)?
+    - list the pastors in [region 1](region_name)
+    - who leads the branches in [region 2](region_name)?
+    - who are the pastors in [region 2](region_name)?
+    - who are the pastors in [international](region_name)?
+    - who leads the branches in [car](region_name)?
+    - pastors in [car](region_name) region

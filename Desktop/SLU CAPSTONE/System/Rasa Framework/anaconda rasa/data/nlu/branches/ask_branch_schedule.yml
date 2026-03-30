@@ -1,0 +1,28 @@
+version: "3.1"
+
+nlu:
+- intent: ask_branch_schedule
+  examples: |
+    - what is the service schedule of [Ansagan](branch_name) branch?
+    - what is the service schedule of [Ansagan](branch_name)?
+    - when is the service at [Ansagan](branch_name)?
+    - what time does [Ansagan](branch_name) branch hold service?
+    - service schedule of [Camp 8](branch_name)
+    - show me the schedule of [Camp 8](branch_name) branch
+    - when does [Main Church](branch_name) hold worship service?
+    - what is the worship schedule of [Main Church](branch_name)?
+    - what time is the service at [Kias](branch_name) branch?
+    - schedule of [Kias](branch_name)
+    - when is the church service at [Patiacan](branch_name)?
+    - what time does [Patiacan](branch_name) have service?
+    - what are the services at [Dianawan](branch_name) branch?
+    - show me the schedule of [Dianawan](branch_name)
+    - what is the schedule of [San Carlos](branch_name) branch?
+    - service time of [San Carlos](branch_name)
+    - when is the Sunday service at [Ansagan](branch_name)?
+    - what schedule does [Ansagan](branch_name) branch have?
+    - give me the service schedule for [Camp 8](branch_name)
+    - what are the service times at [Main Church](branch_name)?
+    - when does [Kias](branch_name) branch hold service?
+    - what is the service time of [Ansagan](branch_name) branch?
+    - what time is worship at [San Carlos](branch_name) branch?

@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer senior pastor / overseer query
+  steps:
+  - intent: ask_senior_pastor
+  - action: action_get_senior_pastor

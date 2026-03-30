@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: answer specific social media query
+    steps:
+      - intent: ask_specific_social_media
+      - action: action_get_specific_social_media

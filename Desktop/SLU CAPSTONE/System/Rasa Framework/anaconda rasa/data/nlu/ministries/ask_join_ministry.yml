@@ -1,0 +1,15 @@
+version: "3.1"
+nlu:
+  - intent: ask_join_ministry
+    examples: |
+      - How can I join the [Music Ministry](ministry_name)?
+      - I want to be part of the [Youth Ministry](ministry_name)
+      - I want to join the [Ushering Ministry](ministry_name)
+      - How do I become a member of the [Prayer Ministry](ministry_name)?
+      - I would like to join the [Women's Ministry](ministry_name)
+      - How can I be part of the [Men's Ministry](ministry_name)?
+      - Sign me up for the [Children's Ministry](ministry_name)
+      - I want to volunteer in the [Worship Ministry](ministry_name)
+      - How do I join [Music Ministry](ministry_name)?
+      - Can I join the [Youth Ministry](ministry_name)?
+      - How do I sign up for the [Outreach Ministry](ministry_name)?

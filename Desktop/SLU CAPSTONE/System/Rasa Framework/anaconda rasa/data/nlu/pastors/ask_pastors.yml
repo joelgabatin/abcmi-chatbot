@@ -1,0 +1,19 @@
+version: "3.1"
+
+nlu:
+- intent: ask_pastors
+  examples: |
+    - who are the pastors of the church?
+    - who are your pastors?
+    - list all pastors
+    - name the pastors of ABCMI
+    - who are the pastors of ABCMI?
+    - who are the church pastors?
+    - show me the pastors
+    - tell me about the pastors
+    - all pastors of the church
+    - who leads the church?
+    - who are your church leaders?
+    - give me the list of pastors
+    - who are the pastors and their branches?
+    - list all pastors and their assigned branches

@@ -3,7 +3,7 @@
 Run the chatbot test suite.
 
 ```bash
-conda run -n rasa310 python test_grace_bot.py
+conda run -n rasa310 python tests/test_grace_bot.py
 ```
 
 Or run Rasa's built-in tests (requires trained model):

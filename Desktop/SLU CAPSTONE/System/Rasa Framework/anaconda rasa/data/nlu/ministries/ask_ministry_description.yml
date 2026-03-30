@@ -1,0 +1,17 @@
+version: "3.1"
+nlu:
+  - intent: ask_ministry_description
+    examples: |
+      - What is the [Music Ministry](ministry_name)?
+      - Tell me about the [Youth Ministry](ministry_name)
+      - Describe the [Ushering Ministry](ministry_name)
+      - What does the [Prayer Ministry](ministry_name) do?
+      - What is the [Women's Ministry](ministry_name)?
+      - Tell me about the [Men's Ministry](ministry_name)
+      - What is the [Children's Ministry](ministry_name)?
+      - Describe the [Worship Ministry](ministry_name)
+      - What is [Music Ministry](ministry_name) about?
+      - Tell me more about the [Outreach Ministry](ministry_name)
+      - What does the [Youth Ministry](ministry_name) do?
+      - Can you describe the [Ushering Ministry](ministry_name)?
+      - What is the [Prayer Ministry](ministry_name) about?

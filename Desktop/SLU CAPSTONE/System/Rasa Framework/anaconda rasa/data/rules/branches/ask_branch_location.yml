@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer location of a specific branch
+  steps:
+  - intent: ask_branch_location
+  - action: action_get_branch_location

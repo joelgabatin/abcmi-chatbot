@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer pastors by region query
+  steps:
+  - intent: ask_pastors_by_region
+  - action: action_get_pastors_by_region

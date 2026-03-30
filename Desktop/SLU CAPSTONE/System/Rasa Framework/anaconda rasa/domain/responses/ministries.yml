@@ -1,0 +1,14 @@
+version: "3.1"
+
+responses:
+  utter_ministry_join_requirements:
+    - text: |
+        Joining a ministry is open to everyone who has a heart to serve!
+
+        Here are the general steps:
+
+        • Choose a ministry that fits your passion or gifts.
+        • Reach out to the ministry overseer or co-leader directly.
+        • Attend one of their meetings or services to get started.
+
+        You can ask me "What are your ministries?" to see the full list, or ask about a specific ministry like "How can I join the Youth Ministry?" and I'll give you their contact details.

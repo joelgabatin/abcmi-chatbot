@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: answer office address query
+    steps:
+      - intent: ask_office_address
+      - action: action_get_office_address

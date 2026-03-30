@@ -1,0 +1,6 @@
+version: "3.1"
+stories:
+  - story: ask specific social media
+    steps:
+      - intent: ask_specific_social_media
+      - action: action_get_specific_social_media

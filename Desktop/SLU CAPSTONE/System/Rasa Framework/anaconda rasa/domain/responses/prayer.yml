@@ -1,0 +1,37 @@
+version: "3.1"
+
+responses:
+  utter_prayer_welcome:
+    - text: >
+        You are so welcome here. We are honored that you reached out to us.
+        You don't need to be a member — God's love and our prayers are for everyone.
+
+        I'll just need a few details so our prayer team can reach you.
+        Everything you share is treated with complete confidentiality.
+
+  utter_ask_prayer_name:
+    - text: "May I know your name, please? (You may type 'skip' if you prefer not to.)"
+
+  utter_ask_prayer_phone:
+    - text: "What is the best phone number to reach you?"
+
+  utter_ask_prayer_address:
+    - text: "Could you share your address? (You may type 'skip' if you prefer not to.)"
+
+  utter_ask_prayer_request:
+    - text: >
+        Please share what's on your heart — what would you like us to pray for?
+        Take your time. There is no judgment here, only love and support.
+
+  utter_ask_prayer_face_to_face:
+    - text: "Would you like one of our pastors to visit you in person for prayer and support? (yes / no)"
+
+  utter_how_to_send_prayer:
+    - text: |
+        You can send a prayer request in two ways:
+
+        1. Visit our Prayer Request page:
+        http://localhost:3000/prayer-request
+        2. Right here through me! Just say "I need prayer" or "I want to submit a prayer request" and I'll guide you through it step by step.
+
+        Either way, your request will be received with care and confidentiality. 🙏

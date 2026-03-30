@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_upcoming_events
+  examples: |
+    - what are the upcoming events of the church?
+    - what events are coming up?
+    - show me upcoming events
+    - list all upcoming church events
+    - what events does ABCMI have?
+    - are there any upcoming events?
+    - what are the church events?
+    - upcoming events of ABCMI
+    - what events are scheduled?
+    - tell me about upcoming church events
+    - what are the next events of ABCMI?
+    - any upcoming events at ABCMI?
+    - show me the church events
+    - what activities are coming up?
+    - what are the planned events of the church?

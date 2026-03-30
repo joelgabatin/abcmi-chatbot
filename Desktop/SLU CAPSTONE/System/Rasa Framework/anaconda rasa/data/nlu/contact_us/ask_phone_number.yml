@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_phone_number
+    examples: |
+      - What is your phone number?
+      - Can I call you?
+      - How can I reach you by phone?
+      - Phone number please
+      - I need your contact number

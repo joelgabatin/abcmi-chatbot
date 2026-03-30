@@ -1,0 +1,15 @@
+version: "3.1"
+nlu:
+  - intent: ask_all_ministries
+    examples: |
+      - What are your ministries?
+      - Show me all ministries
+      - What groups can I join?
+      - What ministries do you have?
+      - List all your ministries
+      - Tell me about your ministries
+      - What church groups are available?
+      - What are the church ministries?
+      - Can you show me the ministries?
+      - What ministry groups does the church have?
+      - What are the available ministries?

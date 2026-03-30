@@ -1,0 +1,27 @@
+version: "3.1"
+
+nlu:
+- intent: select_region
+  examples: |
+    - CAR
+    - CAR region
+    - Cordillera
+    - Cordillera Administrative Region
+    - I'm in CAR
+    - Region I
+    - Region 1
+    - Ilocos
+    - Ilocos region
+    - Region I please
+    - Region II
+    - Region 2
+    - Cagayan Valley
+    - Region II please
+    - Region III
+    - Region 3
+    - Central Luzon
+    - Region III please
+    - International
+    - international branch
+    - abroad
+    - overseas

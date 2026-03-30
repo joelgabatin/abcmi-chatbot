@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_prayer_request
+  examples: |
+    - I need prayer
+    - can you pray for me?
+    - I would like to request a prayer
+    - I'm not a member but I need prayer
+    - I'm not a member but can someone pray for me?
+    - I need help, can you pray for me?
+    - please pray for my family
+    - I'm going through something difficult and need prayer
+    - I need spiritual help
+    - can the church pray for me even if I'm not a member?
+    - I want to submit a prayer request
+    - I'm not religious but I need prayer
+    - can I ask for a prayer?
+    - I'm struggling and I need someone to pray for me
+    - please I need prayer support

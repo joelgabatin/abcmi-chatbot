@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer local branches question
+  steps:
+  - intent: ask_local_branches
+  - action: action_get_local_branches

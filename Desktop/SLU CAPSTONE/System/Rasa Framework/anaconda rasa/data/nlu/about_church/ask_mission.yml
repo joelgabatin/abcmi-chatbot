@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_mission
+  examples: |
+    - what is the mission of the church?
+    - what's the church mission?
+    - tell me about the mission
+    - what do you stand for?
+    - what is your mission?
+    - what is our mission?
+    - what does the church aim to do?
+    - what is ABCMI Church's mission?

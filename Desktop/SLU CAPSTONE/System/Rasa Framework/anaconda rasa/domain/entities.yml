@@ -1,0 +1,10 @@
+version: "3.1"
+
+# ── Entities ───────────────────────────────────────────────────────────────────
+entities:
+  - pastor_name
+  - branch_name
+  - region_name
+  - event_name
+  - ministry_name
+  - social_platform

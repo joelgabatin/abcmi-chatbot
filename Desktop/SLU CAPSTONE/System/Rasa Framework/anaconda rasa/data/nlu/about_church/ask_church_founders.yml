@@ -1,0 +1,21 @@
+version: "3.1"
+
+nlu:
+- intent: ask_church_founders
+  examples: |
+    - who founded ABCMI?
+    - who are the founders of ABCMI?
+    - who is the founder of ABCMI?
+    - who are the founding fathers of ABCMI?
+    - who founded Grace Church?
+    - who established ABCMI?
+    - who started ABCMI?
+    - who are the foundresses of ABCMI?
+    - who founded this church?
+    - who is the founder of Grace Church?
+    - who established Grace Church?
+    - who are the founding pastors of ABCMI?
+    - tell me about the founders of ABCMI
+    - how was ABCMI founded?
+    - who started Grace Church?
+    - who founded the church?

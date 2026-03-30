@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_event_date
+  examples: |
+    - when is [Grand Easter Celebration 2026](event_name) happening?
+    - when is [Grand Easter Celebration 2026](event_name)?
+    - when will [Grand Easter Celebration 2026](event_name) happen?
+    - what date is [Grand Easter Celebration 2026](event_name)?
+    - when does [Youth Camp 2026](event_name) take place?
+    - when is [Youth Camp 2026](event_name) going to happen?
+    - what day is [Youth Camp 2026](event_name)?
+    - when will [Leadership Conference](event_name) be held?
+    - what is the date of [Grand Easter Celebration 2026](event_name)?
+    - when is [Leadership Conference](event_name) scheduled?
+    - tell me when [Youth Camp 2026](event_name) is happening
+    - when exactly is [Grand Easter Celebration 2026](event_name)?
+    - what is the schedule of [Leadership Conference](event_name)?
+    - when is [Youth Camp 2026](event_name) happening?
+    - on what date is [Leadership Conference](event_name)?

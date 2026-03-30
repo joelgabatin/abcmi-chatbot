@@ -1,0 +1,49 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1774599779.644325   28548 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1774599781.644269   28548 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-27 16:23:02 [1;30mWARNING [0m [34mrasa.utils.installation_utils[0m  - [33m{"warning": "TensorFlow is installed but Rasa was not installed with TensorFlow support, i.e. additional packages required to use NLU components have not been installed. For the most reliable setup, delete your current virtual environment, create a new one, and install Rasa again. Please follow the instructions at https://rasa.com/docs/pro/installation/python", "event": "installation_utils.tensorflow_installation", "level": "warning"}[0m
+2026-03-27 16:23:02 [1;30mWARNING [0m [34mrasa.utils.installation_utils[0m  - [33m{"warning": "TensorFlow is installed but Rasa was not installed with TensorFlow support, i.e. additional packages required to use NLU components have not been installed. For the most reliable setup, delete your current virtual environment, create a new one, and install Rasa again. Please follow the instructions at https://rasa.com/docs/pro/installation/python", "event": "installation_utils.tensorflow_installation", "level": "warning"}[0m
+2026-03-27 16:23:02 [1;30mINFO    [0m [34mrasa.tracing.backend_tracing_config[0m  - {"filename": "C:\\Users\\Acer Nitro 5\\Desktop\\GITHUB REPOSITORIES\\RASA DEVELOPMENT VERSIONS\\abcmi-chatbot\\Desktop\\SLU CAPSTONE\\System\\Rasa Framework\\anaconda rasa\\endpoints.yml", "event_info": "No backend tracing configuration found in endpoints.yml. Supported backend tracing types are 'jaeger' and 'otlp'. Backend tracing will not be configured.", "event": "endpoint.read.no_backend_tracing_config", "level": "info"}
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_mission'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_vision'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_history'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_statement_of_belief'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_specific_belief'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_driving_force'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_core_values'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_branches'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_total_branches'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_local_branches'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_international_branches'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_branch_schedule'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_branch_location'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_all_pastors'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_find_pastor'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'action_get_pastor_branch_schedule'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_branches'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_total_branches'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_local_branches'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_international_branches'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_mission'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_vision'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_history'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_statement_of_belief'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_driving_force'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_core_values'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_all_pastors'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_find_pastor'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Re-registered function for 'action_get_pastor_branch_schedule'.
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.endpoint[0m  - Starting action endpoint server...
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.endpoint[0m  - Starting plugins...
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.endpoint[0m  - Action endpoint is up and running on http://0.0.0.0:5055
+2026-03-27 16:23:03 [1;30mINFO    [0m [34mrasa_sdk.tracing.config[0m  - No endpoint for tracing type available in endpoints.yml,tracing will not be configured.
+Unable to start server
+Traceback (most recent call last):
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\site-packages\sanic\server\runners.py", line 235, in _serve_http_1
+    http_server = loop.run_until_complete(server_coroutine)
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\Acer Nitro 5\anaconda3\envs\RASA-310\lib\asyncio\base_events.py", line 1519, in create_server
+    raise OSError(err.errno, 'error while attempting '
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 5055): only one usage of each socket address (protocol/network address/port) is normally permitted

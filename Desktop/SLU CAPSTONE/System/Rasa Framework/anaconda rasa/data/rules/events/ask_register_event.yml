@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Handle event registration request
+  steps:
+  - intent: ask_register_event
+  - action: action_register_event

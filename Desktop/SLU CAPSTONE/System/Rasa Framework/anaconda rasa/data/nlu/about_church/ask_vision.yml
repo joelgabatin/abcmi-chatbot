@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_vision
+  examples: |
+    - what is the vision of the church?
+    - what's the church vision?
+    - tell me about the vision
+    - what is your vision?
+    - what is our vision?
+    - what is ABCMI Church's vision?
+    - where do you want to go?
+    - what is the church's future goal?

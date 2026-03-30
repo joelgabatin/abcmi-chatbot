@@ -1,0 +1,19 @@
+version: "3.1"
+
+nlu:
+- intent: ask_statement_of_belief
+  examples: |
+    - what does the church believe?
+    - what is the statement of belief?
+    - what are the beliefs of the church?
+    - tell me about your beliefs
+    - what do you believe in?
+    - what is ABCMI's statement of belief?
+    - what does ABCMI believe?
+    - tell me the church's beliefs
+    - what are the doctrines of the church?
+    - what is the church's faith statement?
+    - what are the articles of faith?
+    - tell me what the church stands for spiritually
+    - show me all the beliefs of the church
+    - list the beliefs of ABCMI

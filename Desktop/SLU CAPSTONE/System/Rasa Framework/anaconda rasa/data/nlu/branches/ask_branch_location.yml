@@ -1,0 +1,22 @@
+version: "3.1"
+
+nlu:
+- intent: ask_branch_location
+  examples: |
+    - where is [Ansagan](branch_name) branch located?
+    - where is [Ansagan](branch_name)?
+    - what is the location of [Ansagan](branch_name) branch?
+    - what is the address of [Ansagan](branch_name)?
+    - where can I find [Camp 8](branch_name) branch?
+    - where is [Camp 8](branch_name) located?
+    - location of [Main Church](branch_name) branch
+    - how do I get to [Kias](branch_name) branch?
+    - where is the [Patiacan](branch_name) branch?
+    - give me the location of [Patiacan](branch_name)
+    - address of [Dianawan](branch_name) branch
+    - where exactly is [San Carlos](branch_name) branch?
+    - how do I find the [San Carlos](branch_name) branch?
+    - where is [Ansagan](branch_name) church?
+    - what is the location of [Camp 8](branch_name)?
+    - find the [Main Church](branch_name) address
+    - where is [Kias](branch_name) branch found?

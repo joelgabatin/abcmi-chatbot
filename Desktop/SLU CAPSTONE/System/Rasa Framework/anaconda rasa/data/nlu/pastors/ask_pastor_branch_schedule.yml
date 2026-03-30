@@ -1,0 +1,19 @@
+version: "3.1"
+
+nlu:
+- intent: ask_pastor_branch_schedule
+  examples: |
+    - what is the service schedule?
+    - what is the branch service schedule?
+    - when are the services?
+    - what time is the service?
+    - what time does service start?
+    - give me the service schedule
+    - what is the schedule of the branch?
+    - tell me the service schedule
+    - when is the worship service?
+    - what day is the service?
+    - when does the branch have service?
+    - what time is the worship service?
+    - what is the church service schedule?
+    - when does service start?

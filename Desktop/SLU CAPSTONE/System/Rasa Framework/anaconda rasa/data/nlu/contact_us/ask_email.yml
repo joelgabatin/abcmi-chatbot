@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_email
+    examples: |
+      - What is your email?
+      - Can I have your email address?
+      - How can I email you?
+      - Email please
+      - I need your email

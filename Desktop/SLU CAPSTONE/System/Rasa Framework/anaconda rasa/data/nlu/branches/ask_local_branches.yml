@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_local_branches
+  examples: |
+    - how many local branches does ABCMI have?
+    - how many local branches are there?
+    - what are the local branches of ABCMI?
+    - list the local branches
+    - show me the local branches
+    - what are the branches here in the Philippines?
+    - how many church branches are in the Philippines?
+    - local branches of ABCMI
+    - give me the list of local branches
+    - name the local branches

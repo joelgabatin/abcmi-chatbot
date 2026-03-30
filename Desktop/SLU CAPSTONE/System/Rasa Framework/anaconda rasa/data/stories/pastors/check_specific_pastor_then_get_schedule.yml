@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: check specific pastor then get schedule
+  steps:
+  - intent: ask_specific_pastor
+  - action: action_find_pastor
+  - intent: ask_pastor_branch_schedule
+  - action: action_get_pastor_branch_schedule

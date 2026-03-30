@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer main branch query
+  steps:
+  - intent: ask_main_branch
+  - action: action_get_main_branch

@@ -1,0 +1,12 @@
+version: "3.1"
+
+stories:
+
+- story: Full prayer request flow
+  steps:
+  - intent: ask_prayer_request
+  - action: utter_prayer_welcome
+  - action: prayer_form
+  - active_loop: prayer_form
+  - active_loop: null
+  - action: action_process_prayer

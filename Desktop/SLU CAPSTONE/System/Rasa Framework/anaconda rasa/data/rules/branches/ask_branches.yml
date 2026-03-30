@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Start branch search when user asks about branches
+  steps:
+  - intent: ask_branches
+  - action: action_get_branches

@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_administrative_pastor
+  examples: |
+    - who is the administrative pastor of ABCMI?
+    - who is the ABCMI administrative pastor?
+    - who handles administration in ABCMI?
+    - who is the admin pastor of ABCMI?
+    - who manages ABCMI administration?
+    - who is the ABCMI administrator?
+    - tell me the administrative pastor of ABCMI
+    - who is the administrative head of ABCMI?
+    - who is in charge of ABCMI administration?
+    - who is the administrative pastor?
+    - who is the admin of Grace Church?
+    - who handles the administrative duties of ABCMI?
+    - who is the ABCMI administrative officer?
+    - who is the church administrator of ABCMI?
+    - who manages the church administration?

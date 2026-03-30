@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+- story: user asks general sign up requirements then lists ministries
+  steps:
+  - intent: ask_join_requirements
+  - action: utter_ministry_join_requirements
+  - intent: ask_all_ministries
+  - action: action_get_all_ministries
+
+- story: user lists ministries then asks about a specific one
+  steps:
+  - intent: ask_all_ministries
+  - action: action_get_all_ministries
+  - intent: ask_ministry_description
+  - action: action_get_ministry_description
+
+- story: user asks about ministry then decides to join
+  steps:
+  - intent: ask_ministry_description
+  - action: action_get_ministry_description
+  - intent: ask_join_ministry
+  - action: action_get_ministry_join_info
+
+- story: user asks general requirements then joins specific ministry
+  steps:
+  - intent: ask_join_requirements
+  - action: utter_ministry_join_requirements
+  - intent: ask_join_ministry
+  - action: action_get_ministry_join_info

@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer church founders query
+  steps:
+  - intent: ask_church_founders
+  - action: action_get_church_founders

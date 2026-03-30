@@ -1,89 +1,24 @@
+# ── Domain Index ───────────────────────────────────────────────────────────────
+#
+# This project uses a split domain structure inside the domain/ folder.
+# Edit the files there — NOT this file.
+#
+#   domain/intents.yml              — all intents
+#   domain/entities.yml             — all entities
+#   domain/slots.yml                — all slots
+#   domain/forms.yml                — all forms
+#   domain/actions.yml              — all custom actions
+#   domain/session_config.yml       — session settings
+#   domain/responses/greetings.yml  — greeting/general responses
+#   domain/responses/prayer.yml     — prayer responses
+#   domain/responses/ministries.yml — ministry responses
+#
+# Always run Rasa with the --domain flag pointing to the folder:
+#
+#   rasa train --domain domain/
+#   rasa run --enable-api --cors "*"
+#   rasa run actions
+#
+# ──────────────────────────────────────────────────────────────────────────────
+
 version: "3.1"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - ask_mission
-  - ask_vision
-  - ask_history
-  - ask_statement_of_belief
-  - ask_driving_force
-  - ask_core_values
-  - ask_branches
-  - ask_total_branches
-  - ask_local_branches
-  - ask_international_branches
-  - select_region
-  - select_branch
-  - ask_pastors
-  - ask_specific_pastor
-  - ask_pastor_branch_schedule
-
-entities:
-  - pastor_name
-
-slots:
-  selected_region_id:
-    type: float
-    mappings:
-      - type: custom
-  selected_region_name:
-    type: text
-    mappings:
-      - type: custom
-  last_pastor_name:
-    type: text
-    mappings:
-      - type: custom
-  last_branch_id:
-    type: float
-    mappings:
-      - type: custom
-  last_branch_name:
-    type: text
-    mappings:
-      - type: custom
-
-responses:
-  utter_greet:
-  - text: "Welcome to Grace Church! I'm here to help. How are you doing today?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-actions:
-  - action_get_branches
-  - action_get_total_branches
-  - action_get_local_branches
-  - action_get_international_branches
-  - action_get_mission
-  - action_get_vision
-  - action_get_history
-  - action_get_statement_of_belief
-  - action_get_driving_force
-  - action_get_core_values
-  - action_get_all_pastors
-  - action_find_pastor
-  - action_get_pastor_branch_schedule
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true

@@ -1,0 +1,68 @@
+version: "3.1"
+
+# ── Slots ──────────────────────────────────────────────────────────────────────
+slots:
+  # Branch finder flow
+  selected_region_id:
+    type: float
+    mappings:
+      - type: custom
+  selected_region_name:
+    type: text
+    mappings:
+      - type: custom
+  selected_branch_id:
+    type: float
+    mappings:
+      - type: custom
+
+  # Prayer request form
+  prayer_name:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: prayer_form
+            requested_slot: prayer_name
+  prayer_phone:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: prayer_form
+            requested_slot: prayer_phone
+  prayer_address:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: prayer_form
+            requested_slot: prayer_address
+  prayer_request:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: prayer_form
+            requested_slot: prayer_request
+  prayer_face_to_face:
+    type: bool
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: prayer_form
+            requested_slot: prayer_face_to_face
+
+  # Pastor lookup flow
+  last_pastor_name:
+    type: text
+    mappings:
+      - type: custom
+  last_branch_id:
+    type: float
+    mappings:
+      - type: custom
+  last_branch_name:
+    type: text
+    mappings:
+      - type: custom

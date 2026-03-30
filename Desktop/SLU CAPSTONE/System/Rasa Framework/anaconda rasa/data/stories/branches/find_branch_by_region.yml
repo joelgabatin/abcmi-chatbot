@@ -1,0 +1,12 @@
+version: "3.1"
+
+stories:
+
+- story: find branch by region
+  steps:
+  - intent: ask_branches
+  - action: action_get_branches
+  - intent: select_region
+  - action: action_get_branches
+  - intent: select_branch
+  - action: action_get_branches

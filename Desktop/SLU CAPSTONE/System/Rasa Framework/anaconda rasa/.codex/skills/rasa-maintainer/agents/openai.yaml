@@ -1,0 +1,3 @@
+display_name: Rasa Maintainer
+short_description: Maintain split Rasa data, actions, and Supabase-backed chatbot features in this repo.
+default_prompt: Maintain this Rasa chatbot project using the split data and domain structure, keeping changes consistent across NLU, rules, stories, actions, and Supabase settings lookups.

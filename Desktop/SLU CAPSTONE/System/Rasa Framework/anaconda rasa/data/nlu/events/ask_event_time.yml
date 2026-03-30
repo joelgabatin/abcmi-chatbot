@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_event_time
+  examples: |
+    - what time is [Youth Camp 2026](event_name)?
+    - what is the time of [Youth Camp 2026](event_name)?
+    - when does [Easter Celebration](event_name) start?
+    - what time does [Leadership Conference](event_name) begin?
+    - what is the schedule of [Youth Camp 2026](event_name)?
+    - when is [Easter Celebration](event_name)?
+    - what time is the [Leadership Conference](event_name)?
+    - what date is [Youth Camp 2026](event_name)?
+    - when will [Easter Celebration](event_name) be held?
+    - what is the date and time of [Leadership Conference](event_name)?
+    - tell me the time of [Youth Camp 2026](event_name)
+    - what day is [Easter Celebration](event_name)?
+    - when is [Youth Camp 2026](event_name) scheduled?
+    - what time does [Easter Celebration](event_name) start?
+    - when does [Leadership Conference](event_name) take place?

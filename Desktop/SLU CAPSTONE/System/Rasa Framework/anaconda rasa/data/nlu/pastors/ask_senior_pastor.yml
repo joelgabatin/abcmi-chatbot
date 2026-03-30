@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+- intent: ask_senior_pastor
+  examples: |
+    - who is the senior pastor of ABCMI?
+    - who is the ABCMI overseer?
+    - who is the overseer of ABCMI?
+    - who is the senior pastor?
+    - who leads ABCMI?
+    - who is the head of ABCMI?
+    - who is the ABCMI senior pastor?
+    - tell me the senior pastor of ABCMI
+    - who is the overall head pastor?
+    - who oversees ABCMI?
+    - who is the chief pastor of ABCMI?
+    - who is the senior pastor of Grace Church?
+    - who is the ABCMI national overseer?
+    - who is the overall pastor of ABCMI?
+    - who leads Grace Church?

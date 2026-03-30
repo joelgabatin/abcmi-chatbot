@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer past church activities query
+  steps:
+  - intent: ask_past_events
+  - action: action_get_past_events

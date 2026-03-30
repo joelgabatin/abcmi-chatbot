@@ -1,0 +1,10 @@
+version: "3.1"
+nlu:
+  - intent: ask_social_media
+    examples: |
+      - Do you have social media?
+      - What are your social media?
+      - What social media accounts do you have?
+      - Can I see your social media links?
+      - Where can I find your official social media accounts?
+      - Do you have an official social media account?
