@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_direct_contact
+    examples: |
+      - I want to talk to a pastor or admin directly
+      - How can I contact a pastor directly?
+      - I want to speak with an admin
+      - Can you direct me to your contact page?
+      - I need to talk to someone from the church directly

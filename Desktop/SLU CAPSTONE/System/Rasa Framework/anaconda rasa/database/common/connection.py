@@ -1,6 +1,10 @@
 from supabase import create_client
 
-from config import NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY
+from config import (
+    NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    NEXT_PUBLIC_SUPABASE_URL,
+    SUPABASE_SERVICE_ROLE_KEY,
+)
 
 
 class Database:
@@ -13,7 +17,8 @@ class Database:
     def connect(self):
         """Establish connection to Supabase"""
         try:
-            self.client = create_client(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)
+            api_key = SUPABASE_SERVICE_ROLE_KEY or NEXT_PUBLIC_SUPABASE_ANON_KEY
+            self.client = create_client(NEXT_PUBLIC_SUPABASE_URL, api_key)
             self.client.table("church_vmd").select("id").limit(1).execute()
             self._connected = True
             print("[OK] Connected to Supabase database")

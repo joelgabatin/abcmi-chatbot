@@ -69,3 +69,7 @@ intents:
   - ask_office_address
   - ask_social_media
   - ask_specific_social_media
+  - ask_all_contact_details
+  - ask_send_contact_message
+  - ask_direct_contact
+  - ask_contact_reply_time

@@ -53,6 +53,43 @@ slots:
           - active_loop: prayer_form
             requested_slot: prayer_face_to_face
 
+  # Contact message form
+  contact_name:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: contact_message_form
+            requested_slot: contact_name
+  contact_email:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: contact_message_form
+            requested_slot: contact_email
+  contact_phone:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: contact_message_form
+            requested_slot: contact_phone
+  contact_subject:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: contact_message_form
+            requested_slot: contact_subject
+  contact_message:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: contact_message_form
+            requested_slot: contact_message
+
   # Pastor lookup flow
   last_pastor_name:
     type: text

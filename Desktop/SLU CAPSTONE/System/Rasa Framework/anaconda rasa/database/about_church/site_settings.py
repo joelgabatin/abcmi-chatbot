@@ -114,6 +114,24 @@ class SiteSettings:
             return {}
 
     @staticmethod
+    def get_contact_details(db):
+        """Fetch all contact info and social media links from site_settings in one call."""
+        try:
+            response = (
+                db.client.table("site_settings")
+                .select(
+                    "email, phone_number, office_address, office_hours, "
+                    "facebook_url, tiktok_url, instagram_url, youtube_url"
+                )
+                .limit(1)
+                .execute()
+            )
+            return response.data[0] if response.data else {}
+        except Exception as e:
+            print(f"[ERROR] Error fetching contact details from site_settings: {e}")
+            return {}
+
+    @staticmethod
     def get_social_media_url(db, platform):
         platform_columns = {
             "facebook": "facebook_url",

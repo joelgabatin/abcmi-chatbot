@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_all_contact_details
+    examples: |
+      - How can I contact you?
+      - Can you give me all your contact details?
+      - I need your email, phone number, address, and office hours
+      - How do I contact the church?
+      - What are your complete contact details?

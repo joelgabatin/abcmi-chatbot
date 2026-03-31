@@ -1,18 +1,10 @@
 #!/usr/bin/env python3
 """
-PR automation agent for Codex workflows.
+Codex PR workflow agent.
 
-This script can:
-1. Create or reuse a feature branch
-2. Commit tracked changes
-3. Push the branch to origin
-4. Create a pull request on GitHub
-5. Merge the pull request into the base branch
-
-Requirements:
-- git must be available
-- remote "origin" must point to GitHub
-- GITHUB_TOKEN must be set
+Supported workflow:
+1. start  -> checkout main, pull origin/main, create feature branch
+2. finish -> commit changes, push branch, create PR, merge PR, checkout main, pull origin/main
 """
 
 from __future__ import annotations
@@ -26,11 +18,14 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime
 from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+
+def notify(message: str) -> None:
+    print(f"[NOTIFY] {message}")
 
 
 def run_git(*args: str, check: bool = True) -> str:
@@ -94,25 +89,18 @@ def github_request(method: str, path: str, token: str, payload: dict | None = No
         raise RuntimeError(f"GitHub API error ({error.code}): {details}") from error
 
 
-def ensure_branch(base_branch: str, branch_name: str | None) -> str:
-    current_branch = run_git("rev-parse", "--abbrev-ref", "HEAD")
+def require_token() -> str:
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        raise RuntimeError("GITHUB_TOKEN is required.")
+    return token
 
-    if current_branch == "HEAD":
-        raise RuntimeError("Detached HEAD is not supported for PR automation.")
 
-    if current_branch == base_branch:
-        if not branch_name:
-            timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-            branch_name = f"codex/{base_branch}/{timestamp}"
-        run_git("checkout", "-b", branch_name)
-        return branch_name
-
-    if branch_name and branch_name != current_branch:
-        raise RuntimeError(
-            f"Current branch is '{current_branch}', but requested branch is '{branch_name}'."
-        )
-
-    return current_branch
+def current_branch() -> str:
+    branch = run_git("rev-parse", "--abbrev-ref", "HEAD")
+    if branch == "HEAD":
+        raise RuntimeError("Detached HEAD is not supported for this workflow.")
+    return branch
 
 
 def ensure_changes() -> None:
@@ -121,27 +109,38 @@ def ensure_changes() -> None:
         raise RuntimeError("There are no changes to commit.")
 
 
+def checkout(branch_name: str) -> None:
+    run_git("checkout", branch_name)
+    notify(f"Checked out '{branch_name}'.")
+
+
+def pull_origin(branch_name: str) -> None:
+    run_git("pull", "origin", branch_name)
+    notify(f"Pulled latest changes from origin/{branch_name}.")
+
+
+def create_branch(branch_name: str) -> None:
+    run_git("checkout", "-b", branch_name)
+    notify(f"Created feature branch '{branch_name}'.")
+
+
 def commit_changes(commit_message: str) -> None:
     run_git("add", "-A")
-
     diff_cached = run_git("diff", "--cached", "--name-only", check=False)
     if not diff_cached.strip():
         raise RuntimeError("No staged changes were found after git add.")
-
     run_git("commit", "-m", commit_message)
+    notify(f"Committed changes with message: {commit_message}")
 
 
 def push_branch(branch_name: str) -> None:
     run_git("push", "-u", "origin", branch_name)
+    notify(f"Pushed branch '{branch_name}' to origin.")
 
 
 def find_open_pr(owner: str, repo: str, branch_name: str, token: str) -> dict | None:
     encoded_head = urllib.parse.quote(f"{owner}:{branch_name}", safe="")
-    data = github_request(
-        "GET",
-        f"/repos/{owner}/{repo}/pulls?state=open&head={encoded_head}",
-        token,
-    )
+    data = github_request("GET", f"/repos/{owner}/{repo}/pulls?state=open&head={encoded_head}", token)
     if isinstance(data, list) and data:
         return data[0]
     return None
@@ -150,41 +149,75 @@ def find_open_pr(owner: str, repo: str, branch_name: str, token: str) -> dict | 
 def create_pr(owner: str, repo: str, base_branch: str, branch_name: str, title: str, body: str, token: str) -> dict:
     existing = find_open_pr(owner, repo, branch_name, token)
     if existing:
+        notify(f"Reusing existing PR: {existing.get('html_url', 'unknown')}")
         return existing
 
-    return github_request(
+    pr = github_request(
         "POST",
         f"/repos/{owner}/{repo}/pulls",
         token,
-        {
-            "title": title,
-            "head": branch_name,
-            "base": base_branch,
-            "body": body,
-        },
+        {"title": title, "head": branch_name, "base": base_branch, "body": body},
     )
+    notify(f"Created PR: {pr.get('html_url', 'unknown')}")
+    return pr
 
 
 def merge_pr(owner: str, repo: str, pr_number: int, token: str, commit_title: str) -> dict:
-    return github_request(
+    merged = github_request(
         "PUT",
         f"/repos/{owner}/{repo}/pulls/{pr_number}/merge",
         token,
-        {
-            "merge_method": "squash",
-            "commit_title": commit_title,
-        },
+        {"merge_method": "squash", "commit_title": commit_title},
     )
+    notify("Merged PR into main.")
+    return merged
+
+
+def start_feature(branch_name: str, base_branch: str) -> int:
+    checkout(base_branch)
+    pull_origin(base_branch)
+    create_branch(branch_name)
+    notify("Feature workflow is ready. You can start implementing the update now.")
+    return 0
+
+
+def finish_update(title: str, body: str, commit_message: str | None, base_branch: str) -> int:
+    token = require_token()
+    branch_name = current_branch()
+
+    if branch_name == base_branch:
+        raise RuntimeError("Finish step cannot run on the base branch. Create a feature branch first.")
+
+    ensure_changes()
+    commit_changes(commit_message or title)
+    push_branch(branch_name)
+
+    remote_url = run_git("remote", "get-url", "origin")
+    owner, repo = parse_remote(remote_url)
+    pr = create_pr(owner, repo, base_branch, branch_name, title, body, token)
+    merge_pr(owner, repo, pr["number"], token, title)
+
+    checkout(base_branch)
+    pull_origin(base_branch)
+    notify("Workflow complete: branch created earlier, PR created, merged into main, and local main is up to date.")
+    return 0
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Create a branch, PR, and merge to main.")
-    parser.add_argument("--title", required=True, help="Pull request title")
-    parser.add_argument("--body", default="Automated update from Codex PR agent.", help="Pull request body")
-    parser.add_argument("--commit-message", help="Commit message to use")
-    parser.add_argument("--branch", help="Branch name to create or reuse")
-    parser.add_argument("--base", default="main", help="Base branch for the pull request")
-    parser.add_argument("--no-merge", action="store_true", help="Create the PR without merging it")
+    parser = argparse.ArgumentParser(description="Codex PR workflow agent")
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    start_parser = subparsers.add_parser("start", help="Pull main and create a feature branch")
+    start_parser.add_argument("--title", required=True, help="Short feature title used to build the branch name")
+    start_parser.add_argument("--branch", help="Explicit branch name")
+    start_parser.add_argument("--base", default="main", help="Base branch to start from")
+
+    finish_parser = subparsers.add_parser("finish", help="Create PR, merge to main, and update local main")
+    finish_parser.add_argument("--title", required=True, help="Pull request title")
+    finish_parser.add_argument("--body", default="Automated update from Codex PR agent.", help="Pull request body")
+    finish_parser.add_argument("--commit-message", help="Commit message to use")
+    finish_parser.add_argument("--base", default="main", help="Base branch for the pull request")
+
     return parser
 
 
@@ -192,41 +225,13 @@ def main() -> int:
     parser = build_parser()
     args = parser.parse_args()
 
-    token = os.environ.get("GITHUB_TOKEN")
-    if not token:
-        print("GITHUB_TOKEN is required.", file=sys.stderr)
-        return 1
-
     try:
-        ensure_changes()
-
-        branch_name = args.branch or f"codex/{slugify(args.title)}"
-        branch_name = ensure_branch(args.base, branch_name)
-
-        commit_message = args.commit_message or args.title
-        commit_changes(commit_message)
-        push_branch(branch_name)
-
-        remote_url = run_git("remote", "get-url", "origin")
-        owner, repo = parse_remote(remote_url)
-
-        pr = create_pr(
-            owner=owner,
-            repo=repo,
-            base_branch=args.base,
-            branch_name=branch_name,
-            title=args.title,
-            body=args.body,
-            token=token,
-        )
-
-        print(f"PR created: {pr.get('html_url', 'unknown')}")
-
-        if not args.no_merge:
-            merge_result = merge_pr(owner, repo, pr["number"], token, args.title)
-            print(f"Merged into {args.base}: {merge_result.get('sha', 'unknown')}")
-
-        return 0
+        if args.command == "start":
+            branch_name = args.branch or f"codex/{slugify(args.title)}"
+            return start_feature(branch_name, args.base)
+        if args.command == "finish":
+            return finish_update(args.title, args.body, args.commit_message, args.base)
+        raise RuntimeError(f"Unsupported command: {args.command}")
     except Exception as exc:
         print(f"PR agent failed: {exc}", file=sys.stderr)
         return 1

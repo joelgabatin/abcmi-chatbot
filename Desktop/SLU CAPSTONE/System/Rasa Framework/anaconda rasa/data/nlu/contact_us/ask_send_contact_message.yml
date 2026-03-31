@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_send_contact_message
+    examples: |
+      - Can I send a message to the church through here?
+      - I want to send a message to the church
+      - Can you help me send a message to the church?
+      - I’d like to leave a message for the church
+      - Can I message the church here?

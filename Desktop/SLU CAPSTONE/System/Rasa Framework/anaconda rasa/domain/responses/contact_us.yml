@@ -1,12 +1,51 @@
 version: "3.1"
+
 responses:
   utter_email:
     - text: "You can reach us via email at info@gracechurch.com."
+
   utter_phone_number:
     - text: "Our phone number is +1 (555) 123-4567."
+
   utter_office_hours:
     - text: "Our office hours are Monday to Friday, from 9 AM to 5 PM."
+
   utter_office_address:
     - text: "Our main office is located at 123 Grace Street, City, State, 12345."
+
   utter_social_media:
     - text: "We currently do not have any social media links available in our system settings."
+
+  utter_contact_message_welcome:
+    - text: "Yes, you can send a message to the church through me. I just need a few details so I can submit it properly."
+
+  utter_contact_page_options:
+    - text: "If you want to talk to a pastor or admin directly, please visit our Contact page: http://localhost:3000/contact\n\nIf you prefer, you can also send a message right here by saying \"I want to send a message to the church.\""
+
+  utter_contact_reply_time:
+    - text: "The church usually replies within 1 to 2 business days."
+
+  utter_ask_contact_name:
+    - text: "May I have your full name, please?"
+
+  utter_ask_contact_email:
+    - text: "What is your email address? (e.g. you@example.com)"
+
+  utter_ask_contact_phone:
+    - text: "What is your phone number? (Include country code, e.g. +6393893424527)"
+
+  utter_ask_contact_subject:
+    - text: |
+        Please choose a subject by typing its number:
+
+        1. General Inquiry
+        2. Prayer Request
+        3. Church Membership
+        4. Missions & Training
+        5. Donations & Giving
+        6. Counseling
+        7. Events & Activities
+        8. Other
+
+  utter_ask_contact_message:
+    - text: "Please type your message below. (Minimum 25 characters -Maximum 200 characters)"

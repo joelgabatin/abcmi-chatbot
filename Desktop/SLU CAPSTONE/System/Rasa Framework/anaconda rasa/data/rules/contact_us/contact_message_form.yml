@@ -1,0 +1,19 @@
+version: "3.1"
+
+rules:
+  - rule: activate contact message form
+    steps:
+      - intent: ask_send_contact_message
+      - action: utter_contact_message_welcome
+      - action: contact_message_form
+      - active_loop: contact_message_form
+
+  - rule: submit contact message form
+    condition:
+      - active_loop: contact_message_form
+    steps:
+      - action: contact_message_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_process_contact_message
