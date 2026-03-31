@@ -9,3 +9,10 @@ forms:
       - prayer_address
       - prayer_request
       - prayer_face_to_face
+  contact_message_form:
+    required_slots:
+      - contact_name
+      - contact_email
+      - contact_phone
+      - contact_subject
+      - contact_message

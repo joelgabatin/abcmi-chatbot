@@ -10,6 +10,7 @@ from .about_church import (
 )
 from .branches import ChurchBranch
 from .common.connection import Database
+from .contact import ContactMessage
 from .events import ChurchEvent
 from .ministries import Ministry
 from .pastors import Pastor

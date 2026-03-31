@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_contact_reply_time
+    examples: |
+      - How long before someone replies to my message?
+      - When will the church reply to my message?
+      - How long does it take to get a reply?
+      - What is the usual response time for messages?
+      - When should I expect a response?

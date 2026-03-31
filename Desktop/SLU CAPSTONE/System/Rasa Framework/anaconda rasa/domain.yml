@@ -9,9 +9,10 @@
 #   domain/forms.yml                — all forms
 #   domain/actions.yml              — all custom actions
 #   domain/session_config.yml       — session settings
-#   domain/responses/greetings.yml  — greeting/general responses
-#   domain/responses/prayer.yml     — prayer responses
-#   domain/responses/ministries.yml — ministry responses
+#   domain/responses/greetings.yml   — greeting/general responses
+#   domain/responses/prayer.yml      — prayer responses
+#   domain/responses/ministries.yml  — ministry responses
+#   domain/responses/contact_us.yml  — contact form responses
 #
 # Always run Rasa with the --domain flag pointing to the folder:
 #
