@@ -13,7 +13,6 @@ SUBJECTS = [
     "Church Membership",
     "Missions & Training",
     "Donations & Giving",
-    "Counseling",
     "Events & Activities",
     "Other",
 ]

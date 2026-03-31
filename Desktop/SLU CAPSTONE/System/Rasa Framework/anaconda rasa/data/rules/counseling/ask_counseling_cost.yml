@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: answer counseling cost query
+    steps:
+      - intent: ask_counseling_cost
+      - action: action_get_counseling_cost

@@ -1,0 +1,14 @@
+version: "3.1"
+
+responses:
+  utter_counseling_request_welcome:
+    - text: "Yes, I can help you submit a counseling request here. I just need your name, contact number, and a short description of your concern."
+
+  utter_ask_counseling_name:
+    - text: "May I have your full name, please?"
+
+  utter_ask_counseling_contact_number:
+    - text: "What contact number should the church use to reach you?"
+
+  utter_ask_counseling_concern:
+    - text: "Please briefly describe your concern. (Minimum 25 characters - Maximum 400 characters)"

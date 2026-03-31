@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_book_counseling
+    examples: |
+      - Can I book a counseling session through the chatbot?
+      - Can you help me request counseling here?
+      - I want to book counseling here
+      - I want to submit a counseling request
+      - Can I ask for counseling through chat?

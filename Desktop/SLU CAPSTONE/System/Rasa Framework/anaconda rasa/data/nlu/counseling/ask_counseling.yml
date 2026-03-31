@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_counseling
+    examples: |
+      - Do you offer counseling?
+      - Do you have counseling sessions?
+      - Can I get counseling from the church?
+      - Does the church offer pastoral counseling?
+      - Is counseling available here?

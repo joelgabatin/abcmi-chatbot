@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_confidentiality_followup
+    examples: |
+      - Is it confidential?
+      - Will it stay private?
+      - Is this private?
+      - Is that confidential?
+      - Will anyone else know?
