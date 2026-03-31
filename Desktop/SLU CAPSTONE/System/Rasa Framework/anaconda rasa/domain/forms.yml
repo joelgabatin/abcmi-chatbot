@@ -16,3 +16,8 @@ forms:
       - contact_phone
       - contact_subject
       - contact_message
+  counseling_request_form:
+    required_slots:
+      - counseling_name
+      - counseling_contact_number
+      - counseling_concern

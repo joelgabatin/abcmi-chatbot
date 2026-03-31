@@ -55,11 +55,17 @@ actions:
 
   # Contact Us — actions/contact_us/actions.py
   - validate_contact_message_form
+  - validate_counseling_request_form
   - action_get_all_contact_details
+  - action_get_counseling_overview
+  - action_get_counseling_schedule
+  - action_get_counseling_cost
+  - action_get_counseling_confidentiality
   - action_get_email
   - action_get_phone_number
   - action_get_office_hours
   - action_get_office_address
+  - action_process_counseling_request
   - action_process_contact_message
   - action_get_social_media
   - action_get_specific_social_media

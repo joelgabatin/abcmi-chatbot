@@ -1,0 +1,11 @@
+version: "3.1"
+
+stories:
+  - story: full counseling request flow
+    steps:
+      - intent: ask_book_counseling
+      - action: utter_counseling_request_welcome
+      - action: counseling_request_form
+      - active_loop: counseling_request_form
+      - active_loop: null
+      - action: action_process_counseling_request

@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_counseling_schedule
+    examples: |
+      - How do I schedule a counseling session?
+      - Where can I book counseling?
+      - How can I schedule counseling?
+      - Where do I sign up for counseling?
+      - How do I arrange a counseling session?

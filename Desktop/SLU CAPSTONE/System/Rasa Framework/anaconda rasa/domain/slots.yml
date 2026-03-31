@@ -90,6 +90,32 @@ slots:
           - active_loop: contact_message_form
             requested_slot: contact_message
 
+  counseling_name:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: counseling_request_form
+            requested_slot: counseling_name
+  counseling_contact_number:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: counseling_request_form
+            requested_slot: counseling_contact_number
+  counseling_concern:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: counseling_request_form
+            requested_slot: counseling_concern
+  last_contact_topic:
+    type: text
+    mappings:
+      - type: custom
+
   # Pastor lookup flow
   last_pastor_name:
     type: text

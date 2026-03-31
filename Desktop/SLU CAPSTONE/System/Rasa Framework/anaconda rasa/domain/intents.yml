@@ -73,3 +73,8 @@ intents:
   - ask_send_contact_message
   - ask_direct_contact
   - ask_contact_reply_time
+  - ask_counseling
+  - ask_counseling_schedule
+  - ask_book_counseling
+  - ask_counseling_cost
+  - ask_confidentiality_followup

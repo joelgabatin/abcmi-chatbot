@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_counseling_cost
+    examples: |
+      - Is counseling free?
+      - Do I need to pay for counseling?
+      - Is there a fee for counseling?
+      - How much does counseling cost?
+      - Is pastoral counseling free?

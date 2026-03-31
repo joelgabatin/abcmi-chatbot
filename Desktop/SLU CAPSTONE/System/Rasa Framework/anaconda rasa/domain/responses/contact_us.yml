@@ -43,9 +43,8 @@ responses:
         3. Church Membership
         4. Missions & Training
         5. Donations & Giving
-        6. Counseling
-        7. Events & Activities
-        8. Other
+        6. Events & Activities
+        7. Other
 
   utter_ask_contact_message:
     - text: "Please type your message below. (Minimum 25 characters -Maximum 200 characters)"

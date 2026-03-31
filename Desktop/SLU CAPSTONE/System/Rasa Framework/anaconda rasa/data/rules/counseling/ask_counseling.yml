@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: answer counseling overview query
+    steps:
+      - intent: ask_counseling
+      - action: action_get_counseling_overview
