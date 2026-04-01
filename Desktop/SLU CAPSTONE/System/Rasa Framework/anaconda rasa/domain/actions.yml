@@ -41,6 +41,13 @@ actions:
   - action_get_all_ministries
   - action_get_ministry_description
   - action_get_ministry_join_info
+  - action_get_ministry_contact_info
+  - action_get_ministry_schedule
+  - action_get_ministry_leader
+  - action_get_ministry_requirements
+  - action_get_ministry_activities
+  - action_get_ministry_volunteer_info
+  - action_get_multiple_ministry_join_info
 
   # Pastors — actions/pastors/actions.py
   - action_get_all_pastors
@@ -55,12 +62,19 @@ actions:
 
   # Contact Us — actions/contact_us/actions.py
   - validate_contact_message_form
+  - validate_counseling_confirmation_form
   - validate_counseling_request_form
   - action_get_all_contact_details
   - action_get_counseling_overview
   - action_get_counseling_schedule
   - action_get_counseling_cost
   - action_get_counseling_confidentiality
+  - action_get_counseling_modes
+  - action_get_counseling_team
+  - action_get_counseling_topics
+  - action_offer_counseling_support
+  - action_get_counseling_membership
+  - action_get_counseling_time_slots
   - action_get_email
   - action_get_phone_number
   - action_get_office_hours

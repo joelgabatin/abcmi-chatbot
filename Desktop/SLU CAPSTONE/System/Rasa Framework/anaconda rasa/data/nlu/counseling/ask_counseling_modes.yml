@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_counseling_modes
+    examples: |
+      - Can I do it online or via video call?
+      - Can counseling be done online?
+      - Do you offer video call counseling?
+      - Can I choose a phone call instead of face-to-face?
+      - What counseling modes are available?

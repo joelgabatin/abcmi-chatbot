@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_counseling_team
+    examples: |
+      - Who will be counseling me?
+      - Who handles the counseling sessions?
+      - Who are the counselors?
+      - Is there a pastor or team for counseling?
+      - Who will talk to me during counseling?

@@ -21,12 +21,24 @@ class ActionProcessCounselingRequest(Action):
     ) -> List[Dict[Text, Any]]:
         name = tracker.get_slot("counseling_name") or "Friend"
         contact_number = tracker.get_slot("counseling_contact_number") or ""
+        address = tracker.get_slot("counseling_address") or "Not provided"
+        facebook_account = tracker.get_slot("counseling_facebook_account") or "Not provided"
+        preferred_date = tracker.get_slot("counseling_preferred_date") or ""
+        preferred_time = tracker.get_slot("counseling_preferred_time") or ""
+        counseling_type = tracker.get_slot("counseling_type") or ""
+        is_member = tracker.get_slot("counseling_is_member")
         concern = tracker.get_slot("counseling_concern") or ""
 
         result = CounselingRequest.save(
             db,
             name=name,
             contact_number=contact_number,
+            address=address,
+            facebook_account=facebook_account,
+            preferred_date=preferred_date,
+            preferred_time=preferred_time,
+            counseling_type=counseling_type,
+            is_member=bool(is_member),
             concern=concern,
         )
 
@@ -34,7 +46,7 @@ class ActionProcessCounselingRequest(Action):
             dispatcher.utter_message(
                 text=(
                     f"Thank you, {name}. Your counseling request has been submitted.\n\n"
-                    "A church representative will review it, confirm the schedule details with you, and contact you as soon as possible."
+                    "A church representative will review your details, confirm the schedule with you, and contact you as soon as possible."
                 )
             )
         else:

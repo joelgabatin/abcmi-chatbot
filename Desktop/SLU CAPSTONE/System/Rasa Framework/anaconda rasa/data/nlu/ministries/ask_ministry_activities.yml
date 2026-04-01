@@ -1,0 +1,12 @@
+version: "3.1"
+nlu:
+  - intent: ask_ministry_activities
+    examples: |
+      - What activities does the [Music Ministry](ministry_name) have?
+      - What does the [Youth Ministry](ministry_name) do?
+      - Tell me the activities of the [Ushering Ministry](ministry_name)
+      - What events are handled by the [Prayer Ministry](ministry_name)?
+      - What does the [Women's Ministry](ministry_name) usually do?
+      - What are the programs of the [Men's Ministry](ministry_name)?
+      - What are the activities in the [Children's Ministry](ministry_name)?
+      - What ministry activities does the [Worship Ministry](ministry_name) do?

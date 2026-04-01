@@ -16,8 +16,17 @@ forms:
       - contact_phone
       - contact_subject
       - contact_message
+  counseling_confirmation_form:
+    required_slots:
+      - counseling_continue_confirmation
   counseling_request_form:
     required_slots:
       - counseling_name
       - counseling_contact_number
+      - counseling_address
+      - counseling_facebook_account
+      - counseling_preferred_date
+      - counseling_preferred_time
+      - counseling_type
+      - counseling_is_member
       - counseling_concern

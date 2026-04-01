@@ -23,6 +23,7 @@ DEFAULT_MIGRATIONS = [
     ROOT / "create_chat_history_tables.sql",
     ROOT / "create_rasa_trackers_table.sql",
     ROOT / "create_counseling_requests_table.sql",
+    ROOT / "alter_counseling_requests_type_constraint.sql",
 ]
 
 

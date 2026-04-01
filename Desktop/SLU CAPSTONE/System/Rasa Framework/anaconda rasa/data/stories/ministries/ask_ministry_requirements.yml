@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: user asks ministry requirements
+  steps:
+  - intent: ask_ministry_requirements
+  - action: action_get_ministry_requirements

@@ -1,0 +1,12 @@
+version: "3.1"
+nlu:
+  - intent: ask_ministry_contact_info
+    examples: |
+      - What is the contact number for the [Children's Ministry](ministry_name)?
+      - How can I contact the [Music Ministry](ministry_name)?
+      - Give me the phone number of the [Youth Ministry](ministry_name)
+      - What is the email of the [Ushering Ministry](ministry_name)?
+      - How do I reach the [Prayer Ministry](ministry_name)?
+      - Can I get the contact details for the [Women's Ministry](ministry_name)?
+      - Who do I contact for the [Men's Ministry](ministry_name)?
+      - Share the contact info of the [Worship Ministry](ministry_name)

@@ -3,6 +3,9 @@ version: "3.1"
 nlu:
 - intent: ask_resident_pastor_of_branch
   examples: |
+- intent: ask_resident_pastor_of_branch
+  examples: |
+    # Original style (questions)
     - who is the resident pastor of [Ansagan](branch_name)?
     - who is the pastor of [Ansagan](branch_name) branch?
     - who leads the [Ansagan](branch_name) branch?
@@ -14,7 +17,46 @@ nlu:
     - who leads the [San Carlos](branch_name) congregation?
     - tell me the resident pastor of [Ansagan](branch_name)
     - what pastor is assigned to [Camp 8](branch_name)?
-    - who is the pastor serving at [Kias](branch_name) branch?
-    - who is the resident pastor of [Patiacan](branch_name) branch?
+    - who is the pastor serving at [Kias](branch_name) branch
     - give me the name of the resident pastor at [Ansagan](branch_name)
-    - which pastor oversees [Dianawan](branch_name)?
+    - which pastor oversees [Dianawan](branch_name)
+
+    # Short / keyword style (VERY IMPORTANT)
+    - pastor [Ansagan](branch_name)
+    - pastor [Camp 8](branch_name)
+    - pastor [Kias](branch_name)
+    - [Ansagan](branch_name) pastor
+    - [Camp 8](branch_name) pastor
+    - [Kias](branch_name) pastor
+    - [San Juan](branch_name) pastor
+    - pastor [San Juan](branch_name) branch
+    - [San Juan](branch_name) branch pastor
+ 
+    # Slight variations
+    - who is the pastor in [Ansagan](branch_name)?
+    - who is the pastor in [Camp 8](branch_name)?
+    - who is the pastor of [San Juan](branch_name)?
+    - pastor of [San Juan](branch_name)
+    - resident pastor of [San Juan](branch_name)
+    - pastor assigned to [San Juan](branch_name)
+    - pastor for [San Juan](branch_name) branch
+
+    # Natural language / conversational
+    - can you tell me the pastor of [Ansagan](branch_name)?
+    - do you know who the pastor of [Camp 8](branch_name) is?
+    - i want to know the pastor of [Kias](branch_name)
+    - may i ask who leads [San Juan](branch_name)?
+    - who currently pastors [San Juan](branch_name)?
+
+    # Informal / casual typing
+    - ansagan pastor
+    - camp 8 pastor
+    - kias branch pastor
+    - san juan branch pastor
+    - pastor in san juan
+    - pastor san juan
+
+    #  With extra words/noise
+    - can you tell me who is the pastor of [San Juan](branch_name) branch right now?
+    - i just want to ask who the pastor in [Ansagan](branch_name) is
+    - please tell me the resident pastor assigned to [Camp 8](branch_name)

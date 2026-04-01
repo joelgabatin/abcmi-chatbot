@@ -1,0 +1,12 @@
+version: "3.1"
+nlu:
+  - intent: ask_ministry_requirements
+    examples: |
+      - What are the requirements to join the [Music Ministry](ministry_name)?
+      - What qualifications do I need for the [Youth Ministry](ministry_name)?
+      - Are there requirements for joining the [Ushering Ministry](ministry_name)?
+      - What do I need to become part of the [Prayer Ministry](ministry_name)?
+      - What are the qualifications for the [Women's Ministry](ministry_name)?
+      - What are the ministry requirements for the [Men's Ministry](ministry_name)?
+      - Do I need any qualifications to join the [Children's Ministry](ministry_name)?
+      - What do I need before joining the [Worship Ministry](ministry_name)?

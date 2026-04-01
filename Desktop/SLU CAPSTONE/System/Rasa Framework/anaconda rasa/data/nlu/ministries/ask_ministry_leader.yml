@@ -1,0 +1,12 @@
+version: "3.1"
+nlu:
+  - intent: ask_ministry_leader
+    examples: |
+      - Who leads the [Music Ministry](ministry_name)?
+      - Who is in charge of the [Youth Ministry](ministry_name)?
+      - Who heads the [Ushering Ministry](ministry_name)?
+      - Who is the leader of the [Prayer Ministry](ministry_name)?
+      - Tell me the leader of the [Women's Ministry](ministry_name)
+      - Who oversees the [Men's Ministry](ministry_name)?
+      - Who is the overseer of the [Children's Ministry](ministry_name)?
+      - Who runs the [Worship Ministry](ministry_name)?

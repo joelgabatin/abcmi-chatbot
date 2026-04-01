@@ -1,0 +1,12 @@
+version: "3.1"
+nlu:
+  - intent: ask_ministry_schedule
+    examples: |
+      - When does the [Music Ministry](ministry_name) meet?
+      - What time is the meeting of the [Youth Ministry](ministry_name)?
+      - When is the [Ushering Ministry](ministry_name) schedule?
+      - What is the meeting schedule for the [Prayer Ministry](ministry_name)?
+      - When does the [Women's Ministry](ministry_name) gather?
+      - Where and when does the [Men's Ministry](ministry_name) meet?
+      - Tell me the meeting time of the [Children's Ministry](ministry_name)
+      - What is the schedule of the [Worship Ministry](ministry_name)?

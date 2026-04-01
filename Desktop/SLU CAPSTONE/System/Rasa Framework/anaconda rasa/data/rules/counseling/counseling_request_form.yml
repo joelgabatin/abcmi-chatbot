@@ -1,12 +1,39 @@
 version: "3.1"
 
 rules:
-  - rule: activate counseling request form
+  - rule: ask for counseling request confirmation
     steps:
       - intent: ask_book_counseling
       - action: utter_counseling_request_welcome
+      - action: counseling_confirmation_form
+      - active_loop: counseling_confirmation_form
+      - slot_was_set:
+          - counseling_continue_confirmation: null
+
+  - rule: activate counseling request form after confirmation
+    condition:
+      - active_loop: counseling_confirmation_form
+    steps:
+      - action: counseling_confirmation_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - slot_was_set:
+          - counseling_continue_confirmation: true
       - action: counseling_request_form
       - active_loop: counseling_request_form
+
+  - rule: cancel counseling request form after decline
+    condition:
+      - active_loop: counseling_confirmation_form
+    steps:
+      - action: counseling_confirmation_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - slot_was_set:
+          - counseling_continue_confirmation: false
+      - action: utter_counseling_request_cancelled
 
   - rule: submit counseling request form
     condition:
