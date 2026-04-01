@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_counseling_membership
+    examples: |
+      - Can non-members get counseling?
+      - Is counseling only for church members?
+      - Can I request counseling even if I'm not a member?
+      - Do you accept non-members for counseling?
+      - Is counseling open to everyone?

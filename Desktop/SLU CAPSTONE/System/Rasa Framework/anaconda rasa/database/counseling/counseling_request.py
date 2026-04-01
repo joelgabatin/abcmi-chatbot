@@ -1,25 +1,31 @@
-from datetime import date
-
-
 class CounselingRequest:
     """Counseling request data model."""
 
     TABLE_NAME = "counseling_requests"
 
     @staticmethod
-    def save(db, name, contact_number, concern):
+    def save(
+        db,
+        name,
+        contact_number,
+        address,
+        facebook_account,
+        preferred_date,
+        preferred_time,
+        counseling_type,
+        is_member,
+        concern,
+    ):
         try:
             payload = {
                 "full_name": name,
                 "contact_number": contact_number,
-                # The existing Supabase schema requires scheduling fields even when the
-                # chatbot only collects a lightweight counseling request.
-                "address": "Not provided via chatbot",
-                "facebook_account": "Not provided",
-                "preferred_date": date.today().isoformat(),
-                "preferred_time": "To be arranged",
-                "counseling_type": "face-to-face",
-                "is_member": False,
+                "address": address or "Not provided",
+                "facebook_account": facebook_account or "Not provided",
+                "preferred_date": preferred_date,
+                "preferred_time": preferred_time,
+                "counseling_type": counseling_type,
+                "is_member": bool(is_member),
                 "concern": concern,
                 "status": "pending",
             }

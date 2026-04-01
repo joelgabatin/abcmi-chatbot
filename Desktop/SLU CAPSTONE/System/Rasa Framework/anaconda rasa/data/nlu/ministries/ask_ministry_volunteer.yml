@@ -1,0 +1,12 @@
+version: "3.1"
+nlu:
+  - intent: ask_ministry_volunteer
+    examples: |
+      - Can I volunteer for a ministry without being a member?
+      - Can I serve in a ministry even if I am not a member yet?
+      - Is volunteering in a ministry allowed without membership?
+      - Can I help in a ministry before becoming a member?
+      - Do I need to be an official member before volunteering?
+      - Can I volunteer first and become a member later?
+      - May I serve in a ministry without joining formally?
+      - Can I assist in church ministries even if I am new?

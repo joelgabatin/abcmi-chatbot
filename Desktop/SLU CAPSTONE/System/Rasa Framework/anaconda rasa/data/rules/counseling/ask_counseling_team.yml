@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: answer counseling team query
+    steps:
+      - intent: ask_counseling_team
+      - action: action_get_counseling_team

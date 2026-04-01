@@ -1,0 +1,6 @@
+[
+  {
+    "name": "social_platform",
+    "pattern": "(\\bFacebook\\b|\\bTikTok\\b|\\bInstagram\\b|\\bYouTube\\b|\\bSpotify\\b)"
+  }
+]

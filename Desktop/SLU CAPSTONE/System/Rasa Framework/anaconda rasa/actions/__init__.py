@@ -35,8 +35,27 @@ from .contact_us import (
 from .counseling import (
     ActionGetCounselingConfidentiality,
     ActionGetCounselingCost,
+    ActionGetCounselingMembership,
+    ActionGetCounselingModes,
     ActionGetCounselingOverview,
     ActionGetCounselingSchedule,
+    ActionGetCounselingTeam,
+    ActionGetCounselingTimeSlots,
+    ActionGetCounselingTopics,
+    ActionOfferCounselingSupport,
     ActionProcessCounselingRequest,
+    ValidateCounselingConfirmationForm,
     ValidateCounselingRequestForm,
+)
+from .ministries import (
+    ActionGetAllMinistries,
+    ActionGetMinistryActivities,
+    ActionGetMinistryContactInfo,
+    ActionGetMinistryDescription,
+    ActionGetMinistryJoinInfo,
+    ActionGetMinistryLeader,
+    ActionGetMinistryRequirements,
+    ActionGetMinistrySchedule,
+    ActionGetMinistryVolunteerInfo,
+    ActionGetMultipleMinistryJoinInfo,
 )

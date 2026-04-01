@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_counseling_topics
+    examples: |
+      - What concerns can I bring to counseling?
+      - What topics can be discussed in counseling?
+      - Can I talk about family problems in counseling?
+      - Is counseling for grief or personal struggles too?
+      - What kinds of concerns do you handle in counseling?

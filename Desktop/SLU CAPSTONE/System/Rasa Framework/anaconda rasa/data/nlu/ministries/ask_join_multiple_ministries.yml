@@ -1,0 +1,12 @@
+version: "3.1"
+nlu:
+  - intent: ask_join_multiple_ministries
+    examples: |
+      - Can I join more than one ministry?
+      - Is it okay to be part of multiple ministries?
+      - May I serve in two ministries at the same time?
+      - Can I join several ministries?
+      - Am I allowed to be in more than one ministry?
+      - Can I be part of the choir and another ministry too?
+      - Is joining multiple ministries allowed?
+      - Can I serve in more than one ministry at church?

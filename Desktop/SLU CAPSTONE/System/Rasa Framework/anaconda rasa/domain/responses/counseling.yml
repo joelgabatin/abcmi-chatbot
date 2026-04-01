@@ -2,13 +2,42 @@ version: "3.1"
 
 responses:
   utter_counseling_request_welcome:
-    - text: "Yes, I can help you submit a counseling request here. I just need your name, contact number, and a short description of your concern."
+    - text: "Yes, I can help you schedule a counseling session here. I will ask for the same details requested on the website form so the church receives a complete request."
+
+  utter_ask_counseling_continue_confirmation:
+    - text: "Would you like to continue? Please reply with `yes` or `no`."
+
+  utter_counseling_request_cancelled:
+    - text: "No problem. If you change your mind later, just tell me that you want to book a counseling session and I can guide you through it."
 
   utter_ask_counseling_name:
     - text: "May I have your full name, please?"
 
   utter_ask_counseling_contact_number:
     - text: "What contact number should the church use to reach you?"
+
+  utter_ask_counseling_address:
+    - text: "What is your address? If you prefer not to share it here, type `skip`."
+
+  utter_ask_counseling_facebook_account:
+    - text: "What is your Facebook account or profile link? This is optional, so you can type `skip`."
+
+  utter_ask_counseling_preferred_date:
+    - text: "What date would you prefer for the counseling session? Please use `dd/mm/yyyy`."
+
+  utter_ask_counseling_preferred_time:
+    - text: "What time would you prefer? You can reply with something like `9:00 AM`, `2:30 PM`, or `14:00`."
+
+  utter_ask_counseling_type:
+    - text: |
+        What type of counseling session would you prefer?
+
+        1. Face-to-Face
+        2. Call
+        3. Video Call
+
+  utter_ask_counseling_is_member:
+    - text: "Are you a church member? Please reply with `yes` or `no`."
 
   utter_ask_counseling_concern:
     - text: "Please briefly describe your concern. (Minimum 25 characters - Maximum 400 characters)"

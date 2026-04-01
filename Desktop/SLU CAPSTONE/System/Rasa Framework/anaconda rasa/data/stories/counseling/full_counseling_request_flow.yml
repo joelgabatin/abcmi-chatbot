@@ -5,7 +5,23 @@ stories:
     steps:
       - intent: ask_book_counseling
       - action: utter_counseling_request_welcome
+      - action: counseling_confirmation_form
+      - active_loop: counseling_confirmation_form
+      - active_loop: null
+      - slot_was_set:
+          - counseling_continue_confirmation: true
       - action: counseling_request_form
       - active_loop: counseling_request_form
       - active_loop: null
       - action: action_process_counseling_request
+
+  - story: decline counseling request flow
+    steps:
+      - intent: ask_book_counseling
+      - action: utter_counseling_request_welcome
+      - action: counseling_confirmation_form
+      - active_loop: counseling_confirmation_form
+      - active_loop: null
+      - slot_was_set:
+          - counseling_continue_confirmation: false
+      - action: utter_counseling_request_cancelled

@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: user asks about joining multiple ministries
+  steps:
+  - intent: ask_join_multiple_ministries
+  - action: action_get_multiple_ministry_join_info

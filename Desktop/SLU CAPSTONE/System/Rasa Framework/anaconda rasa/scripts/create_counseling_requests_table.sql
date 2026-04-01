@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS counseling_requests (
     facebook_account TEXT        NOT NULL DEFAULT 'Not provided',
     preferred_date   DATE        NOT NULL,
     preferred_time   TEXT        NOT NULL,
-    counseling_type  TEXT        NOT NULL CHECK (counseling_type IN ('face-to-face', 'online')),
+    counseling_type  TEXT        NOT NULL CHECK (counseling_type IN ('face-to-face', 'online', 'call', 'video-call')),
     is_member        BOOLEAN     NOT NULL DEFAULT FALSE,
     concern          TEXT        NOT NULL,
     status           TEXT        NOT NULL DEFAULT 'pending',

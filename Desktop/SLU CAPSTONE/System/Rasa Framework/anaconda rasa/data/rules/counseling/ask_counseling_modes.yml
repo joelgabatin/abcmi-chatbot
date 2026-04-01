@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: answer counseling modes query
+    steps:
+      - intent: ask_counseling_modes
+      - action: action_get_counseling_modes

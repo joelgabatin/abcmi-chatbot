@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_counseling_support
+    examples: |
+      - I'm going through a difficult time, can someone help me?
+      - I need help emotionally right now
+      - I'm struggling and I need someone to talk to
+      - Can someone help me through this hard time?
+      - I feel overwhelmed, is counseling available?

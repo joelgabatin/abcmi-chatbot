@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: ministry volunteer eligibility
+  steps:
+  - intent: ask_ministry_volunteer
+  - action: action_get_ministry_volunteer_info

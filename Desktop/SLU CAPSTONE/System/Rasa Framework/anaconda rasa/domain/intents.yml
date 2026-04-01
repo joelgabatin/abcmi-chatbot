@@ -41,6 +41,13 @@ intents:
   - ask_ministry_description
   - ask_join_ministry
   - ask_join_requirements
+  - ask_ministry_contact_info
+  - ask_ministry_schedule
+  - ask_ministry_leader
+  - ask_ministry_requirements
+  - ask_ministry_activities
+  - ask_ministry_volunteer
+  - ask_join_multiple_ministries
 
   # Events
   - ask_upcoming_events
@@ -78,3 +85,9 @@ intents:
   - ask_book_counseling
   - ask_counseling_cost
   - ask_confidentiality_followup
+  - ask_counseling_modes
+  - ask_counseling_team
+  - ask_counseling_topics
+  - ask_counseling_support
+  - ask_counseling_membership
+  - ask_counseling_time_slots

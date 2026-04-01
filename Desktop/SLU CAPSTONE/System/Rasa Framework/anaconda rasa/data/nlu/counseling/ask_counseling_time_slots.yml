@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - intent: ask_counseling_time_slots
+    examples: |
+      - What are the available times for counseling?
+      - What time slots are available for counseling?
+      - What hours can I choose for counseling?
+      - When can I book a counseling session?
+      - What counseling times do you offer?

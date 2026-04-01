@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: user asks about ministry volunteering
+  steps:
+  - intent: ask_ministry_volunteer
+  - action: action_get_ministry_volunteer_info
