@@ -146,3 +146,5 @@ actions:
   - action_handle_expired_reset_link
   - action_explain_password_requirements
   - action_escalate_password_reset_support
+  - action_help_recover_username_or_email
+  - action_help_account_recovery_no_email_phone

@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_account_recovery_no_email_phone
+  examples: |
+    - I can't access my email anymore
+    - my phone number changed
+    - how can I recover my account without email?
+    - I no longer have access to my registered email
+    - I changed my phone and lost access
+    - how do I recover my account if my email is gone?
+    - I can't use my old phone number anymore
+    - my recovery email is no longer accessible

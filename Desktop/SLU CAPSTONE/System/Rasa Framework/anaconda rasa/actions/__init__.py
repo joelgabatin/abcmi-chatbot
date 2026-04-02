@@ -115,5 +115,7 @@ from .forgot_password import (
     ActionExplainPasswordRequirements,
     ActionGetPasswordResetPage,
     ActionGetPasswordResetSteps,
+    ActionHelpAccountRecoveryNoEmailPhone,
+    ActionHelpRecoverUsernameOrEmail,
     ActionHandleExpiredResetLink,
 )
