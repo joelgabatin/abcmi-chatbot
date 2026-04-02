@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Advise checking spam for reset email
+  steps:
+  - intent: ask_check_spam_for_reset_email
+  - action: action_advise_check_spam_reset_email

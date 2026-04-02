@@ -108,3 +108,12 @@ from .login import (
     ActionHelpWithLoginLockout,
     ActionTroubleshootLoginCredentials,
 )
+from .forgot_password import (
+    ActionAdviseCheckSpamResetEmail,
+    ActionConfirmPasswordResetEmail,
+    ActionEscalatePasswordResetSupport,
+    ActionExplainPasswordRequirements,
+    ActionGetPasswordResetPage,
+    ActionGetPasswordResetSteps,
+    ActionHandleExpiredResetLink,
+)

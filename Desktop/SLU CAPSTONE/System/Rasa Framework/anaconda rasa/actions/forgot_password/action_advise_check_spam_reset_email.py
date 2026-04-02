@@ -1,0 +1,15 @@
+from typing import Any, Dict, List, Text
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+from .common import get_forgot_password_help_text
+
+
+class ActionAdviseCheckSpamResetEmail(Action):
+    def name(self) -> Text:
+        return "action_advise_check_spam_reset_email"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text=get_forgot_password_help_text("check_spam"))
+        return []
