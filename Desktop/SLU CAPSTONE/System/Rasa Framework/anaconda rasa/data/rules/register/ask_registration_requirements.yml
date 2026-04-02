@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Explain what is needed for registration
+  steps:
+  - intent: ask_registration_requirements
+  - action: action_explain_registration_requirements

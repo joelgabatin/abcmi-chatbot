@@ -11,11 +11,17 @@ class LoginHelp:
         "steps": (
             "Here is how you can log in:\n"
             "1. Open the login page.\n"
-            "2. Choose the correct portal if you see separate member and admin access.\n"
-            "3. Enter your registered email or username and password.\n"
-            "4. Click the Sign in or Log in button.\n"
+            "2. Choose your preferred login method.\n"
+            "3. You can either continue with Google or sign in using your username or email and password.\n"
+            "4. If you see separate member and admin access, choose the correct portal first.\n"
             "5. Complete two-factor verification if a code is required.\n"
             "6. If you forgot your password, use the Forgot Password option before trying again too many times."
+        ),
+        "login_methods": (
+            "There are two ways to log in on the website:\n"
+            "1. Continue with Google or Gmail login.\n"
+            "2. Sign in using your username or email and password.\n\n"
+            "If your account was created with Google, use the Google sign-in option. If your account was created with regular credentials, use your username or email and password."
         ),
         "account_types": (
             "Member login is for regular church members who need access to their personal account features.\n\n"
@@ -26,7 +32,7 @@ class LoginHelp:
             "If the website says your credentials are invalid, try these steps:\n"
             "1. Make sure you entered the correct email or username.\n"
             "2. Re-type your password carefully and check Caps Lock.\n"
-            "3. Make sure you are using the correct login portal, especially if member and admin logins are separate.\n"
+            "3. Make sure you are using the correct login method. If you normally use Google, choose the Google sign-in button instead of typing a password.\n"
             "4. Try the Forgot Password option if you are not sure about the password.\n"
             "5. If the problem continues, contact the church admin for account checking."
         ),

@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Explain registration eligibility
+  steps:
+  - intent: ask_registration_eligibility
+  - action: action_explain_registration_eligibility

@@ -1,0 +1,12 @@
+version: "3.1"
+
+nlu:
+- intent: ask_failed_registration
+  examples: |
+    - my registration failed
+    - I couldn't finish sign up
+    - the sign up form is not working
+    - I cannot complete my registration
+    - my account registration did not go through
+    - the registration page failed
+    - I am having trouble signing up

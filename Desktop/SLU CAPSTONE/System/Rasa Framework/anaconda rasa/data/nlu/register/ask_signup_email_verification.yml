@@ -1,0 +1,12 @@
+version: "3.1"
+
+nlu:
+- intent: ask_signup_email_verification
+  examples: |
+    - do I need to verify my email?
+    - I didn't get the verification email
+    - how do I confirm my account?
+    - why do I need email verification after sign up?
+    - how do I verify my account after registering?
+    - is email verification required?
+    - what do I do with the verification email?

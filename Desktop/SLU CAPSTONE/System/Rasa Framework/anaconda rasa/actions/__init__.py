@@ -99,6 +99,7 @@ from .ministries import (
 )
 from .login import (
     ActionExplainLoginAccountTypes,
+    ActionExplainLoginMethods,
     ActionExplainLoginTwoFactor,
     ActionExplainRememberMeLogin,
     ActionExplainSessionTimeout,
@@ -118,4 +119,16 @@ from .forgot_password import (
     ActionHelpAccountRecoveryNoEmailPhone,
     ActionHelpRecoverUsernameOrEmail,
     ActionHandleExpiredResetLink,
+)
+from .register import (
+    ActionExplainRegistrationEligibility,
+    ActionExplainRegistrationMethods,
+    ActionExplainRegistrationRequirements,
+    ActionExplainResendVerificationInstructions,
+    ActionExplainSignupEmailVerification,
+    ActionExplainSignupPasswordRequirements,
+    ActionGetRegistrationSteps,
+    ActionHelpFailedRegistration,
+    ActionHelpVerifyEmailOrPhone,
+    ActionTroubleshootDuplicateRegistrationEmail,
 )

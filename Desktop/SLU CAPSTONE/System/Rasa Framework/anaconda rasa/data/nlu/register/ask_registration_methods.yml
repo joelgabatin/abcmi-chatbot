@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_registration_methods
+  examples: |
+    - how can I register using my gmail?
+    - can I sign up with google?
+    - can I register with username and password instead?
+    - what are the ways to register?
+    - do you support gmail sign up?
+    - do I use google sign up or manual registration?
+    - can I create an account using my google account?
+    - how do I sign up with gmail on the website?

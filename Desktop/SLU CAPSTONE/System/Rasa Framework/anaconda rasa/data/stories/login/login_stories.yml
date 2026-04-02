@@ -1,0 +1,14 @@
+version: "3.1"
+
+stories:
+- story: Explain login methods flow
+  steps:
+  - intent: ask_login_methods
+  - action: action_explain_login_methods
+
+- story: Login steps then login methods flow
+  steps:
+  - intent: ask_login_steps
+  - action: action_get_login_steps
+  - intent: ask_login_methods
+  - action: action_explain_login_methods

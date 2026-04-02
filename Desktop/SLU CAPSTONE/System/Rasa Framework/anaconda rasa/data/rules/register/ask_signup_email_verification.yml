@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Explain sign up email verification
+  steps:
+  - intent: ask_signup_email_verification
+  - action: action_explain_signup_email_verification

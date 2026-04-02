@@ -1,0 +1,5 @@
+version: "3.1"
+
+responses:
+  utter_register_help_fallback:
+    - text: "I can help with sign-up steps, Gmail or Google registration, username and password registration, registration requirements, eligibility, email verification, duplicate email issues, password requirements, failed registration, account verification, and resending verification instructions."

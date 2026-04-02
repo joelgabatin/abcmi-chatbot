@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_login_methods
+  examples: |
+    - how can I log in using my gmail?
+    - can I sign in with google?
+    - how do I log in with my gmail account?
+    - do I use google login or username and password?
+    - what login methods are available?
+    - can I log in with username and password instead?
+    - how do I sign in with google on the website?
+    - is there a gmail login option?
