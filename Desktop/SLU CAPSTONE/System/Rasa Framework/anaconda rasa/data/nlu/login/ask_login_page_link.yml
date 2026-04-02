@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_login_page_link
+  examples: |
+    - send me the login link
+    - take me to sign in
+    - where can I sign in?
+    - can I have the login page link?
+    - what is the direct login page?
+    - give me the sign in URL
+    - where is the login route?
+    - open the login page

@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Share the direct login page link
+  steps:
+  - intent: ask_login_page_link
+  - action: action_get_login_page_link

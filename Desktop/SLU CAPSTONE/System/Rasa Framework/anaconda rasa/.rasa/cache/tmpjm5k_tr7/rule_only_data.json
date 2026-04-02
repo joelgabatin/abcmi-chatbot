@@ -1,0 +1,11 @@
+{
+  "rule_only_slots": [],
+  "rule_only_loops": [
+    "testimony_form",
+    "prayer_form",
+    "contact_message_form",
+    "counseling_request_form",
+    "counseling_confirmation_form",
+    "devotion_subscribe_form"
+  ]
+}

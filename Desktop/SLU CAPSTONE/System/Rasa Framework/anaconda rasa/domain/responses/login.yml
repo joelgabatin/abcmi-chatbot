@@ -1,0 +1,5 @@
+version: "3.1"
+
+responses:
+  utter_login_help_fallback:
+    - text: "I can help with login instructions, login links, invalid credentials, session timeout, lockouts, browser login issues, two-factor authentication, and staying signed in."

@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_login_two_factor
+  examples: |
+    - why am I being asked for a code?
+    - what's the verification code for?
+    - how do I complete 2FA login?
+    - what is two factor authentication during login?
+    - why do I need a code after entering my password?
+    - I was asked for a login verification code
+    - how does the login security code work?
+    - what should I do with the 2FA prompt?

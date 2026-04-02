@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Help when account is locked after failed logins
+  steps:
+  - intent: ask_login_lockout
+  - action: action_help_with_login_lockout

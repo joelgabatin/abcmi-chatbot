@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Explain how to log in step by step
+  steps:
+  - intent: ask_login_steps
+  - action: action_get_login_steps

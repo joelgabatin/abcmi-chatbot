@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Explain member and admin login differences
+  steps:
+  - intent: ask_login_account_types
+  - action: action_explain_login_account_types

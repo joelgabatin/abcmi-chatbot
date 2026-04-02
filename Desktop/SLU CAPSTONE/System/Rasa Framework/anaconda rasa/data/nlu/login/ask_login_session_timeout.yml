@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_login_session_timeout
+  examples: |
+    - why was I logged out?
+    - my session expired
+    - why do I need to sign in again?
+    - why does the website log me out?
+    - I was signed out automatically
+    - why did my login session time out?
+    - why do I have to log in every time?
+    - the site logged me out by itself

@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_login_lockout
+  examples: |
+    - my account is locked
+    - too many login attempts
+    - I got locked out
+    - the system locked my account
+    - I tried signing in too many times
+    - how do I unlock my account?
+    - I am locked out after failed attempts
+    - login says my account is locked

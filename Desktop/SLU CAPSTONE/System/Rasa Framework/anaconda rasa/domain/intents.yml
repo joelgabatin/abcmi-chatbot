@@ -133,3 +133,14 @@ intents:
   - ask_read_testimonies
   - ask_show_testimonies
   - ask_submit_testimony_form
+
+  # Login Help - data/nlu/login/
+  - ask_login_steps
+  - ask_login_account_types
+  - ask_login_page_link
+  - ask_invalid_login_credentials
+  - ask_login_session_timeout
+  - ask_login_lockout
+  - ask_browser_login_issues
+  - ask_login_two_factor
+  - ask_remember_me_login
