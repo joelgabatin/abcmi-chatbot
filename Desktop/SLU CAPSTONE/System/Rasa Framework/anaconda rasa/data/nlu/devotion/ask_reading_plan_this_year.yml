@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_reading_plan_this_year
+  examples: |
+    - provide the this year reading plan
+    - what is this year's reading plan?
+    - give me the reading plan for this year
+    - what is the annual reading plan?
+    - this year's bible reading plan please
+    - show me the reading plan for this year
+    - what is the current year's reading schedule?
+    - give me the yearly reading plan
+    - annual bible reading plan for this year?
+    - what readings are planned for this year?

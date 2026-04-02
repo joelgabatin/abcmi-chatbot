@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_title_by_date
+  examples: |
+    - what is the [September 6, 2026](devotion_date) devotional title?
+    - what is the title of the [October 1, 2026](devotion_date) devotion?
+    - what was the devotion called on [January 15, 2026](devotion_date)?
+    - tell me the title of the [March 20, 2026](devotion_date) devotional
+    - what is the [December 25, 2025](devotion_date) devotion title?
+    - what is the name of the [April 10, 2026](devotion_date) devotion?
+    - [July 4, 2026](devotion_date) devotional title?
+    - what was the title of the [February 14, 2026](devotion_date) devotion?
+    - what is the [November 11, 2026](devotion_date) daily devotion title?
+    - title of [August 15, 2026](devotion_date) devotion?

@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_unsubscribe
+  examples: |
+    - how can I unsubscribe from daily reminders?
+    - how do I stop receiving devotion emails?
+    - how do I unsubscribe from daily devotions?
+    - I want to stop getting devotion notifications
+    - how do I remove myself from devotion emails?
+    - how can I cancel my devotion subscription?
+    - I want to unsubscribe from daily devotionals
+    - how do I stop the daily devotion emails?
+    - can I opt out of devotion reminders?
+    - unsubscribe from daily devotions please

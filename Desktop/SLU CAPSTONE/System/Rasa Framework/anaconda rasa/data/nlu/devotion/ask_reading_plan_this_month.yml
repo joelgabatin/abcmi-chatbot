@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_reading_plan_this_month
+  examples: |
+    - what is this month's reading plan?
+    - give me the reading plan for this month
+    - what are the bible readings this month?
+    - this month's reading plan please
+    - what is the monthly reading plan?
+    - show me this month's reading plan
+    - what is this month's bible reading schedule?
+    - give me the reading plan for the current month
+    - monthly bible reading plan?
+    - what readings are scheduled this month?

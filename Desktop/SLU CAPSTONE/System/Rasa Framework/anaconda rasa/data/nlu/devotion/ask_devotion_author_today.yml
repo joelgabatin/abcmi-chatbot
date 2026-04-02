@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_author_today
+  examples: |
+    - who wrote today's devotion?
+    - who is the author of today's devotional?
+    - who wrote today's daily devotion?
+    - who authored the devotion for today?
+    - who wrote this devotion?
+    - who is today's devotion by?
+    - tell me the author of today's devotion
+    - who wrote the devotional today?
+    - whose devotion is today's?
+    - who is the writer of today's devotion?

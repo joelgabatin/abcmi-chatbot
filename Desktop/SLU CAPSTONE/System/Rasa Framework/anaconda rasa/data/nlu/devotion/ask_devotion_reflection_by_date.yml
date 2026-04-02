@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_reflection_by_date
+  examples: |
+    - what is the [September 6, 2026](devotion_date) devotion reflection?
+    - what is the [October 1, 2026](devotion_date) devotion?
+    - give me the reflection of the [January 15, 2026](devotion_date) devotion
+    - what was the devotion message on [March 20, 2026](devotion_date)?
+    - [December 25, 2025](devotion_date) devotion reflection?
+    - read the [April 10, 2026](devotion_date) devotion reflection
+    - what does the [July 4, 2026](devotion_date) devotion say?
+    - reflection of [February 14, 2026](devotion_date) devotion?
+    - what was the devotion on [November 11, 2026](devotion_date)?
+    - give me the [August 15, 2026](devotion_date) devotion message

@@ -8,3 +8,5 @@ entities:
   - event_name
   - ministry_name
   - social_platform
+  - devotion_date
+  - reading_period

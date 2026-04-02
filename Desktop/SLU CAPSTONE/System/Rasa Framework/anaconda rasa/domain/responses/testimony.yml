@@ -1,0 +1,23 @@
+version: "3.1"
+
+responses:
+  utter_ask_testimony_submit_welcome:
+    - text: "I would be glad to help you share your testimony! I will ask a few questions to collect your story."
+
+  utter_ask_testimony_name:
+    - text: "What is your name? (Type 'anonymous' to keep your identity private)"
+
+  utter_ask_testimony_title:
+    - text: "Give your testimony a short title:"
+
+  utter_ask_testimony_category:
+    - text: "What category best describes your testimony?\n\n- Healing\n- Salvation\n- Provision\n- Protection\n- Deliverance\n- Restoration\n- Answered Prayer\n- Other"
+
+  utter_ask_testimony_content:
+    - text: "Please share your testimony story: (minimum 50 characters, maximum 2000 characters)"
+
+  utter_ask_testimony_branch:
+    - text: "Which ABCMI branch are you from? (Type 'none' if you are not from a specific branch)"
+
+  utter_ask_testimony_is_member:
+    - text: "Are you a church member? Please reply with 'yes' or 'no'."

@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_subscribe_via_chat
+  examples: |
+    - subscribe me to daily devotions
+    - I want to subscribe to daily devotions here
+    - sign me up for daily devotions in this chat
+    - can you subscribe me to devotions?
+    - subscribe me right now
+    - I want to receive daily devotions, sign me up
+    - enroll me in daily devotion emails
+    - please subscribe me to devotions
+    - add me to the daily devotion list
+    - I'd like to subscribe to daily devotions via chat

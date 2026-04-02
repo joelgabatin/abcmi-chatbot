@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_page_link
+  examples: |
+    - where can I read the full devotion?
+    - where is the daily devotional page?
+    - give me the link to the devotional page
+    - where do I go to read devotions?
+    - what is the URL for the devotional page?
+    - where can I access the daily devotion?
+    - link to daily devotion page?
+    - where is the devotion page on your website?
+    - how do I get to the devotional page?
+    - send me the devotional page link

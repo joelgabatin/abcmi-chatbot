@@ -1,0 +1,86 @@
+version: "3.1"
+
+stories:
+  - story: user wants to share testimony - gets options
+    steps:
+      - intent: ask_share_testimony
+      - action: action_get_testimony_submit_options
+
+  - story: user wants to see featured testimonies
+    steps:
+      - intent: ask_show_testimonies
+      - action: action_get_featured_testimonies
+
+  - story: user reads testimonies then wants to show in chat
+    steps:
+      - intent: ask_read_testimonies
+      - action: action_get_testimony_page_link
+      - intent: ask_show_testimonies
+      - action: action_get_featured_testimonies
+
+  - story: user asks how to submit testimony
+    steps:
+      - intent: ask_submit_testimony
+      - action: action_get_testimony_submit_options
+
+  - story: user asks about anonymous submission
+    steps:
+      - intent: ask_submit_testimony_anonymously
+      - action: action_get_testimony_anonymous_info
+
+  - story: user asks about moderation
+    steps:
+      - intent: ask_testimony_moderation
+      - action: action_get_testimony_visibility
+
+  - story: user asks about testimony types
+    steps:
+      - intent: ask_testimony_types
+      - action: action_get_testimony_types
+
+  - story: user asks how to submit on website
+    steps:
+      - intent: ask_testimony_website_submission
+      - action: action_get_testimony_website_link
+
+  - story: user wants to read testimonies
+    steps:
+      - intent: ask_read_testimonies
+      - action: action_get_testimony_page_link
+
+  - story: full testimony form submission
+    steps:
+      - intent: ask_submit_testimony_form
+      - action: utter_ask_testimony_submit_welcome
+      - action: testimony_form
+      - active_loop: testimony_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_process_testimony
+
+  - story: share testimony then submit
+    steps:
+      - intent: ask_share_testimony
+      - action: action_get_testimony_submit_options
+      - intent: ask_submit_testimony_form
+      - action: utter_ask_testimony_submit_welcome
+      - action: testimony_form
+      - active_loop: testimony_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_process_testimony
+
+  - story: ask submit options then go to form
+    steps:
+      - intent: ask_submit_testimony
+      - action: action_get_testimony_submit_options
+      - intent: ask_submit_testimony_form
+      - action: utter_ask_testimony_submit_welcome
+      - action: testimony_form
+      - active_loop: testimony_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_process_testimony

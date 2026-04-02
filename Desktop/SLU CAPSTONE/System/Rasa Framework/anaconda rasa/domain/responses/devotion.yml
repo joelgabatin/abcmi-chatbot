@@ -1,0 +1,8 @@
+version: "3.1"
+
+responses:
+  utter_ask_devotion_subscribe_welcome:
+    - text: "I'd be happy to subscribe you to daily devotions right here! I just need your email address."
+
+  utter_ask_devotion_subscriber_email:
+    - text: "Please enter your email address:"

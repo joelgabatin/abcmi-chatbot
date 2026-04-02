@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_title_today
+  examples: |
+    - what is today's devotional title?
+    - what is the title of today's devotion?
+    - what is today's devotion called?
+    - tell me today's devotional title
+    - what is the name of today's devotion?
+    - what is today's daily devotion title?
+    - give me the title of today's devotional
+    - what's the devotion title for today?
+    - today's devotion - what is it called?
+    - what is the heading of today's devotion?

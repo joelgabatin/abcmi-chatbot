@@ -1,0 +1,25 @@
+version: "3.1"
+
+nlu:
+- intent: ask_testimony_types
+  examples: |
+    - What kind of testimonies do you accept?
+    - what types of testimonies can I submit?
+    - what categories of testimonies are accepted?
+    - what topics can my testimony be about?
+    - what are the testimony categories?
+    - what kinds of stories can I share?
+    - does it have to be about healing?
+    - can I share a testimony about provision?
+    - what testimony themes are accepted?
+    - what subjects can a testimony cover?
+    - what are the accepted types of testimonies?
+    - can I share any kind of testimony?
+    - what categories can I choose for my testimony?
+    - does the church accept all types of testimonies?
+    - what topics are allowed for testimony submissions?
+    - what is an accepted testimony?
+    - can I share a testimony about salvation?
+    - what are the testimony submission categories?
+    - what types of miracles can I testify about?
+    - what fields are available for testimony categories?

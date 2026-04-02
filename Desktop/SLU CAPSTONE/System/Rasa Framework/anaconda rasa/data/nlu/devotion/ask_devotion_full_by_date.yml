@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_full_by_date
+  examples: |
+    - read me the full devotional of [September 6, 2026](devotion_date)
+    - give me the complete devotion for [October 1, 2026](devotion_date)
+    - show me the full [January 15, 2026](devotion_date) devotional
+    - read the [March 20, 2026](devotion_date) devotion title verse and reflection
+    - give me the complete [December 25, 2025](devotion_date) devotional
+    - full devotion for [April 10, 2026](devotion_date) please
+    - read me the [July 4, 2026](devotion_date) full devotion
+    - show everything about the [February 14, 2026](devotion_date) devotion
+    - [November 11, 2026](devotion_date) complete devotional?
+    - read the full devotional from [August 15, 2026](devotion_date)

@@ -1,0 +1,25 @@
+version: "3.1"
+
+nlu:
+- intent: ask_testimony_website_submission
+  examples: |
+    - How do I submit a testimony on the website?
+    - how do I submit through the website?
+    - where is the testimony form on the website?
+    - how can I submit my testimony online?
+    - how do I use the website to share a testimony?
+    - where can I find the testimony submission form?
+    - is there an online form for testimony?
+    - how do I fill out the testimony form on the site?
+    - where do I go on the website to submit my testimony?
+    - how do I access the testimony page?
+    - how do I submit on the ABCMI website?
+    - what is the process for submitting on the website?
+    - can you give me the link to submit a testimony?
+    - how do I submit my story on the Grace Church website?
+    - what is the website link for testimony submission?
+    - guide me to submit a testimony on the website
+    - what steps do I follow to submit online?
+    - can you direct me to the testimony submission page?
+    - where do I submit my testimony online?
+    - how do I get to the testimony form?

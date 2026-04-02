@@ -1,0 +1,29 @@
+version: "3.1"
+
+nlu:
+- intent: ask_share_testimony
+  examples: |
+    - I want to share my testimony
+    - I have a testimony I'd like to share
+    - can I share my testimony here?
+    - I want to tell my story
+    - I have a story of God's faithfulness
+    - how can I share my testimony?
+    - I want to give my testimony
+    - let me share a testimony
+    - I have something to testify about
+    - I want to share what God has done for me
+    - I'd like to share my experience with the church
+    - can I share what happened to me?
+    - I want to tell my story of faith
+    - I have a miracle to share
+    - let me tell you about what God did in my life
+    - I want to share a praise report
+    - I have a testimony to share with the congregation
+    - I want to give my testimony to the church
+    - I'd like to share my faith story
+    - I have a story I want to share
+    - I want to testify about what God did for me
+    - I'd like to submit my story to the church
+    - how do I share my testimony with ABCMI?
+    - I want to share my experience

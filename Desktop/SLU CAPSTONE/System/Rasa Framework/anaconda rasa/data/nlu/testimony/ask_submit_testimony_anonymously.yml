@@ -1,0 +1,25 @@
+version: "3.1"
+
+nlu:
+- intent: ask_submit_testimony_anonymously
+  examples: |
+    - Can I submit anonymously?
+    - can I share my testimony without my name?
+    - is anonymous submission allowed?
+    - can I keep my name private when submitting?
+    - can I submit a testimony without revealing my identity?
+    - do I need to use my real name?
+    - can I post anonymously?
+    - is it possible to submit a testimony anonymously?
+    - I don't want to reveal my name, can I still share?
+    - can I remain anonymous when sharing my testimony?
+    - can I submit my story without my name?
+    - will my name be shown if I submit a testimony?
+    - can I be anonymous in my testimony?
+    - I prefer not to share my name, is that okay?
+    - can I submit a private testimony?
+    - is there an anonymous option for testimony submission?
+    - do I have to put my name when submitting?
+    - can I share my story without identifying myself?
+    - is anonymous posting allowed for testimonies?
+    - I want to submit without disclosing my name

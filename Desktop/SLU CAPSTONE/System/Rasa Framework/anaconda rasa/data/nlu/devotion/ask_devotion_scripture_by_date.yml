@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_scripture_by_date
+  examples: |
+    - what is the [September 6, 2026](devotion_date) scripture passage?
+    - what bible verse was used for the [October 1, 2026](devotion_date) devotion?
+    - what is the scripture for [January 15, 2026](devotion_date)?
+    - what verse was the [March 20, 2026](devotion_date) devotion based on?
+    - give me the scripture passage for [December 25, 2025](devotion_date)
+    - what is the [April 10, 2026](devotion_date) devotional verse?
+    - what bible passage was used on [July 4, 2026](devotion_date)?
+    - scripture for [February 14, 2026](devotion_date) devotion?
+    - what verse was read on [November 11, 2026](devotion_date)?
+    - [August 15, 2026](devotion_date) devotion scripture?

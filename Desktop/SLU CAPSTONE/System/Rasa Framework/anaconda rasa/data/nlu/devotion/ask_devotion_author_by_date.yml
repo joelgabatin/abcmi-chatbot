@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_author_by_date
+  examples: |
+    - who wrote the [September 6, 2026](devotion_date) devotion?
+    - who authored the [October 1, 2026](devotion_date) devotional?
+    - who is the author of the [January 15, 2026](devotion_date) devotion?
+    - who wrote the devotion for [March 20, 2026](devotion_date)?
+    - who authored the [December 25, 2025](devotion_date) devotion?
+    - tell me the author of the [April 10, 2026](devotion_date) devotion
+    - who wrote the [July 4, 2026](devotion_date) devotional?
+    - who is the writer of the [February 14, 2026](devotion_date) devotion?
+    - [November 11, 2026](devotion_date) devotion - who wrote it?
+    - author of the [August 15, 2026](devotion_date) devotional?

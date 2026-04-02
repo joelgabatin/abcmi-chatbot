@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_email_notifications
+  examples: |
+    - can I get reminders on my phone?
+    - can I get email notifications for devotions?
+    - how do I get email reminders for devotions?
+    - does the subscription send email alerts?
+    - can I set up phone notifications for devotions?
+    - are there email reminders for daily devotions?
+    - can I get notified about daily devotions?
+    - how do email notifications work for devotions?
+    - does subscribing give me email reminders?
+    - what notification options are available for devotions?

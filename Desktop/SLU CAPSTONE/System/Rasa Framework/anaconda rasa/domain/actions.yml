@@ -83,3 +83,46 @@ actions:
   - action_process_contact_message
   - action_get_social_media
   - action_get_specific_social_media
+
+  # Devotion & Bible Reading Plan — actions/devotion/
+  # Daily Devotion (features 1–11)
+  - action_get_devotion_author_today
+  - action_get_devotion_author_by_date
+  - action_get_devotion_scripture_today
+  - action_get_devotion_scripture_by_date
+  - action_get_devotion_title_today
+  - action_get_devotion_title_by_date
+  - action_get_devotion_reflection_today
+  - action_get_devotion_reflection_by_date
+  - action_get_devotion_full_today
+  - action_get_devotion_full_by_date
+  - action_get_devotion_page_url
+
+  # Subscription & Access (features 12–16)
+  - action_get_devotion_subscribe
+  - action_get_devotion_unsubscribe
+  - action_get_devotion_page_link
+  - action_get_reading_plan_page_url
+  - action_get_devotion_email_notifications
+
+  # Bible Study / Reading Plan (features 17–23)
+  - action_get_reading_plan_today
+  - action_get_reading_plan_by_date
+  - action_get_reading_plan_this_week
+  - action_get_reading_plan_this_month
+  - action_get_reading_plan_by_month
+  - action_get_reading_plan_this_year
+  - action_get_reading_plan_by_year
+  - validate_devotion_subscribe_form
+  - action_process_devotion_subscribe
+
+  # Testimony — actions/testimony/
+  - action_get_featured_testimonies
+  - action_get_testimony_submit_options
+  - action_get_testimony_anonymous_info
+  - action_get_testimony_visibility
+  - action_get_testimony_types
+  - action_get_testimony_website_link
+  - action_get_testimony_page_link
+  - validate_testimony_form
+  - action_process_testimony

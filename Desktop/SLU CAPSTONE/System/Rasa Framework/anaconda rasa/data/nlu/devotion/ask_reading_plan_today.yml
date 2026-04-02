@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_reading_plan_today
+  examples: |
+    - what is today's reading plan?
+    - what is today's bible reading?
+    - what should I read today?
+    - give me today's reading plan
+    - what is today's reading?
+    - what is the reading plan for today?
+    - today's bible reading plan?
+    - what do I read in the bible today?
+    - tell me today's reading plan
+    - what is the reading for today?
