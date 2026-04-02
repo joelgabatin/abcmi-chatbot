@@ -126,3 +126,14 @@ actions:
   - action_get_testimony_page_link
   - validate_testimony_form
   - action_process_testimony
+
+  # Login Help - actions/login/
+  - action_get_login_steps
+  - action_explain_login_account_types
+  - action_get_login_page_link
+  - action_troubleshoot_login_credentials
+  - action_explain_session_timeout
+  - action_help_with_login_lockout
+  - action_help_with_browser_login_issues
+  - action_explain_login_two_factor
+  - action_explain_remember_me_login

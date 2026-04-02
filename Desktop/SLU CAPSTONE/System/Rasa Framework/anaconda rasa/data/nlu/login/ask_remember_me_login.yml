@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_remember_me_login
+  examples: |
+    - how do I stay logged in?
+    - remember me option
+    - keep me signed in
+    - I keep getting logged out
+    - how to avoid logging in every time
+    - can I stay signed in on this device?
+    - where is the remember me option?
+    - how do I keep my account signed in?

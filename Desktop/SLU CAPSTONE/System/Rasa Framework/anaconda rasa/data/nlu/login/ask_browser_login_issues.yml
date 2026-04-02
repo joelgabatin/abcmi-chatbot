@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_browser_login_issues
+  examples: |
+    - the login page won't load
+    - sign in button not working
+    - I can't log in on Chrome
+    - the login page is broken
+    - nothing happens when I click sign in
+    - the website login does not open
+    - login is not working in my browser
+    - I cannot access the login page from my browser

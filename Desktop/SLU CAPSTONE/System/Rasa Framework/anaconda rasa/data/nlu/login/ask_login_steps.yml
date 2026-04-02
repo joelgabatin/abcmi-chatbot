@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_login_steps
+  examples: |
+    - how do I log in?
+    - where is the login page?
+    - I can't sign in
+    - how do I access my account?
+    - login help
+    - sign in instructions
+    - can you show me how to log in?
+    - what are the steps to sign in?
+    - help me log in
+    - how can I sign into the website?

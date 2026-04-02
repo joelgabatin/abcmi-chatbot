@@ -1,0 +1,2043 @@
+FILEHEADER = {
+  magic: lCRF
+  size: 71940
+  type: FOMC
+  version: 100
+  num_features: 0
+  num_labels: 24
+  num_attrs: 741
+  off_features: 0x30
+  off_labels: 0x61F8
+  off_attrs: 0x6E0D
+  off_labelrefs: 0xED70
+  off_attrrefs: 0xEF9C
+}
+
+LABELS = {
+      0: O
+      1: U-branch_name
+      2: B-branch_name
+      3: L-branch_name
+      4: U-social_platform
+      5: B-devotion_date
+      6: I-devotion_date
+      7: L-devotion_date
+      8: B-reading_period
+      9: I-reading_period
+     10: L-reading_period
+     11: U-reading_period
+     12: B-event_name
+     13: I-event_name
+     14: L-event_name
+     15: B-ministry_name
+     16: L-ministry_name
+     17: I-ministry_name
+     18: U-region_name
+     19: B-region_name
+     20: L-region_name
+     21: B-pastor_name
+     22: L-pastor_name
+     23: I-pastor_name
+}
+
+ATTRIBUTES = {
+      0: BOS
+      1: 0:bias:bias
+      2: 0:prefix2:wh
+      3: 0:digit
+      4: 0:prefix2:fo
+      5: 0:suffix2:ed
+      6: 0:low:abcmi
+      7: 0:prefix5:abcmi
+      8: 0:prefix2:ab
+      9: 0:suffix5:abcmi
+     10: 0:suffix3:cmi
+     11: 0:suffix2:mi
+     12: EOS
+     13: 0:suffix2:re
+     14: 1:low:the
+     15: 0:low:the
+     16: 0:prefix5:the
+     17: 0:prefix2:th
+     18: 0:suffix5:the
+     19: 0:suffix3:the
+     20: 0:suffix2:he
+     21: -1:low:the
+     22: 0:suffix2:rs
+     23: 1:low:of
+     24: 0:low:of
+     25: 0:prefix5:of
+     26: 0:prefix2:of
+     27: 0:suffix5:of
+     28: 0:suffix3:of
+     29: 0:suffix2:of
+     30: -1:low:of
+     31: 0:low:is
+     32: 0:prefix5:is
+     33: 0:prefix2:is
+     34: 0:suffix5:is
+     35: 0:suffix3:is
+     36: 0:suffix2:is
+     37: -1:low:is
+     38: 0:suffix2:er
+     39: 0:suffix3:ing
+     40: 0:suffix2:ng
+     41: 0:prefix2:fa
+     42: 0:low:grace
+     43: 0:prefix5:grace
+     44: 0:prefix2:gr
+     45: 0:suffix5:grace
+     46: 0:suffix3:ace
+     47: 0:suffix2:ce
+     48: 1:low:church
+     49: -1:low:grace
+     50: 0:low:church
+     51: 0:prefix5:churc
+     52: 0:prefix2:ch
+     53: 0:suffix5:hurch
+     54: 0:suffix3:rch
+     55: 0:suffix2:ch
+     56: 0:prefix2:st
+     57: 0:suffix2:es
+     58: 0:prefix5:pasto
+     59: 0:prefix2:pa
+     60: -1:low:pastors
+     61: 0:prefix2:te
+     62: 0:suffix2:ll
+     63: 1:low:me
+     64: 0:low:me
+     65: 0:prefix5:me
+     66: 0:prefix2:me
+     67: 0:suffix5:me
+     68: 0:suffix3:me
+     69: 0:suffix2:me
+     70: -1:low:me
+     71: 0:prefix2:ho
+     72: -1:low:how
+     73: 0:suffix2:as
+     74: -1:low:abcmi
+     75: 0:suffix3:hat
+     76: 0:suffix2:at
+     77: -1:low:what
+     78: 0:prefix2:co
+     79: 1:low:s
+     80: -1:low:church
+     81: 0:low:s
+     82: 0:prefix5:s
+     83: 0:prefix2:s
+     84: 0:suffix5:s
+     85: 0:suffix3:s
+     86: 0:suffix2:s
+     87: -1:low:s
+     88: 0:low:does
+     89: 0:prefix5:does
+     90: 0:prefix2:do
+     91: 0:suffix5:does
+     92: 0:suffix3:oes
+     93: -1:low:does
+     94: 1:low:hold
+     95: 1:low:your
+     96: 0:low:your
+     97: 0:prefix5:your
+     98: 0:prefix2:yo
+     99: 0:suffix5:your
+    100: 0:suffix3:our
+    101: 0:suffix2:ur
+    102: -1:low:your
+    103: 0:prefix2:li
+    104: 0:suffix2:st
+    105: 0:prefix2:pr
+    106: 0:suffix2:ry
+    107: 0:prefix2:di
+    108: 0:suffix2:en
+    109: 0:prefix2:ba
+    110: 0:suffix2:nd
+    111: 0:prefix2:mi
+    112: 0:suffix2:ve
+    113: 1:low:a
+    114: 0:low:a
+    115: 0:prefix5:a
+    116: 0:prefix2:a
+    117: 0:suffix5:a
+    118: 0:suffix3:a
+    119: 0:suffix2:a
+    120: -1:low:a
+    121: 0:prefix2:br
+    122: 0:prefix2:ha
+    123: 1:low:in
+    124: 0:low:in
+    125: 0:prefix5:in
+    126: 0:prefix2:in
+    127: 0:suffix5:in
+    128: 0:suffix3:in
+    129: 0:suffix2:in
+    130: -1:low:in
+    131: 1:low:please
+    132: 0:prefix2:pl
+    133: 0:suffix3:ion
+    134: 0:suffix2:on
+    135: 1:low:do
+    136: 0:low:do
+    137: 0:prefix5:do
+    138: 0:suffix5:do
+    139: 0:suffix3:do
+    140: 0:suffix2:do
+    141: -1:low:do
+    142: 0:low:you
+    143: 0:prefix5:you
+    144: 0:suffix5:you
+    145: 0:suffix3:you
+    146: 0:suffix2:ou
+    147: -1:low:you
+    148: 0:suffix3:and
+    149: 1:low:for
+    150: 0:low:for
+    151: 0:prefix5:for
+    152: 0:suffix5:for
+    153: 0:suffix3:for
+    154: 0:suffix2:or
+    155: 0:prefix2:ou
+    156: 0:suffix2:im
+    157: 1:low:to
+    158: 0:low:to
+    159: 0:prefix5:to
+    160: 0:prefix2:to
+    161: 0:suffix5:to
+    162: 0:suffix3:to
+    163: 0:suffix2:to
+    164: -1:low:to
+    165: 0:prefix2:be
+    166: 0:suffix2:ly
+    167: 0:prefix2:sp
+    168: 0:suffix2:it
+    169: 0:low:salvation
+    170: 0:prefix5:salva
+    171: 0:prefix2:sa
+    172: 0:suffix5:ation
+    173: 0:suffix2:th
+    174: 0:prefix2:re
+    175: 1:low:bible
+    176: 0:suffix3:ble
+    177: 0:suffix2:le
+    178: 0:prefix2:he
+    179: 0:prefix2:an
+    180: -1:low:and
+    181: 0:suffix3:nal
+    182: 0:suffix2:al
+    183: 0:prefix2:se
+    184: 0:low:prayer
+    185: 0:prefix5:praye
+    186: 0:suffix5:rayer
+    187: 0:suffix3:yer
+    188: -1:low:prayer
+    189: 0:suffix3:nce
+    190: 1:low:one
+    191: 0:low:one
+    192: 0:prefix5:one
+    193: 0:prefix2:on
+    194: 0:suffix5:one
+    195: 0:suffix3:one
+    196: 0:suffix2:ne
+    197: -1:low:one
+    198: 0:suffix2:nt
+    199: 0:prefix5:faith
+    200: 0:suffix3:ith
+    201: -1:low:for
+    202: -1:low:where
+    203: 0:suffix2:an
+    204: 0:suffix2:am
+    205: 1:low:i
+    206: 0:low:i
+    207: 0:prefix5:i
+    208: 0:prefix2:i
+    209: 0:suffix5:i
+    210: 0:suffix3:i
+    211: 0:suffix2:i
+    212: -1:low:i
+    213: 0:low:ansagan
+    214: 0:prefix5:ansag
+    215: 0:suffix5:sagan
+    216: 0:suffix3:gan
+    217: 1:low:branch
+    218: -1:low:ansagan
+    219: 0:low:branch
+    220: 0:prefix5:branc
+    221: 0:suffix5:ranch
+    222: 0:suffix3:nch
+    223: 0:prefix2:lo
+    224: 1:low:address
+    225: 0:low:can
+    226: 0:prefix5:can
+    227: 0:prefix2:ca
+    228: 0:suffix5:can
+    229: 0:suffix3:can
+    230: -1:low:can
+    231: 1:low:camp
+    232: -1:low:find
+    233: 0:low:camp
+    234: 0:prefix5:camp
+    235: 0:suffix5:camp
+    236: 0:suffix3:amp
+    237: 0:suffix2:mp
+    238: 1:low:8
+    239: -1:low:camp
+    240: 0:low:8
+    241: 0:prefix5:8
+    242: 0:prefix2:8
+    243: 0:suffix5:8
+    244: 0:suffix3:8
+    245: 0:suffix2:8
+    246: -1:low:8
+    247: 0:low:main
+    248: 0:prefix5:main
+    249: 0:prefix2:ma
+    250: 0:suffix5:main
+    251: 0:suffix3:ain
+    252: -1:low:main
+    253: 0:low:kias
+    254: 0:prefix5:kias
+    255: 0:prefix2:ki
+    256: 0:suffix5:kias
+    257: 0:suffix3:ias
+    258: 0:low:patiacan
+    259: 0:prefix5:patia
+    260: 0:suffix5:iacan
+    261: 0:low:dianawan
+    262: 0:prefix5:diana
+    263: 0:suffix5:nawan
+    264: 0:suffix3:wan
+    265: 1:low:san
+    266: 0:low:san
+    267: 0:prefix5:san
+    268: 0:suffix5:san
+    269: 0:suffix3:san
+    270: 1:low:carlos
+    271: -1:low:san
+    272: 0:low:carlos
+    273: 0:prefix5:carlo
+    274: 0:suffix5:arlos
+    275: 0:suffix3:los
+    276: 0:suffix2:os
+    277: 0:low:service
+    278: 0:prefix5:servi
+    279: 0:suffix5:rvice
+    280: 0:suffix3:ice
+    281: 1:low:at
+    282: 0:low:at
+    283: 0:prefix5:at
+    284: 0:prefix2:at
+    285: 0:suffix5:at
+    286: 0:suffix3:at
+    287: -1:low:at
+    288: 0:prefix2:ti
+    289: 0:low:worship
+    290: 0:prefix5:worsh
+    291: 0:prefix2:wo
+    292: 0:suffix5:rship
+    293: 0:suffix3:hip
+    294: 0:suffix2:ip
+    295: -1:low:worship
+    296: 1:low:have
+    297: 0:low:have
+    298: 0:prefix5:have
+    299: 0:suffix5:have
+    300: 0:suffix3:ave
+    301: -1:low:have
+    302: 0:prefix2:su
+    303: 0:suffix3:day
+    304: 0:suffix2:ay
+    305: 1:low:branches
+    306: 0:suffix2:ar
+    307: 0:suffix3:ons
+    308: 0:suffix2:ns
+    309: 0:suffix2:ny
+    310: 0:low:international
+    311: 0:prefix5:inter
+    312: 0:suffix5:ional
+    313: 0:suffix3:ber
+    314: 0:low:1
+    315: 0:prefix5:1
+    316: 0:prefix2:1
+    317: 0:suffix5:1
+    318: 0:suffix3:1
+    319: 0:suffix2:1
+    320: 0:low:2
+    321: 0:prefix5:2
+    322: 0:prefix2:2
+    323: 0:suffix5:2
+    324: 0:suffix3:2
+    325: 0:suffix2:2
+    326: 0:low:3
+    327: 0:prefix5:3
+    328: 0:prefix2:3
+    329: 0:suffix5:3
+    330: 0:suffix3:3
+    331: 0:suffix2:3
+    332: 0:low:car
+    333: 0:prefix5:car
+    334: 0:suffix5:car
+    335: 0:suffix3:car
+    336: 1:low:region
+    337: -1:low:car
+    338: 0:low:region
+    339: 0:prefix5:regio
+    340: 0:suffix5:egion
+    341: -1:low:region
+    342: 1:low:1
+    343: 1:low:2
+    344: 0:prefix2:ce
+    345: 0:prefix2:de
+    346: 0:suffix2:il
+    347: 0:suffix2:te
+    348: 0:suffix3:ies
+    349: 0:low:my
+    350: 0:prefix5:my
+    351: 0:prefix2:my
+    352: 0:suffix5:my
+    353: 0:suffix3:my
+    354: 0:suffix2:my
+    355: -1:low:my
+    356: 0:suffix3:age
+    357: 0:suffix2:ge
+    358: -1:low:will
+    359: 0:prefix2:us
+    360: 1:low:pastor
+    361: 0:low:pastor
+    362: 0:suffix5:astor
+    363: 0:suffix3:tor
+    364: -1:low:pastor
+    365: -1:low:or
+    366: 0:low:an
+    367: 0:prefix5:an
+    368: 0:suffix5:an
+    369: 0:suffix3:an
+    370: -1:low:from
+    371: 0:suffix5:reach
+    372: 0:suffix3:ach
+    373: 0:prefix2:le
+    374: 0:suffix2:ia
+    375: -1:low:official
+    376: 1:low:account
+    377: 1:low:facebook
+    378: 0:low:facebook
+    379: 0:prefix5:faceb
+    380: 0:suffix5:ebook
+    381: 0:suffix3:ook
+    382: 0:suffix2:ok
+    383: 0:low:tiktok
+    384: 0:prefix5:tikto
+    385: 0:suffix5:iktok
+    386: 0:suffix3:tok
+    387: 0:low:instagram
+    388: 0:prefix5:insta
+    389: 0:suffix5:agram
+    390: 0:suffix3:ram
+    391: 0:low:youtube
+    392: 0:prefix5:youtu
+    393: 0:suffix5:utube
+    394: 0:suffix3:ube
+    395: 0:suffix2:be
+    396: 0:low:spotify
+    397: 0:prefix5:spoti
+    398: 0:suffix5:otify
+    399: 0:suffix3:ify
+    400: 0:suffix2:fy
+    401: 1:low:link
+    402: 1:low:channel
+    403: 0:suffix2:el
+    404: -1:low:on
+    405: 0:low:counseling
+    406: 0:prefix5:couns
+    407: 0:suffix5:eling
+    408: 0:prefix2:fe
+    409: 0:prefix2:mu
+    410: 0:prefix2:no
+    411: 0:prefix5:membe
+    412: 0:low:member
+    413: 0:suffix5:ember
+    414: 1:low:be
+    415: 0:low:be
+    416: 0:prefix5:be
+    417: 0:suffix5:be
+    418: 0:suffix3:be
+    419: 0:prefix2:pe
+    420: 1:low:too
+    421: 0:low:september
+    422: 0:prefix5:septe
+    423: 1:low:6
+    424: 0:low:6
+    425: 0:prefix5:6
+    426: 0:prefix2:6
+    427: 0:suffix5:6
+    428: 0:suffix3:6
+    429: 0:suffix2:6
+    430: 1:low:2026
+    431: -1:low:6
+    432: 0:low:2026
+    433: 0:prefix5:2026
+    434: 0:prefix2:20
+    435: 0:suffix5:2026
+    436: 0:suffix3:026
+    437: 0:suffix2:26
+    438: 1:low:devotion
+    439: -1:low:2026
+    440: 0:low:devotion
+    441: 0:prefix5:devot
+    442: 0:suffix5:otion
+    443: 0:prefix2:au
+    444: 0:low:october
+    445: 0:prefix5:octob
+    446: 0:prefix2:oc
+    447: 0:suffix5:tober
+    448: -1:low:october
+    449: -1:low:1
+    450: 1:low:devotional
+    451: 0:low:devotional
+    452: 0:low:january
+    453: 0:prefix5:janua
+    454: 0:prefix2:ja
+    455: 0:suffix5:nuary
+    456: 0:suffix3:ary
+    457: 1:low:15
+    458: 0:low:15
+    459: 0:prefix5:15
+    460: 0:prefix2:15
+    461: 0:suffix5:15
+    462: 0:suffix3:15
+    463: 0:suffix2:15
+    464: -1:low:15
+    465: 0:low:march
+    466: 0:prefix5:march
+    467: 0:suffix5:march
+    468: 1:low:20
+    469: -1:low:march
+    470: 0:low:20
+    471: 0:prefix5:20
+    472: 0:suffix5:20
+    473: 0:suffix3:20
+    474: 0:suffix2:20
+    475: -1:low:20
+    476: 0:low:december
+    477: 0:prefix5:decem
+    478: 1:low:25
+    479: -1:low:december
+    480: 0:low:25
+    481: 0:prefix5:25
+    482: 0:prefix2:25
+    483: 0:suffix5:25
+    484: 0:suffix3:25
+    485: 0:suffix2:25
+    486: 1:low:2025
+    487: -1:low:25
+    488: 0:low:2025
+    489: 0:prefix5:2025
+    490: 0:suffix5:2025
+    491: 0:suffix3:025
+    492: 0:low:april
+    493: 0:prefix5:april
+    494: 0:prefix2:ap
+    495: 0:suffix5:april
+    496: 0:suffix3:ril
+    497: 1:low:10
+    498: -1:low:10
+    499: 0:low:july
+    500: 0:prefix5:july
+    501: 0:prefix2:ju
+    502: 0:suffix5:july
+    503: 0:suffix3:uly
+    504: 1:low:4
+    505: -1:low:july
+    506: 0:low:4
+    507: 0:prefix5:4
+    508: 0:prefix2:4
+    509: 0:suffix5:4
+    510: 0:suffix3:4
+    511: 0:suffix2:4
+    512: -1:low:4
+    513: 0:suffix3:ter
+    514: 0:low:february
+    515: 0:prefix5:febru
+    516: 0:suffix5:ruary
+    517: 1:low:14
+    518: 0:low:november
+    519: 0:prefix5:novem
+    520: 1:low:11
+    521: -1:low:november
+    522: 0:low:11
+    523: 0:prefix5:11
+    524: 0:prefix2:11
+    525: 0:suffix5:11
+    526: 0:suffix3:11
+    527: 0:suffix2:11
+    528: -1:low:11
+    529: 0:low:august
+    530: 0:prefix5:augus
+    531: 0:suffix5:ugust
+    532: 0:suffix3:ust
+    533: -1:low:august
+    534: 0:low:today
+    535: 0:prefix5:today
+    536: 0:suffix5:today
+    537: -1:low:today
+    538: 0:prefix2:da
+    539: 0:suffix2:rk
+    540: 1:low:full
+    541: 1:low:reading
+    542: 0:low:reading
+    543: 0:prefix5:readi
+    544: 0:suffix5:ading
+    545: -1:low:reading
+    546: 0:low:plan
+    547: 0:prefix5:plan
+    548: 0:suffix5:plan
+    549: 0:suffix3:lan
+    550: 0:low:2027
+    551: 0:prefix5:2027
+    552: 0:suffix5:2027
+    553: 0:suffix3:027
+    554: 0:suffix2:27
+    555: 0:low:2024
+    556: 0:prefix5:2024
+    557: 0:suffix5:2024
+    558: 0:suffix3:024
+    559: 0:suffix2:24
+    560: 1:low:annual
+    561: 1:low:yearly
+    562: 0:low:grand
+    563: 0:prefix5:grand
+    564: 0:suffix5:grand
+    565: 1:low:easter
+    566: -1:low:grand
+    567: 0:low:easter
+    568: 0:prefix5:easte
+    569: 0:prefix2:ea
+    570: 0:suffix5:aster
+    571: 1:low:celebration
+    572: -1:low:easter
+    573: 0:low:celebration
+    574: 0:prefix5:celeb
+    575: -1:low:celebration
+    576: 1:low:happening
+    577: 1:low:happen
+    578: 0:low:youth
+    579: 0:prefix5:youth
+    580: 0:suffix5:youth
+    581: 0:suffix3:uth
+    582: -1:low:youth
+    583: 0:low:leadership
+    584: 0:prefix5:leade
+    585: 1:low:conference
+    586: -1:low:leadership
+    587: 0:low:conference
+    588: 0:prefix5:confe
+    589: 0:suffix5:rence
+    590: 0:low:join
+    591: 0:prefix5:join
+    592: 0:prefix2:jo
+    593: 0:suffix5:join
+    594: 0:suffix3:oin
+    595: -1:low:join
+    596: 0:prefix2:cr
+    597: 0:suffix5:ering
+    598: 0:prefix5:minis
+    599: 1:low:ministry
+    600: 0:low:ministry
+    601: 0:suffix5:istry
+    602: 0:suffix3:try
+    603: -1:low:ministry
+    604: 0:low:music
+    605: 0:prefix5:music
+    606: 0:suffix5:music
+    607: 0:suffix3:sic
+    608: 0:suffix2:ic
+    609: -1:low:music
+    610: 0:low:ushering
+    611: 0:prefix5:usher
+    612: -1:low:ushering
+    613: 0:low:women
+    614: 0:prefix5:women
+    615: 0:suffix5:women
+    616: 0:suffix3:men
+    617: -1:low:women
+    618: 0:low:men
+    619: 0:prefix5:men
+    620: 0:suffix5:men
+    621: -1:low:men
+    622: 0:low:children
+    623: 0:prefix5:child
+    624: 0:suffix5:ldren
+    625: 0:suffix3:ren
+    626: -1:low:children
+    627: 0:low:outreach
+    628: 0:prefix5:outre
+    629: -1:low:outreach
+    630: -1:low:than
+    631: 0:low:another
+    632: 0:prefix5:anoth
+    633: 0:suffix5:other
+    634: 0:suffix3:her
+    635: -1:low:another
+    636: -1:low:leads
+    637: -1:low:oversees
+    638: 0:prefix2:ga
+    639: 0:suffix3:yes
+    640: 0:low:metro
+    641: 0:prefix5:metro
+    642: 0:suffix5:metro
+    643: 0:suffix3:tro
+    644: 0:suffix2:ro
+    645: 1:low:manila
+    646: -1:low:metro
+    647: 0:low:manila
+    648: 0:prefix5:manil
+    649: 0:suffix5:anila
+    650: 0:suffix3:ila
+    651: 0:suffix2:la
+    652: 0:low:baguio
+    653: 0:prefix5:bagui
+    654: 0:suffix5:aguio
+    655: 0:suffix3:uio
+    656: 0:suffix2:io
+    657: 1:low:assigned
+    658: -1:low:2
+    659: 1:low:congregation
+    660: 1:low:juan
+    661: 0:low:juan
+    662: 0:prefix5:juan
+    663: 0:suffix5:juan
+    664: 0:suffix3:uan
+    665: 0:low:joel
+    666: 0:prefix5:joel
+    667: 0:suffix5:joel
+    668: 0:suffix3:oel
+    669: 1:low:gabatin
+    670: -1:low:joel
+    671: 0:low:gabatin
+    672: 0:prefix5:gabat
+    673: 0:suffix5:batin
+    674: 0:suffix3:tin
+    675: 0:low:john
+    676: 0:prefix5:john
+    677: 0:suffix5:john
+    678: 0:suffix3:ohn
+    679: 0:suffix2:hn
+    680: 1:low:smith
+    681: -1:low:john
+    682: 0:low:smith
+    683: 0:prefix5:smith
+    684: 0:prefix2:sm
+    685: 0:suffix5:smith
+    686: 0:low:mark
+    687: 0:prefix5:mark
+    688: 0:suffix5:mark
+    689: 0:suffix3:ark
+    690: 1:low:dela
+    691: -1:low:mark
+    692: 0:low:dela
+    693: 0:prefix5:dela
+    694: 0:suffix5:dela
+    695: 0:suffix3:ela
+    696: 1:low:cruz
+    697: -1:low:dela
+    698: 0:low:cruz
+    699: 0:prefix5:cruz
+    700: 0:suffix5:cruz
+    701: 0:suffix3:ruz
+    702: 0:suffix2:uz
+    703: -1:low:named
+    704: 1:low:pastoring
+    705: 0:low:ana
+    706: 0:prefix5:ana
+    707: 0:suffix5:ana
+    708: 0:suffix3:ana
+    709: 0:suffix2:na
+    710: -1:low:ana
+    711: 0:low:ben
+    712: 0:prefix5:ben
+    713: 0:suffix5:ben
+    714: 0:suffix3:ben
+    715: 1:low:santos
+    716: -1:low:ben
+    717: 0:low:santos
+    718: 0:prefix5:santo
+    719: 0:suffix5:antos
+    720: 0:suffix3:tos
+    721: 0:low:maria
+    722: 0:prefix5:maria
+    723: 0:suffix5:maria
+    724: 0:suffix3:ria
+    725: 1:low:reyes
+    726: -1:low:maria
+    727: 0:low:reyes
+    728: 0:prefix5:reyes
+    729: 0:suffix5:reyes
+    730: 0:low:pedro
+    731: 0:prefix5:pedro
+    732: 0:suffix5:pedro
+    733: 0:suffix3:dro
+    734: -1:low:pedro
+    735: 1:low:lim
+    736: 0:low:lim
+    737: 0:prefix5:lim
+    738: 0:suffix5:lim
+    739: 0:suffix3:lim
+    740: 0:prefix5:testi
+}
+
+TRANSITIONS = {
+  (1) O --> O: 3.627497
+  (1) O --> U-branch_name: 1.370333
+  (1) O --> B-branch_name: 1.105269
+  (1) O --> L-branch_name: -1.458811
+  (1) O --> U-social_platform: 0.866513
+  (1) O --> B-devotion_date: 0.911961
+  (1) O --> I-devotion_date: -1.637106
+  (1) O --> L-devotion_date: -0.750675
+  (1) O --> B-reading_period: 0.696732
+  (1) O --> I-reading_period: -1.346983
+  (1) O --> L-reading_period: -1.432771
+  (1) O --> U-reading_period: 0.992367
+  (1) O --> B-event_name: 1.732225
+  (1) O --> I-event_name: -1.440740
+  (1) O --> L-event_name: -1.004105
+  (1) O --> B-ministry_name: 0.609277
+  (1) O --> L-ministry_name: -1.793006
+  (1) O --> I-ministry_name: -1.136355
+  (1) O --> U-region_name: 0.802304
+  (1) O --> B-region_name: 0.890674
+  (1) O --> L-region_name: -1.109536
+  (1) O --> B-pastor_name: 0.639789
+  (1) O --> L-pastor_name: -1.448187
+  (1) O --> I-pastor_name: -0.532097
+  (1) U-branch_name --> O: 0.102072
+  (1) B-branch_name --> O: -1.432473
+  (1) B-branch_name --> L-branch_name: 4.219543
+  (1) B-branch_name --> L-event_name: -0.050171
+  (1) L-branch_name --> O: 0.811946
+  (1) U-social_platform --> O: 0.173619
+  (1) B-devotion_date --> O: -0.893030
+  (1) B-devotion_date --> I-devotion_date: 4.695437
+  (1) B-devotion_date --> I-reading_period: -0.330041
+  (1) I-devotion_date --> O: -0.077368
+  (1) I-devotion_date --> L-devotion_date: 4.222735
+  (1) I-devotion_date --> L-reading_period: -1.095169
+  (1) I-devotion_date --> U-reading_period: -0.572014
+  (1) I-devotion_date --> L-event_name: -0.428149
+  (1) L-devotion_date --> O: 0.573086
+  (1) B-reading_period --> O: -0.997018
+  (1) B-reading_period --> I-devotion_date: -0.973262
+  (1) B-reading_period --> L-devotion_date: -0.009606
+  (1) B-reading_period --> I-reading_period: 3.179788
+  (1) B-reading_period --> L-reading_period: 2.942966
+  (1) B-reading_period --> U-reading_period: -0.293883
+  (1) B-reading_period --> L-event_name: -0.060074
+  (1) I-reading_period --> O: -0.143021
+  (1) I-reading_period --> L-devotion_date: -0.693028
+  (1) I-reading_period --> L-reading_period: 2.910430
+  (1) I-reading_period --> U-reading_period: -0.357615
+  (1) I-reading_period --> L-event_name: -0.227191
+  (1) L-reading_period --> O: -0.273937
+  (1) U-reading_period --> O: 0.475661
+  (1) B-event_name --> O: -1.050486
+  (1) B-event_name --> B-event_name: -0.452474
+  (1) B-event_name --> I-event_name: 1.904095
+  (1) B-event_name --> L-event_name: 3.530667
+  (1) B-event_name --> L-ministry_name: -0.157725
+  (1) I-event_name --> O: -0.253036
+  (1) I-event_name --> L-devotion_date: -0.475527
+  (1) I-event_name --> L-reading_period: -0.948895
+  (1) I-event_name --> U-reading_period: -0.341497
+  (1) I-event_name --> I-event_name: 2.623842
+  (1) I-event_name --> L-event_name: 2.633235
+  (1) L-event_name --> O: 1.032496
+  (1) L-event_name --> L-reading_period: -0.153572
+  (1) L-event_name --> L-event_name: -0.489618
+  (1) B-ministry_name --> O: -1.377926
+  (1) B-ministry_name --> I-devotion_date: -0.071443
+  (1) B-ministry_name --> I-event_name: -0.006725
+  (1) B-ministry_name --> B-ministry_name: -0.087768
+  (1) B-ministry_name --> L-ministry_name: 2.550386
+  (1) B-ministry_name --> I-ministry_name: 1.817921
+  (1) L-ministry_name --> O: 0.020092
+  (1) I-ministry_name --> O: -0.775132
+  (1) I-ministry_name --> L-ministry_name: 1.613998
+  (1) U-region_name --> O: -0.293507
+  (1) U-region_name --> B-region_name: -0.086336
+  (1) B-region_name --> O: -0.660975
+  (1) B-region_name --> L-region_name: 3.450998
+  (1) B-pastor_name --> O: -1.087542
+  (1) B-pastor_name --> L-pastor_name: 3.772001
+  (1) B-pastor_name --> I-pastor_name: 0.852284
+  (1) L-pastor_name --> O: 1.258933
+  (1) I-pastor_name --> O: -0.275096
+  (1) I-pastor_name --> L-pastor_name: 0.695255
+}
+
+STATE_FEATURES = {
+  (0) BOS --> O: 4.745745
+  (0) BOS --> U-branch_name: -1.025004
+  (0) BOS --> B-branch_name: -0.428904
+  (0) BOS --> B-devotion_date: 0.363328
+  (0) BOS --> B-reading_period: 1.029089
+  (0) BOS --> U-reading_period: 1.111440
+  (0) 0:bias:bias --> O: 2.534651
+  (0) 0:bias:bias --> U-branch_name: -0.737817
+  (0) 0:bias:bias --> B-branch_name: -0.390636
+  (0) 0:bias:bias --> L-branch_name: 0.193220
+  (0) 0:bias:bias --> B-devotion_date: 0.016626
+  (0) 0:bias:bias --> I-devotion_date: -0.357857
+  (0) 0:bias:bias --> L-devotion_date: -0.559404
+  (0) 0:bias:bias --> B-reading_period: 0.045175
+  (0) 0:bias:bias --> L-reading_period: -0.242885
+  (0) 0:bias:bias --> U-reading_period: -0.966307
+  (0) 0:bias:bias --> B-event_name: -0.642063
+  (0) 0:bias:bias --> I-event_name: 0.118586
+  (0) 0:bias:bias --> L-event_name: -0.089990
+  (0) 0:bias:bias --> B-ministry_name: -0.288842
+  (0) 0:bias:bias --> L-ministry_name: 0.339924
+  (0) 0:bias:bias --> U-region_name: -0.695063
+  (0) 0:bias:bias --> B-region_name: -0.645659
+  (0) 0:bias:bias --> L-region_name: 0.003768
+  (0) 0:bias:bias --> B-pastor_name: 0.014821
+  (0) 0:bias:bias --> L-pastor_name: 0.480819
+  (0) 0:prefix2:wh --> O: 0.382609
+  (0) 0:digit --> O: -3.459732
+  (0) 0:digit --> L-branch_name: 0.281459
+  (0) 0:digit --> U-social_platform: -0.000224
+  (0) 0:digit --> I-devotion_date: 1.459694
+  (0) 0:digit --> L-devotion_date: 0.895366
+  (0) 0:digit --> B-reading_period: -0.668354
+  (0) 0:digit --> I-reading_period: 1.435770
+  (0) 0:digit --> L-reading_period: 0.674005
+  (0) 0:digit --> U-reading_period: 1.837556
+  (0) 0:digit --> B-event_name: -0.014366
+  (0) 0:digit --> I-event_name: -0.220793
+  (0) 0:digit --> L-event_name: 0.054416
+  (0) 0:digit --> L-region_name: 0.618447
+  (0) 0:prefix2:fo --> O: 0.371934
+  (0) 0:suffix2:ed --> O: 0.495666
+  (0) 0:low:abcmi --> O: 0.267778
+  (0) 0:prefix5:abcmi --> O: 0.267778
+  (0) 0:prefix2:ab --> O: 0.509465
+  (0) 0:suffix5:abcmi --> O: 0.267778
+  (0) 0:suffix3:cmi --> O: 0.267778
+  (0) 0:suffix2:mi --> O: 0.267778
+  (0) EOS --> O: 3.514785
+  (0) EOS --> U-branch_name: 0.461671
+  (0) EOS --> L-branch_name: 0.031279
+  (0) EOS --> U-social_platform: 0.793184
+  (0) EOS --> L-devotion_date: -0.046195
+  (0) EOS --> L-reading_period: 0.651285
+  (0) EOS --> U-reading_period: -0.612368
+  (0) EOS --> L-event_name: 1.266808
+  (0) EOS --> L-ministry_name: 0.647724
+  (0) EOS --> U-region_name: 1.074949
+  (0) EOS --> L-region_name: 0.679078
+  (0) 0:suffix2:re --> O: 0.518096
+  (0) 1:low:the --> O: 0.487552
+  (0) 0:low:the --> O: 0.673436
+  (0) 0:prefix5:the --> O: 0.673436
+  (0) 0:prefix2:th --> O: 1.213590
+  (0) 0:suffix5:the --> O: 0.673436
+  (0) 0:suffix3:the --> O: 0.673436
+  (0) 0:suffix2:he --> O: 0.673436
+  (0) -1:low:the --> O: -0.607889
+  (0) -1:low:the --> U-branch_name: 0.232016
+  (0) -1:low:the --> B-devotion_date: 0.618724
+  (0) -1:low:the --> B-reading_period: 0.850058
+  (0) -1:low:the --> U-reading_period: 1.414639
+  (0) -1:low:the --> B-event_name: -0.141662
+  (0) -1:low:the --> B-ministry_name: 2.607882
+  (0) 0:suffix2:rs --> O: 0.157314
+  (0) 1:low:of --> O: 1.452569
+  (0) 0:low:of --> O: 0.254598
+  (0) 0:prefix5:of --> O: 0.254598
+  (0) 0:prefix2:of --> O: 0.528943
+  (0) 0:suffix5:of --> O: 0.254598
+  (0) 0:suffix3:of --> O: 0.254598
+  (0) 0:suffix2:of --> O: 0.254598
+  (0) -1:low:of --> O: -1.612307
+  (0) -1:low:of --> U-branch_name: 0.695583
+  (0) -1:low:of --> B-branch_name: 1.076402
+  (0) -1:low:of --> B-devotion_date: 0.107939
+  (0) -1:low:of --> B-event_name: 0.194341
+  (0) -1:low:of --> U-region_name: 0.512041
+  (0) 0:low:is --> O: 0.219821
+  (0) 0:prefix5:is --> O: 0.219821
+  (0) 0:prefix2:is --> O: 0.219821
+  (0) 0:suffix5:is --> O: 0.219821
+  (0) 0:suffix3:is --> O: 0.219821
+  (0) 0:suffix2:is --> O: 0.448234
+  (0) -1:low:is --> O: -1.657757
+  (0) -1:low:is --> B-event_name: 0.608210
+  (0) -1:low:is --> B-pastor_name: 2.598349
+  (0) 0:suffix2:er --> O: -0.692334
+  (0) 0:suffix2:er --> B-devotion_date: 0.843161
+  (0) 0:suffix2:er --> B-reading_period: 0.795716
+  (0) 0:suffix2:er --> B-event_name: 0.418769
+  (0) 0:suffix2:er --> I-event_name: 0.403791
+  (0) 0:suffix3:ing --> O: 0.430974
+  (0) 0:suffix3:ing --> B-ministry_name: 0.312110
+  (0) 0:suffix2:ng --> O: 0.477788
+  (0) 0:suffix2:ng --> B-ministry_name: 0.311236
+  (0) 0:prefix2:fa --> O: -0.323028
+  (0) 0:prefix2:fa --> U-social_platform: 0.829044
+  (0) 0:low:grace --> B-pastor_name: 0.276117
+  (0) 0:prefix5:grace --> B-pastor_name: 0.276117
+  (0) 0:prefix2:gr --> O: -0.264259
+  (0) 0:prefix2:gr --> B-event_name: 0.663238
+  (0) 0:prefix2:gr --> B-pastor_name: 0.174508
+  (0) 0:suffix5:grace --> B-pastor_name: 0.276117
+  (0) 0:suffix3:ace --> B-pastor_name: 0.265084
+  (0) 0:suffix2:ce --> L-event_name: 0.607582
+  (0) 0:suffix2:ce --> B-pastor_name: 0.246079
+  (0) 1:low:church --> B-branch_name: 0.647342
+  (0) -1:low:grace --> O: -0.000169
+  (0) -1:low:grace --> L-pastor_name: 0.375055
+  (0) 0:low:church --> O: 0.204443
+  (0) 0:low:church --> L-branch_name: 0.574310
+  (0) 0:prefix5:churc --> O: 0.205054
+  (0) 0:prefix5:churc --> L-branch_name: 0.574255
+  (0) 0:prefix2:ch --> O: 0.326651
+  (0) 0:prefix2:ch --> L-branch_name: 0.561559
+  (0) 0:suffix5:hurch --> O: 0.204443
+  (0) 0:suffix5:hurch --> L-branch_name: 0.574310
+  (0) 0:suffix3:rch --> O: -0.005278
+  (0) 0:suffix3:rch --> L-branch_name: 0.597269
+  (0) 0:suffix3:rch --> B-devotion_date: 0.164082
+  (0) 0:suffix3:rch --> B-reading_period: 0.267701
+  (0) 0:suffix2:ch --> O: 0.098150
+  (0) 0:suffix2:ch --> L-branch_name: 0.458543
+  (0) 0:suffix2:ch --> B-devotion_date: 0.130552
+  (0) 0:suffix2:ch --> B-reading_period: 0.225156
+  (0) 0:prefix2:st --> O: 0.032960
+  (0) 0:suffix2:es --> O: 0.300493
+  (0) 0:suffix2:es --> L-pastor_name: 0.315232
+  (0) 0:prefix5:pasto --> O: 0.447325
+  (0) 0:prefix2:pa --> O: 0.018759
+  (0) 0:prefix2:pa --> U-branch_name: 0.750456
+  (0) -1:low:pastors --> B-branch_name: 0.247250
+  (0) 0:prefix2:te --> O: 0.375351
+  (0) 0:suffix2:ll --> O: 0.451571
+  (0) 1:low:me --> O: 0.002881
+  (0) 0:low:me --> O: 0.146850
+  (0) 0:prefix5:me --> O: 0.146850
+  (0) 0:prefix2:me --> B-ministry_name: 0.069045
+  (0) 0:prefix2:me --> B-region_name: 0.528918
+  (0) 0:suffix5:me --> O: 0.146850
+  (0) 0:suffix3:me --> O: 0.146850
+  (0) 0:suffix2:me --> O: 0.440070
+  (0) -1:low:me --> B-reading_period: 0.215474
+  (0) -1:low:me --> U-reading_period: 0.243510
+  (0) 0:prefix2:ho --> O: 0.027170
+  (0) -1:low:how --> O: 0.196129
+  (0) 0:suffix2:as --> O: -0.386817
+  (0) 0:suffix2:as --> U-branch_name: 1.141487
+  (0) -1:low:abcmi --> O: 1.006882
+  (0) 0:suffix3:hat --> O: 0.005938
+  (0) 0:suffix2:at --> O: 0.608207
+  (0) -1:low:what --> O: 0.370210
+  (0) 0:prefix2:co --> O: 0.015784
+  (0) 0:prefix2:co --> L-event_name: 0.495826
+  (0) 1:low:s --> O: -0.061933
+  (0) 1:low:s --> B-ministry_name: 1.282521
+  (0) -1:low:church --> O: 0.243549
+  (0) 0:low:s --> O: 0.063840
+  (0) 0:low:s --> I-ministry_name: 0.835753
+  (0) 0:prefix5:s --> O: 0.063840
+  (0) 0:prefix5:s --> I-ministry_name: 0.835753
+  (0) 0:prefix2:s --> O: 0.063840
+  (0) 0:prefix2:s --> I-ministry_name: 0.835753
+  (0) 0:suffix5:s --> O: 0.063840
+  (0) 0:suffix5:s --> I-ministry_name: 0.835753
+  (0) 0:suffix3:s --> O: 0.063840
+  (0) 0:suffix3:s --> I-ministry_name: 0.835753
+  (0) 0:suffix2:s --> O: 0.063840
+  (0) 0:suffix2:s --> I-ministry_name: 0.835753
+  (0) -1:low:s --> O: -0.160367
+  (0) -1:low:s --> L-ministry_name: 0.644339
+  (0) 0:low:does --> O: 0.001868
+  (0) 0:prefix5:does --> O: 0.001868
+  (0) 0:prefix2:do --> O: 0.456171
+  (0) 0:suffix5:does --> O: 0.001868
+  (0) 0:suffix3:oes --> O: 0.004038
+  (0) -1:low:does --> O: -1.116059
+  (0) -1:low:does --> U-branch_name: 0.343890
+  (0) -1:low:does --> B-branch_name: 0.225498
+  (0) -1:low:does --> B-event_name: 0.102150
+  (0) 1:low:hold --> O: -0.194772
+  (0) 1:low:hold --> L-branch_name: 0.252735
+  (0) 1:low:your --> O: -0.086743
+  (0) 1:low:your --> L-pastor_name: 0.184926
+  (0) 0:low:your --> O: 0.322871
+  (0) 0:prefix5:your --> O: 0.322871
+  (0) 0:prefix2:yo --> O: -0.477107
+  (0) 0:prefix2:yo --> U-social_platform: 0.764841
+  (0) 0:prefix2:yo --> B-event_name: 0.599669
+  (0) 0:prefix2:yo --> B-ministry_name: 0.293670
+  (0) 0:suffix5:your --> O: 0.322871
+  (0) 0:suffix3:our --> O: 0.366585
+  (0) 0:suffix2:ur --> O: 0.366585
+  (0) -1:low:your --> O: -0.804275
+  (0) -1:low:your --> U-social_platform: 1.362584
+  (0) 0:prefix2:li --> L-pastor_name: 0.331652
+  (0) 0:suffix2:st --> O: -0.041461
+  (0) 0:suffix2:st --> B-devotion_date: 0.256761
+  (0) 0:suffix2:st --> B-reading_period: 0.383893
+  (0) 0:prefix2:pr --> B-ministry_name: 0.245331
+  (0) 0:suffix2:ry --> O: -0.579744
+  (0) 0:suffix2:ry --> B-devotion_date: 0.556914
+  (0) 0:suffix2:ry --> B-reading_period: 0.513562
+  (0) 0:suffix2:ry --> L-ministry_name: 1.026911
+  (0) 0:prefix2:di --> O: -0.275151
+  (0) 0:prefix2:di --> U-branch_name: 0.842947
+  (0) 0:suffix2:en --> O: -0.463423
+  (0) 0:suffix2:en --> B-ministry_name: 1.437706
+  (0) 0:suffix2:en --> B-pastor_name: 0.040433
+  (0) 0:prefix2:ba --> O: -0.615836
+  (0) 0:prefix2:ba --> U-region_name: 0.805781
+  (0) 0:suffix2:nd --> B-event_name: 0.677257
+  (0) 0:prefix2:mi --> O: -0.062265
+  (0) 0:prefix2:mi --> L-ministry_name: 1.025757
+  (0) 0:suffix2:ve --> O: 0.383807
+  (0) 1:low:a --> O: -0.172406
+  (0) 1:low:a --> L-pastor_name: 0.770870
+  (0) 0:low:a --> O: 0.504749
+  (0) 0:prefix5:a --> O: 0.504749
+  (0) 0:prefix2:a --> O: 0.504749
+  (0) 0:suffix5:a --> O: 0.504749
+  (0) 0:suffix3:a --> O: 0.504749
+  (0) 0:suffix2:a --> O: 0.504749
+  (0) -1:low:a --> O: 1.503017
+  (0) 0:prefix2:br --> O: 0.691984
+  (0) 0:prefix2:ha --> O: 0.354457
+  (0) 1:low:in --> O: 0.154748
+  (0) 0:low:in --> O: 0.588869
+  (0) 0:prefix5:in --> O: 0.588869
+  (0) 0:prefix2:in --> O: -0.380474
+  (0) 0:prefix2:in --> U-social_platform: 0.673820
+  (0) 0:prefix2:in --> U-region_name: 0.980870
+  (0) 0:suffix5:in --> O: 0.588869
+  (0) 0:suffix3:in --> O: 0.588869
+  (0) 0:suffix2:in --> O: 0.340292
+  (0) 0:suffix2:in --> B-branch_name: 0.476646
+  (0) 0:suffix2:in --> L-pastor_name: 0.607418
+  (0) -1:low:in --> O: -1.251211
+  (0) -1:low:in --> B-branch_name: -1.640170
+  (0) -1:low:in --> U-region_name: 2.459686
+  (0) -1:low:in --> B-region_name: 2.346676
+  (0) 1:low:please --> L-devotion_date: 0.518028
+  (0) 0:prefix2:pl --> O: 0.346650
+  (0) 0:suffix3:ion --> I-event_name: 0.283203
+  (0) 0:suffix3:ion --> L-event_name: 0.409714
+  (0) 0:suffix3:ion --> B-region_name: 0.484250
+  (0) 0:suffix2:on --> O: 0.418202
+  (0) 0:suffix2:on --> I-event_name: 0.279895
+  (0) 0:suffix2:on --> L-event_name: 0.408636
+  (0) 0:suffix2:on --> B-region_name: 0.440695
+  (0) 1:low:do --> L-ministry_name: 0.001462
+  (0) 0:low:do --> O: 0.041677
+  (0) 0:prefix5:do --> O: 0.041677
+  (0) 0:suffix5:do --> O: 0.041677
+  (0) 0:suffix3:do --> O: 0.041677
+  (0) 0:suffix2:do --> O: 0.041677
+  (0) -1:low:do --> O: 0.002538
+  (0) 0:low:you --> O: 0.072570
+  (0) 0:prefix5:you --> O: 0.072570
+  (0) 0:suffix5:you --> O: 0.072570
+  (0) 0:suffix3:you --> O: 0.072570
+  (0) 0:suffix2:ou --> O: 0.072570
+  (0) -1:low:you --> O: 0.191771
+  (0) 0:suffix3:and --> O: -0.202578
+  (0) 0:suffix3:and --> B-event_name: 0.694948
+  (0) 1:low:for --> O: 0.213261
+  (0) 0:low:for --> O: 0.196576
+  (0) 0:prefix5:for --> O: 0.196576
+  (0) 0:suffix5:for --> O: 0.196576
+  (0) 0:suffix3:for --> O: 0.196576
+  (0) 0:suffix2:or --> O: 0.774121
+  (0) 0:prefix2:ou --> O: -0.002439
+  (0) 0:prefix2:ou --> B-ministry_name: 0.144340
+  (0) 0:suffix2:im --> O: -0.362148
+  (0) 0:suffix2:im --> L-pastor_name: 0.398393
+  (0) 1:low:to --> O: 0.219992
+  (0) 0:low:to --> O: 0.090088
+  (0) 0:prefix5:to --> O: 0.090088
+  (0) 0:prefix2:to --> O: 0.723626
+  (0) 0:suffix5:to --> O: 0.090088
+  (0) 0:suffix3:to --> O: 0.090088
+  (0) 0:suffix2:to --> O: 0.092410
+  (0) -1:low:to --> O: -0.094313
+  (0) -1:low:to --> B-branch_name: 0.628294
+  (0) 0:prefix2:be --> O: 0.012047
+  (0) 0:prefix2:be --> B-pastor_name: 0.163152
+  (0) 0:suffix2:ly --> B-devotion_date: 0.322775
+  (0) 0:suffix2:ly --> B-reading_period: 0.310672
+  (0) 0:prefix2:sp --> O: -0.637147
+  (0) 0:prefix2:sp --> U-social_platform: 0.900980
+  (0) 0:suffix2:it --> O: 0.153568
+  (0) 0:low:salvation --> O: 0.001920
+  (0) 0:prefix5:salva --> O: 0.001920
+  (0) 0:prefix2:sa --> O: -0.308079
+  (0) 0:prefix2:sa --> B-branch_name: 0.760968
+  (0) 0:prefix2:sa --> L-pastor_name: 0.631902
+  (0) 0:suffix5:ation --> O: -0.502165
+  (0) 0:suffix5:ation --> I-event_name: 0.437515
+  (0) 0:suffix5:ation --> L-event_name: 0.743122
+  (0) 0:suffix2:th --> O: -0.604665
+  (0) 0:suffix2:th --> B-event_name: 0.627475
+  (0) 0:suffix2:th --> B-ministry_name: 0.287037
+  (0) 0:suffix2:th --> L-pastor_name: 0.262859
+  (0) 0:prefix2:re --> O: 0.401108
+  (0) 0:prefix2:re --> B-region_name: 0.533336
+  (0) 0:prefix2:re --> L-pastor_name: 0.193643
+  (0) 1:low:bible --> O: -0.017259
+  (0) 1:low:bible --> L-reading_period: 0.327282
+  (0) 1:low:bible --> U-reading_period: 0.120520
+  (0) 0:suffix3:ble --> O: 0.066527
+  (0) 0:suffix2:le --> O: 0.471125
+  (0) 0:prefix2:he --> O: 0.092956
+  (0) 0:prefix2:an --> O: 0.006921
+  (0) 0:prefix2:an --> U-branch_name: 0.819329
+  (0) 0:prefix2:an --> B-pastor_name: 0.070454
+  (0) -1:low:and --> O: 0.220431
+  (0) 0:suffix3:nal --> O: -0.001006
+  (0) 0:suffix3:nal --> U-region_name: 0.894909
+  (0) 0:suffix2:al --> O: 0.103654
+  (0) 0:suffix2:al --> U-region_name: 0.859871
+  (0) 0:prefix2:se --> O: 0.180030
+  (0) 0:prefix2:se --> B-reading_period: 0.002714
+  (0) 0:low:prayer --> B-ministry_name: 0.267117
+  (0) 0:prefix5:praye --> B-ministry_name: 0.267117
+  (0) 0:suffix5:rayer --> B-ministry_name: 0.267117
+  (0) 0:suffix3:yer --> B-ministry_name: 0.267117
+  (0) -1:low:prayer --> O: -0.009121
+  (0) -1:low:prayer --> L-ministry_name: 0.151860
+  (0) 0:suffix3:nce --> O: -0.302046
+  (0) 0:suffix3:nce --> L-event_name: 0.709819
+  (0) 1:low:one --> O: -0.831266
+  (0) 1:low:one --> L-pastor_name: 0.954694
+  (0) 0:low:one --> O: 0.166165
+  (0) 0:prefix5:one --> O: 0.166165
+  (0) 0:prefix2:on --> O: 0.565133
+  (0) 0:suffix5:one --> O: 0.166165
+  (0) 0:suffix3:one --> O: 0.256971
+  (0) 0:suffix2:ne --> O: 0.289498
+  (0) -1:low:one --> O: 0.497344
+  (0) 0:suffix2:nt --> O: 0.153815
+  (0) 0:prefix5:faith --> O: 0.018050
+  (0) 0:suffix3:ith --> L-pastor_name: 0.294304
+  (0) -1:low:for --> O: -1.370174
+  (0) -1:low:for --> B-devotion_date: -0.004478
+  (0) -1:low:for --> B-reading_period: 1.205023
+  (0) -1:low:for --> U-reading_period: 1.195804
+  (0) -1:low:for --> B-event_name: 0.333731
+  (0) -1:low:where --> O: 0.005126
+  (0) 0:suffix2:an --> O: -0.645225
+  (0) 0:suffix2:an --> U-branch_name: 2.411975
+  (0) 0:suffix2:an --> B-branch_name: 0.735729
+  (0) 0:suffix2:an --> L-branch_name: 0.393479
+  (0) 0:suffix2:am --> O: -0.856344
+  (0) 0:suffix2:am --> U-social_platform: 0.986274
+  (0) 1:low:i --> O: 0.388837
+  (0) 0:low:i --> O: 0.158641
+  (0) 0:prefix5:i --> O: 0.158641
+  (0) 0:prefix2:i --> O: 0.158641
+  (0) 0:suffix5:i --> O: 0.158641
+  (0) 0:suffix3:i --> O: 0.158641
+  (0) 0:suffix2:i --> O: 0.158641
+  (0) -1:low:i --> O: 0.845452
+  (0) 0:low:ansagan --> O: -0.751208
+  (0) 0:low:ansagan --> U-branch_name: 1.089306
+  (0) 0:prefix5:ansag --> O: -0.751208
+  (0) 0:prefix5:ansag --> U-branch_name: 1.089306
+  (0) 0:suffix5:sagan --> O: -0.751208
+  (0) 0:suffix5:sagan --> U-branch_name: 1.089306
+  (0) 0:suffix3:gan --> O: -0.751208
+  (0) 0:suffix3:gan --> U-branch_name: 1.089306
+  (0) 1:low:branch --> O: 0.043980
+  (0) 1:low:branch --> U-branch_name: 0.202634
+  (0) 1:low:branch --> L-branch_name: 0.192199
+  (0) -1:low:ansagan --> O: 0.119213
+  (0) 0:low:branch --> O: 0.314560
+  (0) 0:prefix5:branc --> O: 0.572088
+  (0) 0:suffix5:ranch --> O: 0.314560
+  (0) 0:suffix3:nch --> O: 0.314560
+  (0) 0:prefix2:lo --> O: 0.195851
+  (0) 1:low:address --> O: -0.317769
+  (0) 1:low:address --> L-branch_name: 0.445796
+  (0) 0:low:can --> O: 0.385427
+  (0) 0:prefix5:can --> O: 0.385427
+  (0) 0:prefix2:ca --> O: -0.329090
+  (0) 0:prefix2:ca --> B-branch_name: 0.600507
+  (0) 0:prefix2:ca --> L-branch_name: 0.315702
+  (0) 0:prefix2:ca --> I-event_name: 0.426680
+  (0) 0:prefix2:ca --> U-region_name: 0.753449
+  (0) 0:suffix5:can --> O: 0.385427
+  (0) 0:suffix3:can --> O: -0.020603
+  (0) 0:suffix3:can --> U-branch_name: 0.616205
+  (0) -1:low:can --> O: 0.078643
+  (0) 1:low:camp --> B-event_name: 1.253815
+  (0) -1:low:find --> O: -0.006431
+  (0) 0:low:camp --> O: -0.024122
+  (0) 0:low:camp --> B-branch_name: 0.660049
+  (0) 0:low:camp --> I-event_name: 0.458353
+  (0) 0:prefix5:camp --> O: -0.024122
+  (0) 0:prefix5:camp --> B-branch_name: 0.660049
+  (0) 0:prefix5:camp --> I-event_name: 0.458353
+  (0) 0:suffix5:camp --> O: -0.024122
+  (0) 0:suffix5:camp --> B-branch_name: 0.660049
+  (0) 0:suffix5:camp --> I-event_name: 0.458353
+  (0) 0:suffix3:amp --> O: -0.024122
+  (0) 0:suffix3:amp --> B-branch_name: 0.660049
+  (0) 0:suffix3:amp --> I-event_name: 0.458353
+  (0) 0:suffix2:mp --> O: -0.024122
+  (0) 0:suffix2:mp --> B-branch_name: 0.660049
+  (0) 0:suffix2:mp --> I-event_name: 0.458353
+  (0) 1:low:8 --> O: -0.019522
+  (0) 1:low:8 --> B-branch_name: 0.726834
+  (0) 1:low:8 --> B-reading_period: 0.260298
+  (0) -1:low:camp --> O: 0.064825
+  (0) -1:low:camp --> L-branch_name: 0.625296
+  (0) -1:low:camp --> L-event_name: 1.997740
+  (0) 0:low:8 --> O: 0.046420
+  (0) 0:low:8 --> L-branch_name: 0.540357
+  (0) 0:low:8 --> I-reading_period: 0.100710
+  (0) 0:prefix5:8 --> O: 0.046420
+  (0) 0:prefix5:8 --> L-branch_name: 0.540357
+  (0) 0:prefix5:8 --> I-reading_period: 0.100710
+  (0) 0:prefix2:8 --> O: 0.046420
+  (0) 0:prefix2:8 --> L-branch_name: 0.540357
+  (0) 0:prefix2:8 --> I-reading_period: 0.100710
+  (0) 0:suffix5:8 --> O: 0.046420
+  (0) 0:suffix5:8 --> L-branch_name: 0.540357
+  (0) 0:suffix5:8 --> I-reading_period: 0.100710
+  (0) 0:suffix3:8 --> O: 0.046420
+  (0) 0:suffix3:8 --> L-branch_name: 0.540357
+  (0) 0:suffix3:8 --> I-reading_period: 0.100710
+  (0) 0:suffix2:8 --> O: 0.046420
+  (0) 0:suffix2:8 --> L-branch_name: 0.540357
+  (0) 0:suffix2:8 --> I-reading_period: 0.100710
+  (0) -1:low:8 --> L-reading_period: 0.025580
+  (0) 0:low:main --> B-branch_name: 0.636558
+  (0) 0:prefix5:main --> B-branch_name: 0.636558
+  (0) 0:prefix2:ma --> O: -1.895549
+  (0) 0:prefix2:ma --> B-branch_name: 0.556610
+  (0) 0:prefix2:ma --> B-devotion_date: 0.197290
+  (0) 0:prefix2:ma --> B-reading_period: 0.295199
+  (0) 0:prefix2:ma --> L-region_name: 0.614474
+  (0) 0:prefix2:ma --> B-pastor_name: 0.723583
+  (0) 0:suffix5:main --> B-branch_name: 0.636558
+  (0) 0:suffix3:ain --> O: 0.012449
+  (0) 0:suffix3:ain --> B-branch_name: 0.631061
+  (0) -1:low:main --> O: -0.846791
+  (0) -1:low:main --> L-branch_name: 1.021864
+  (0) 0:low:kias --> O: -0.748142
+  (0) 0:low:kias --> U-branch_name: 1.187006
+  (0) 0:prefix5:kias --> O: -0.748142
+  (0) 0:prefix5:kias --> U-branch_name: 1.187006
+  (0) 0:prefix2:ki --> O: -0.729122
+  (0) 0:prefix2:ki --> U-branch_name: 1.182933
+  (0) 0:suffix5:kias --> O: -0.748142
+  (0) 0:suffix5:kias --> U-branch_name: 1.187006
+  (0) 0:suffix3:ias --> O: -0.748142
+  (0) 0:suffix3:ias --> U-branch_name: 1.187006
+  (0) 0:low:patiacan --> O: -0.834858
+  (0) 0:low:patiacan --> U-branch_name: 0.955522
+  (0) 0:prefix5:patia --> O: -0.834858
+  (0) 0:prefix5:patia --> U-branch_name: 0.955522
+  (0) 0:suffix5:iacan --> O: -0.834858
+  (0) 0:suffix5:iacan --> U-branch_name: 0.955522
+  (0) 0:low:dianawan --> O: -0.647397
+  (0) 0:low:dianawan --> U-branch_name: 0.868568
+  (0) 0:prefix5:diana --> O: -0.647397
+  (0) 0:prefix5:diana --> U-branch_name: 0.868568
+  (0) 0:suffix5:nawan --> O: -0.647397
+  (0) 0:suffix5:nawan --> U-branch_name: 0.868568
+  (0) 0:suffix3:wan --> O: -0.647397
+  (0) 0:suffix3:wan --> U-branch_name: 0.868568
+  (0) 1:low:san --> O: 0.019034
+  (0) 0:low:san --> O: -0.088492
+  (0) 0:low:san --> B-branch_name: 0.797446
+  (0) 0:prefix5:san --> O: -0.088492
+  (0) 0:prefix5:san --> B-branch_name: 0.797446
+  (0) 0:suffix5:san --> O: -0.088492
+  (0) 0:suffix5:san --> B-branch_name: 0.797446
+  (0) 0:suffix3:san --> O: -0.088492
+  (0) 0:suffix3:san --> B-branch_name: 0.797446
+  (0) 1:low:carlos --> O: -0.001763
+  (0) 1:low:carlos --> B-branch_name: 0.216186
+  (0) -1:low:san --> O: -0.128289
+  (0) -1:low:san --> L-branch_name: 1.054806
+  (0) 0:low:carlos --> O: -0.098317
+  (0) 0:low:carlos --> L-branch_name: 0.404757
+  (0) 0:prefix5:carlo --> O: -0.098317
+  (0) 0:prefix5:carlo --> L-branch_name: 0.404757
+  (0) 0:suffix5:arlos --> O: -0.098317
+  (0) 0:suffix5:arlos --> L-branch_name: 0.404757
+  (0) 0:suffix3:los --> O: -0.098317
+  (0) 0:suffix3:los --> L-branch_name: 0.404757
+  (0) 0:suffix2:os --> O: -0.982934
+  (0) 0:suffix2:os --> L-branch_name: 0.362989
+  (0) 0:suffix2:os --> L-pastor_name: 0.496514
+  (0) 0:low:service --> O: 0.000084
+  (0) 0:prefix5:servi --> O: 0.008207
+  (0) 0:suffix5:rvice --> O: 0.000084
+  (0) 0:suffix3:ice --> O: 0.092967
+  (0) 1:low:at --> O: 0.086162
+  (0) 0:low:at --> O: 0.039124
+  (0) 0:prefix5:at --> O: 0.039124
+  (0) 0:prefix2:at --> O: 0.052407
+  (0) 0:suffix5:at --> O: 0.039124
+  (0) 0:suffix3:at --> O: 0.039124
+  (0) -1:low:at --> O: -1.346046
+  (0) -1:low:at --> U-branch_name: 0.376036
+  (0) -1:low:at --> B-branch_name: 0.714124
+  (0) 0:prefix2:ti --> O: -0.394200
+  (0) 0:prefix2:ti --> U-social_platform: 0.688991
+  (0) 0:low:worship --> B-ministry_name: 0.128531
+  (0) 0:prefix5:worsh --> B-ministry_name: 0.128531
+  (0) 0:prefix2:wo --> B-ministry_name: 0.630607
+  (0) 0:suffix5:rship --> O: -0.349484
+  (0) 0:suffix5:rship --> B-event_name: 0.621649
+  (0) 0:suffix5:rship --> B-ministry_name: 0.114614
+  (0) 0:suffix3:hip --> O: -0.349484
+  (0) 0:suffix3:hip --> B-event_name: 0.621649
+  (0) 0:suffix3:hip --> B-ministry_name: 0.114614
+  (0) 0:suffix2:ip --> O: -0.349484
+  (0) 0:suffix2:ip --> B-event_name: 0.621649
+  (0) 0:suffix2:ip --> B-ministry_name: 0.114614
+  (0) -1:low:worship --> L-ministry_name: 0.052128
+  (0) 1:low:have --> U-branch_name: 0.000448
+  (0) 0:low:have --> O: 0.001625
+  (0) 0:prefix5:have --> O: 0.001625
+  (0) 0:suffix5:have --> O: 0.001625
+  (0) 0:suffix3:ave --> O: 0.017746
+  (0) -1:low:have --> O: -1.023936
+  (0) -1:low:have --> U-social_platform: 1.529333
+  (0) 0:prefix2:su --> O: 0.037204
+  (0) 0:suffix3:day --> O: 0.121514
+  (0) 0:suffix2:ay --> O: 0.273073
+  (0) 1:low:branches --> O: 1.494874
+  (0) 0:suffix2:ar --> O: -0.210514
+  (0) 0:suffix2:ar --> U-region_name: 0.881529
+  (0) 0:suffix3:ons --> O: 0.020233
+  (0) 0:suffix2:ns --> O: 0.098955
+  (0) 0:suffix2:ny --> O: 0.346361
+  (0) 0:low:international --> O: -0.705895
+  (0) 0:low:international --> U-region_name: 1.037026
+  (0) 0:prefix5:inter --> O: -0.705895
+  (0) 0:prefix5:inter --> U-region_name: 1.037026
+  (0) 0:suffix5:ional --> O: -0.105595
+  (0) 0:suffix5:ional --> U-region_name: 0.923029
+  (0) 0:suffix3:ber --> O: -0.337415
+  (0) 0:suffix3:ber --> B-devotion_date: 0.988671
+  (0) 0:suffix3:ber --> B-reading_period: 1.029456
+  (0) 0:low:1 --> L-region_name: 0.307008
+  (0) 0:prefix5:1 --> L-region_name: 0.307008
+  (0) 0:prefix2:1 --> L-region_name: 0.307008
+  (0) 0:suffix5:1 --> L-region_name: 0.307008
+  (0) 0:suffix3:1 --> L-region_name: 0.307008
+  (0) 0:suffix2:1 --> L-region_name: 0.307008
+  (0) 0:low:2 --> L-region_name: 0.347688
+  (0) 0:prefix5:2 --> L-region_name: 0.347688
+  (0) 0:prefix2:2 --> L-region_name: 0.347688
+  (0) 0:suffix5:2 --> L-region_name: 0.347688
+  (0) 0:suffix3:2 --> L-region_name: 0.347688
+  (0) 0:suffix2:2 --> L-region_name: 0.347688
+  (0) 0:low:3 --> O: 0.007033
+  (0) 0:prefix5:3 --> O: 0.007033
+  (0) 0:prefix2:3 --> O: 0.007033
+  (0) 0:suffix5:3 --> O: 0.007033
+  (0) 0:suffix3:3 --> O: 0.007033
+  (0) 0:suffix2:3 --> O: 0.007033
+  (0) 0:low:car --> O: -0.373013
+  (0) 0:low:car --> U-region_name: 0.919108
+  (0) 0:prefix5:car --> O: -0.373013
+  (0) 0:prefix5:car --> U-region_name: 0.919108
+  (0) 0:suffix5:car --> O: -0.373013
+  (0) 0:suffix5:car --> U-region_name: 0.919108
+  (0) 0:suffix3:car --> O: -0.373013
+  (0) 0:suffix3:car --> U-region_name: 0.919108
+  (0) 1:low:region --> O: -0.642334
+  (0) 1:low:region --> U-region_name: 0.799925
+  (0) -1:low:car --> O: 0.445178
+  (0) 0:low:region --> B-region_name: 0.766580
+  (0) 0:prefix5:regio --> B-region_name: 0.766580
+  (0) 0:suffix5:egion --> B-region_name: 0.766580
+  (0) -1:low:region --> L-region_name: 1.393610
+  (0) 1:low:1 --> O: -0.501549
+  (0) 1:low:1 --> B-devotion_date: 0.089941
+  (0) 1:low:1 --> B-region_name: 0.450493
+  (0) 1:low:2 --> O: -0.380721
+  (0) 1:low:2 --> B-region_name: 0.542010
+  (0) 0:prefix2:ce --> O: -1.288843
+  (0) 0:prefix2:ce --> I-event_name: 0.515550
+  (0) 0:prefix2:ce --> L-event_name: 0.827853
+  (0) 0:prefix2:de --> B-devotion_date: 0.042082
+  (0) 0:prefix2:de --> B-reading_period: 0.129553
+  (0) 0:prefix2:de --> I-pastor_name: 0.583058
+  (0) 0:suffix2:il --> O: -0.145774
+  (0) 0:suffix2:il --> B-devotion_date: 0.241948
+  (0) 0:suffix2:il --> B-reading_period: 0.321275
+  (0) 0:suffix2:te --> O: 0.349777
+  (0) 0:suffix3:ies --> O: 0.102063
+  (0) 0:low:my --> O: 0.081061
+  (0) 0:prefix5:my --> O: 0.081061
+  (0) 0:prefix2:my --> O: 0.098481
+  (0) 0:suffix5:my --> O: 0.081061
+  (0) 0:suffix3:my --> O: 0.081061
+  (0) 0:suffix2:my --> O: 0.081061
+  (0) -1:low:my --> O: 0.050469
+  (0) 0:suffix3:age --> O: 0.063436
+  (0) 0:suffix2:ge --> O: 0.059276
+  (0) -1:low:will --> O: -0.308198
+  (0) -1:low:will --> B-event_name: 0.584500
+  (0) 0:prefix2:us --> O: -0.059683
+  (0) 0:prefix2:us --> B-ministry_name: 0.400912
+  (0) 1:low:pastor --> O: -0.636085
+  (0) 1:low:pastor --> U-branch_name: 0.945579
+  (0) 1:low:pastor --> L-branch_name: 0.224741
+  (0) 0:low:pastor --> O: 0.008254
+  (0) 0:suffix5:astor --> O: 0.008254
+  (0) 0:suffix3:tor --> O: 0.029006
+  (0) -1:low:pastor --> O: 0.299129
+  (0) -1:low:pastor --> U-branch_name: 0.183442
+  (0) -1:low:pastor --> B-branch_name: -0.439698
+  (0) -1:low:or --> O: -0.278835
+  (0) -1:low:or --> U-social_platform: 0.352716
+  (0) 0:low:an --> O: 0.070992
+  (0) 0:prefix5:an --> O: 0.070992
+  (0) 0:suffix5:an --> O: 0.070992
+  (0) 0:suffix3:an --> O: 0.070992
+  (0) -1:low:from --> B-devotion_date: 0.754636
+  (0) 0:suffix5:reach --> O: -0.025517
+  (0) 0:suffix5:reach --> B-ministry_name: 0.146883
+  (0) 0:suffix3:ach --> O: -0.025517
+  (0) 0:suffix3:ach --> B-ministry_name: 0.146883
+  (0) 0:prefix2:le --> O: -0.244397
+  (0) 0:prefix2:le --> B-event_name: 0.828055
+  (0) 0:suffix2:ia --> O: -0.112873
+  (0) 0:suffix2:ia --> B-pastor_name: 0.264232
+  (0) -1:low:official --> O: -0.444898
+  (0) -1:low:official --> U-social_platform: 0.603090
+  (0) 1:low:account --> O: -0.515382
+  (0) 1:low:account --> U-social_platform: 0.605626
+  (0) 1:low:facebook --> O: 0.039266
+  (0) 0:low:facebook --> U-social_platform: 0.973011
+  (0) 0:prefix5:faceb --> U-social_platform: 0.973011
+  (0) 0:suffix5:ebook --> U-social_platform: 0.973011
+  (0) 0:suffix3:ook --> O: -0.543140
+  (0) 0:suffix3:ook --> U-social_platform: 0.756266
+  (0) 0:suffix2:ok --> O: -1.633039
+  (0) 0:suffix2:ok --> U-social_platform: 1.874364
+  (0) 0:low:tiktok --> U-social_platform: 0.775611
+  (0) 0:prefix5:tikto --> U-social_platform: 0.775611
+  (0) 0:suffix5:iktok --> U-social_platform: 0.775611
+  (0) 0:suffix3:tok --> U-social_platform: 0.775611
+  (0) 0:low:instagram --> U-social_platform: 1.010643
+  (0) 0:prefix5:insta --> O: -0.921140
+  (0) 0:prefix5:insta --> U-social_platform: 0.987066
+  (0) 0:suffix5:agram --> U-social_platform: 1.010643
+  (0) 0:suffix3:ram --> U-social_platform: 1.010643
+  (0) 0:low:youtube --> U-social_platform: 1.173057
+  (0) 0:prefix5:youtu --> U-social_platform: 1.173057
+  (0) 0:suffix5:utube --> U-social_platform: 1.173057
+  (0) 0:suffix3:ube --> U-social_platform: 1.173057
+  (0) 0:suffix2:be --> O: -0.416395
+  (0) 0:suffix2:be --> U-social_platform: 1.035919
+  (0) 0:low:spotify --> U-social_platform: 0.971221
+  (0) 0:prefix5:spoti --> U-social_platform: 0.971221
+  (0) 0:suffix5:otify --> U-social_platform: 0.971221
+  (0) 0:suffix3:ify --> O: -0.807351
+  (0) 0:suffix3:ify --> U-social_platform: 0.931735
+  (0) 0:suffix2:fy --> O: -0.807351
+  (0) 0:suffix2:fy --> U-social_platform: 0.931735
+  (0) 1:low:link --> O: -0.259489
+  (0) 1:low:link --> U-social_platform: 0.323123
+  (0) 1:low:channel --> U-social_platform: 0.510676
+  (0) 0:suffix2:el --> O: -0.505322
+  (0) 0:suffix2:el --> B-pastor_name: 0.710712
+  (0) -1:low:on --> O: -0.964789
+  (0) -1:low:on --> U-social_platform: 0.465626
+  (0) -1:low:on --> B-devotion_date: -0.008794
+  (0) -1:low:on --> B-reading_period: 0.575212
+  (0) 0:low:counseling --> O: 0.000422
+  (0) 0:prefix5:couns --> O: 0.001757
+  (0) 0:suffix5:eling --> O: 0.000596
+  (0) 0:prefix2:fe --> B-devotion_date: 0.110904
+  (0) 0:prefix2:fe --> B-reading_period: 0.272656
+  (0) 0:prefix2:mu --> O: -0.180419
+  (0) 0:prefix2:mu --> B-ministry_name: 0.492663
+  (0) 0:prefix2:no --> B-devotion_date: 0.180341
+  (0) 0:prefix2:no --> B-reading_period: 0.113555
+  (0) 0:prefix5:membe --> O: 0.158054
+  (0) 0:low:member --> O: 0.055272
+  (0) 0:suffix5:ember --> O: -0.433747
+  (0) 0:suffix5:ember --> B-devotion_date: 0.639745
+  (0) 0:suffix5:ember --> B-reading_period: 0.801602
+  (0) 1:low:be --> L-event_name: 0.000673
+  (0) 0:low:be --> O: 0.043390
+  (0) 0:prefix5:be --> O: 0.043390
+  (0) 0:suffix5:be --> O: 0.043390
+  (0) 0:suffix3:be --> O: 0.043390
+  (0) 0:prefix2:pe --> O: -0.089400
+  (0) 0:prefix2:pe --> B-pastor_name: 0.162780
+  (0) 1:low:too --> O: 0.161074
+  (0) 0:low:september --> B-reading_period: 0.040647
+  (0) 0:prefix5:septe --> B-reading_period: 0.040647
+  (0) 1:low:6 --> B-devotion_date: 0.372210
+  (0) 0:low:6 --> I-devotion_date: 0.148307
+  (0) 0:prefix5:6 --> I-devotion_date: 0.148307
+  (0) 0:prefix2:6 --> I-devotion_date: 0.148307
+  (0) 0:suffix5:6 --> I-devotion_date: 0.148307
+  (0) 0:suffix3:6 --> I-devotion_date: 0.148307
+  (0) 0:suffix2:6 --> I-devotion_date: 0.148307
+  (0) 1:low:2026 --> O: -0.524652
+  (0) 1:low:2026 --> I-devotion_date: 1.212861
+  (0) 1:low:2026 --> B-reading_period: 1.362490
+  (0) 1:low:2026 --> I-reading_period: 1.520215
+  (0) 1:low:2026 --> I-event_name: 2.121014
+  (0) -1:low:6 --> L-devotion_date: 0.383182
+  (0) 0:low:2026 --> L-devotion_date: 0.734623
+  (0) 0:low:2026 --> L-reading_period: 0.825596
+  (0) 0:low:2026 --> U-reading_period: 0.359913
+  (0) 0:low:2026 --> L-event_name: 0.742720
+  (0) 0:prefix5:2026 --> L-devotion_date: 0.734623
+  (0) 0:prefix5:2026 --> L-reading_period: 0.825596
+  (0) 0:prefix5:2026 --> U-reading_period: 0.359913
+  (0) 0:prefix5:2026 --> L-event_name: 0.742720
+  (0) 0:prefix2:20 --> I-devotion_date: 0.011118
+  (0) 0:prefix2:20 --> L-devotion_date: 1.106871
+  (0) 0:prefix2:20 --> L-reading_period: 1.237319
+  (0) 0:prefix2:20 --> U-reading_period: 2.364619
+  (0) 0:prefix2:20 --> L-event_name: 0.712476
+  (0) 0:suffix5:2026 --> L-devotion_date: 0.734623
+  (0) 0:suffix5:2026 --> L-reading_period: 0.825596
+  (0) 0:suffix5:2026 --> U-reading_period: 0.359913
+  (0) 0:suffix5:2026 --> L-event_name: 0.742720
+  (0) 0:suffix3:026 --> L-devotion_date: 0.734623
+  (0) 0:suffix3:026 --> L-reading_period: 0.825596
+  (0) 0:suffix3:026 --> U-reading_period: 0.359913
+  (0) 0:suffix3:026 --> L-event_name: 0.742720
+  (0) 0:suffix2:26 --> L-devotion_date: 0.734623
+  (0) 0:suffix2:26 --> L-reading_period: 0.825596
+  (0) 0:suffix2:26 --> U-reading_period: 0.359913
+  (0) 0:suffix2:26 --> L-event_name: 0.742720
+  (0) 1:low:devotion --> O: 0.036544
+  (0) 1:low:devotion --> L-devotion_date: 2.033204
+  (0) -1:low:2026 --> O: 1.132754
+  (0) 0:low:devotion --> O: 0.115153
+  (0) 0:prefix5:devot --> O: 0.947779
+  (0) 0:suffix5:otion --> O: 0.115153
+  (0) 0:prefix2:au --> O: -0.447702
+  (0) 0:prefix2:au --> B-devotion_date: 0.274996
+  (0) 0:prefix2:au --> B-reading_period: 0.476748
+  (0) 0:low:october --> B-devotion_date: 0.071222
+  (0) 0:low:october --> B-reading_period: 0.028804
+  (0) 0:prefix5:octob --> B-devotion_date: 0.071222
+  (0) 0:prefix5:octob --> B-reading_period: 0.028804
+  (0) 0:prefix2:oc --> B-devotion_date: 0.071222
+  (0) 0:prefix2:oc --> B-reading_period: 0.028804
+  (0) 0:suffix5:tober --> B-devotion_date: 0.071222
+  (0) 0:suffix5:tober --> B-reading_period: 0.028804
+  (0) -1:low:october --> I-devotion_date: 0.035039
+  (0) -1:low:1 --> L-devotion_date: 0.008413
+  (0) 1:low:devotional --> L-devotion_date: 1.333719
+  (0) 0:low:devotional --> O: 0.013637
+  (0) 0:low:january --> B-devotion_date: 0.141661
+  (0) 0:low:january --> B-reading_period: 0.158049
+  (0) 0:prefix5:janua --> B-devotion_date: 0.141661
+  (0) 0:prefix5:janua --> B-reading_period: 0.158049
+  (0) 0:prefix2:ja --> B-devotion_date: 0.141661
+  (0) 0:prefix2:ja --> B-reading_period: 0.158049
+  (0) 0:suffix5:nuary --> B-devotion_date: 0.141661
+  (0) 0:suffix5:nuary --> B-reading_period: 0.158049
+  (0) 0:suffix3:ary --> O: -0.449276
+  (0) 0:suffix3:ary --> B-devotion_date: 0.633017
+  (0) 0:suffix3:ary --> B-reading_period: 0.640772
+  (0) 1:low:15 --> B-devotion_date: 0.710001
+  (0) 1:low:15 --> B-reading_period: 0.273255
+  (0) 0:low:15 --> I-devotion_date: 0.136197
+  (0) 0:low:15 --> I-reading_period: 0.134006
+  (0) 0:prefix5:15 --> I-devotion_date: 0.136197
+  (0) 0:prefix5:15 --> I-reading_period: 0.134006
+  (0) 0:prefix2:15 --> I-devotion_date: 0.136197
+  (0) 0:prefix2:15 --> I-reading_period: 0.134006
+  (0) 0:suffix5:15 --> I-devotion_date: 0.136197
+  (0) 0:suffix5:15 --> I-reading_period: 0.134006
+  (0) 0:suffix3:15 --> I-devotion_date: 0.136197
+  (0) 0:suffix3:15 --> I-reading_period: 0.134006
+  (0) 0:suffix2:15 --> I-devotion_date: 0.136197
+  (0) 0:suffix2:15 --> I-reading_period: 0.134006
+  (0) -1:low:15 --> L-devotion_date: 0.367022
+  (0) -1:low:15 --> L-reading_period: 0.111142
+  (0) 0:low:march --> B-devotion_date: 0.324622
+  (0) 0:low:march --> B-reading_period: 0.370735
+  (0) 0:prefix5:march --> B-devotion_date: 0.324622
+  (0) 0:prefix5:march --> B-reading_period: 0.370735
+  (0) 0:suffix5:march --> B-devotion_date: 0.324622
+  (0) 0:suffix5:march --> B-reading_period: 0.370735
+  (0) 1:low:20 --> B-devotion_date: 0.396121
+  (0) -1:low:march --> I-devotion_date: 0.034098
+  (0) 0:low:20 --> I-devotion_date: 0.034269
+  (0) 0:prefix5:20 --> I-devotion_date: 0.034269
+  (0) 0:suffix5:20 --> I-devotion_date: 0.034269
+  (0) 0:suffix3:20 --> I-devotion_date: 0.034269
+  (0) 0:suffix2:20 --> I-devotion_date: 0.034269
+  (0) -1:low:20 --> L-devotion_date: 0.269295
+  (0) 0:low:december --> B-devotion_date: 0.113488
+  (0) 0:low:december --> B-reading_period: 0.184844
+  (0) 0:prefix5:decem --> B-devotion_date: 0.113488
+  (0) 0:prefix5:decem --> B-reading_period: 0.184844
+  (0) 1:low:25 --> B-devotion_date: 0.264240
+  (0) -1:low:december --> L-reading_period: 0.209523
+  (0) 0:low:25 --> I-devotion_date: 0.076284
+  (0) 0:low:25 --> I-reading_period: 0.017975
+  (0) 0:prefix5:25 --> I-devotion_date: 0.076284
+  (0) 0:prefix5:25 --> I-reading_period: 0.017975
+  (0) 0:prefix2:25 --> I-devotion_date: 0.076284
+  (0) 0:prefix2:25 --> I-reading_period: 0.017975
+  (0) 0:suffix5:25 --> I-devotion_date: 0.076284
+  (0) 0:suffix5:25 --> I-reading_period: 0.017975
+  (0) 0:suffix3:25 --> I-devotion_date: 0.076284
+  (0) 0:suffix3:25 --> I-reading_period: 0.017975
+  (0) 0:suffix2:25 --> L-devotion_date: 0.345003
+  (0) 0:suffix2:25 --> L-reading_period: 0.379070
+  (0) 0:suffix2:25 --> U-reading_period: 0.448013
+  (0) 1:low:2025 --> I-devotion_date: 0.075243
+  (0) 1:low:2025 --> B-reading_period: 0.043733
+  (0) 1:low:2025 --> I-reading_period: 0.011561
+  (0) -1:low:25 --> L-devotion_date: 0.443543
+  (0) -1:low:25 --> L-reading_period: 0.213759
+  (0) 0:low:2025 --> L-devotion_date: 0.359732
+  (0) 0:low:2025 --> L-reading_period: 0.576453
+  (0) 0:low:2025 --> U-reading_period: 0.516943
+  (0) 0:prefix5:2025 --> L-devotion_date: 0.359732
+  (0) 0:prefix5:2025 --> L-reading_period: 0.576453
+  (0) 0:prefix5:2025 --> U-reading_period: 0.516943
+  (0) 0:suffix5:2025 --> L-devotion_date: 0.359732
+  (0) 0:suffix5:2025 --> L-reading_period: 0.576453
+  (0) 0:suffix5:2025 --> U-reading_period: 0.516943
+  (0) 0:suffix3:025 --> L-devotion_date: 0.359732
+  (0) 0:suffix3:025 --> L-reading_period: 0.576453
+  (0) 0:suffix3:025 --> U-reading_period: 0.516943
+  (0) 0:low:april --> B-devotion_date: 0.256463
+  (0) 0:low:april --> B-reading_period: 0.326417
+  (0) 0:prefix5:april --> B-devotion_date: 0.256463
+  (0) 0:prefix5:april --> B-reading_period: 0.326417
+  (0) 0:prefix2:ap --> O: -0.311563
+  (0) 0:prefix2:ap --> B-devotion_date: 0.254513
+  (0) 0:prefix2:ap --> B-reading_period: 0.323489
+  (0) 0:suffix5:april --> B-devotion_date: 0.256463
+  (0) 0:suffix5:april --> B-reading_period: 0.326417
+  (0) 0:suffix3:ril --> B-devotion_date: 0.256463
+  (0) 0:suffix3:ril --> B-reading_period: 0.326417
+  (0) 1:low:10 --> B-devotion_date: 0.347652
+  (0) 1:low:10 --> B-reading_period: 0.134528
+  (0) -1:low:10 --> L-devotion_date: 0.026699
+  (0) 0:low:july --> B-devotion_date: 0.373895
+  (0) 0:low:july --> B-reading_period: 0.364381
+  (0) 0:prefix5:july --> B-devotion_date: 0.373895
+  (0) 0:prefix5:july --> B-reading_period: 0.364381
+  (0) 0:prefix2:ju --> O: -0.735146
+  (0) 0:prefix2:ju --> L-branch_name: 0.447850
+  (0) 0:prefix2:ju --> B-devotion_date: 0.365426
+  (0) 0:prefix2:ju --> B-reading_period: 0.351898
+  (0) 0:suffix5:july --> B-devotion_date: 0.373895
+  (0) 0:suffix5:july --> B-reading_period: 0.364381
+  (0) 0:suffix3:uly --> B-devotion_date: 0.373895
+  (0) 0:suffix3:uly --> B-reading_period: 0.364381
+  (0) 1:low:4 --> B-devotion_date: 0.472269
+  (0) 1:low:4 --> B-reading_period: 0.162418
+  (0) -1:low:july --> I-reading_period: 0.056025
+  (0) 0:low:4 --> I-reading_period: 0.056442
+  (0) 0:prefix5:4 --> I-reading_period: 0.056442
+  (0) 0:prefix2:4 --> I-reading_period: 0.056442
+  (0) 0:suffix5:4 --> I-reading_period: 0.056442
+  (0) 0:suffix3:4 --> I-reading_period: 0.056442
+  (0) 0:suffix2:4 --> I-reading_period: 0.056442
+  (0) -1:low:4 --> L-devotion_date: 0.139558
+  (0) 0:suffix3:ter --> O: -0.928901
+  (0) 0:suffix3:ter --> B-event_name: 0.723836
+  (0) 0:suffix3:ter --> I-event_name: 0.531997
+  (0) 0:low:february --> B-devotion_date: 0.112254
+  (0) 0:low:february --> B-reading_period: 0.276047
+  (0) 0:prefix5:febru --> B-devotion_date: 0.112254
+  (0) 0:prefix5:febru --> B-reading_period: 0.276047
+  (0) 0:suffix5:ruary --> B-devotion_date: 0.112254
+  (0) 0:suffix5:ruary --> B-reading_period: 0.276047
+  (0) 1:low:14 --> B-devotion_date: 0.140176
+  (0) 1:low:14 --> B-reading_period: 0.102609
+  (0) 0:low:november --> B-devotion_date: 0.204930
+  (0) 0:low:november --> B-reading_period: 0.138239
+  (0) 0:prefix5:novem --> B-devotion_date: 0.204930
+  (0) 0:prefix5:novem --> B-reading_period: 0.138239
+  (0) 1:low:11 --> B-devotion_date: 0.252791
+  (0) -1:low:november --> I-devotion_date: 0.061051
+  (0) 0:low:11 --> I-devotion_date: 0.061593
+  (0) 0:prefix5:11 --> I-devotion_date: 0.061593
+  (0) 0:prefix2:11 --> I-devotion_date: 0.061593
+  (0) 0:suffix5:11 --> I-devotion_date: 0.061593
+  (0) 0:suffix3:11 --> I-devotion_date: 0.061593
+  (0) 0:suffix2:11 --> I-devotion_date: 0.061593
+  (0) -1:low:11 --> L-devotion_date: 0.425104
+  (0) 0:low:august --> B-devotion_date: 0.276534
+  (0) 0:low:august --> B-reading_period: 0.479176
+  (0) 0:prefix5:augus --> B-devotion_date: 0.276534
+  (0) 0:prefix5:augus --> B-reading_period: 0.479176
+  (0) 0:suffix5:ugust --> B-devotion_date: 0.276534
+  (0) 0:suffix5:ugust --> B-reading_period: 0.479176
+  (0) 0:suffix3:ust --> O: -0.598634
+  (0) 0:suffix3:ust --> B-devotion_date: 0.276093
+  (0) 0:suffix3:ust --> B-reading_period: 0.478483
+  (0) -1:low:august --> L-reading_period: 0.407010
+  (0) 0:low:today --> O: 0.108959
+  (0) 0:prefix5:today --> O: 0.108959
+  (0) 0:suffix5:today --> O: 0.108959
+  (0) -1:low:today --> O: 0.086797
+  (0) 0:prefix2:da --> O: 0.022121
+  (0) 0:suffix2:rk --> B-pastor_name: 0.245221
+  (0) 1:low:full --> L-devotion_date: 0.055882
+  (0) 1:low:reading --> L-reading_period: 3.222727
+  (0) 1:low:reading --> U-reading_period: 1.164047
+  (0) 0:low:reading --> O: 0.020905
+  (0) 0:prefix5:readi --> O: 0.075012
+  (0) 0:suffix5:ading --> O: 0.021758
+  (0) -1:low:reading --> O: 0.197660
+  (0) 0:low:plan --> O: 0.133092
+  (0) 0:prefix5:plan --> O: 0.133092
+  (0) 0:suffix5:plan --> O: 0.133092
+  (0) 0:suffix3:lan --> O: 0.133092
+  (0) 0:low:2027 --> U-reading_period: 0.409970
+  (0) 0:prefix5:2027 --> U-reading_period: 0.409970
+  (0) 0:suffix5:2027 --> U-reading_period: 0.409970
+  (0) 0:suffix3:027 --> U-reading_period: 0.409970
+  (0) 0:suffix2:27 --> U-reading_period: 0.409970
+  (0) 0:low:2024 --> U-reading_period: 0.223220
+  (0) 0:prefix5:2024 --> U-reading_period: 0.223220
+  (0) 0:suffix5:2024 --> U-reading_period: 0.223220
+  (0) 0:suffix3:024 --> U-reading_period: 0.223220
+  (0) 0:suffix2:24 --> U-reading_period: 0.223220
+  (0) 1:low:annual --> O: -0.022043
+  (0) 1:low:annual --> U-reading_period: 0.223224
+  (0) 1:low:yearly --> O: -0.594670
+  (0) 1:low:yearly --> U-reading_period: 1.424724
+  (0) 0:low:grand --> B-event_name: 0.717890
+  (0) 0:prefix5:grand --> B-event_name: 0.717890
+  (0) 0:suffix5:grand --> B-event_name: 0.717890
+  (0) 1:low:easter --> O: -0.000412
+  (0) 1:low:easter --> B-event_name: 0.676292
+  (0) -1:low:grand --> I-event_name: 1.129898
+  (0) 0:low:easter --> B-event_name: 0.747381
+  (0) 0:low:easter --> I-event_name: 0.544158
+  (0) 0:prefix5:easte --> B-event_name: 0.747381
+  (0) 0:prefix5:easte --> I-event_name: 0.544158
+  (0) 0:prefix2:ea --> B-event_name: 0.747381
+  (0) 0:prefix2:ea --> I-event_name: 0.544158
+  (0) 0:suffix5:aster --> B-event_name: 0.747381
+  (0) 0:suffix5:aster --> I-event_name: 0.544158
+  (0) 1:low:celebration --> B-event_name: 0.747381
+  (0) 1:low:celebration --> I-event_name: 0.544158
+  (0) -1:low:easter --> I-event_name: 0.516409
+  (0) -1:low:easter --> L-event_name: 0.829847
+  (0) 0:low:celebration --> I-event_name: 0.516409
+  (0) 0:low:celebration --> L-event_name: 0.829847
+  (0) 0:prefix5:celeb --> I-event_name: 0.516409
+  (0) 0:prefix5:celeb --> L-event_name: 0.829847
+  (0) -1:low:celebration --> O: 0.031130
+  (0) -1:low:celebration --> L-event_name: 1.359235
+  (0) 1:low:happening --> L-event_name: 0.000043
+  (0) 1:low:happen --> L-event_name: 0.093574
+  (0) 0:low:youth --> B-event_name: 0.749118
+  (0) 0:low:youth --> B-ministry_name: 0.310898
+  (0) 0:prefix5:youth --> B-event_name: 0.749118
+  (0) 0:prefix5:youth --> B-ministry_name: 0.310898
+  (0) 0:suffix5:youth --> B-event_name: 0.749118
+  (0) 0:suffix5:youth --> B-ministry_name: 0.310898
+  (0) 0:suffix3:uth --> B-event_name: 0.749118
+  (0) 0:suffix3:uth --> B-ministry_name: 0.310898
+  (0) -1:low:youth --> I-event_name: 0.820973
+  (0) -1:low:youth --> L-ministry_name: 0.179727
+  (0) 0:low:leadership --> B-event_name: 0.837445
+  (0) 0:prefix5:leade --> O: -0.509180
+  (0) 0:prefix5:leade --> B-event_name: 0.834036
+  (0) 1:low:conference --> B-event_name: 0.837445
+  (0) -1:low:leadership --> L-event_name: 0.941041
+  (0) 0:low:conference --> L-event_name: 0.941041
+  (0) 0:prefix5:confe --> L-event_name: 0.941041
+  (0) 0:suffix5:rence --> O: -0.705526
+  (0) 0:suffix5:rence --> L-event_name: 0.797378
+  (0) 0:low:join --> O: 0.044204
+  (0) 0:prefix5:join --> O: 0.044204
+  (0) 0:prefix2:jo --> O: -0.730262
+  (0) 0:prefix2:jo --> B-pastor_name: 1.131309
+  (0) 0:suffix5:join --> O: 0.044204
+  (0) 0:suffix3:oin --> O: 0.064635
+  (0) -1:low:join --> O: -0.154346
+  (0) -1:low:join --> B-event_name: 0.114832
+  (0) 0:prefix2:cr --> O: -0.662788
+  (0) 0:prefix2:cr --> L-pastor_name: 0.716380
+  (0) 0:suffix5:ering --> O: -0.330070
+  (0) 0:suffix5:ering --> B-ministry_name: 0.415193
+  (0) 0:prefix5:minis --> O: -0.081945
+  (0) 0:prefix5:minis --> L-ministry_name: 1.027550
+  (0) 1:low:ministry --> O: -1.229117
+  (0) 1:low:ministry --> B-ministry_name: 2.098614
+  (0) 1:low:ministry --> I-ministry_name: 0.920392
+  (0) 0:low:ministry --> O: -0.201478
+  (0) 0:low:ministry --> L-ministry_name: 1.036487
+  (0) 0:suffix5:istry --> O: -0.201478
+  (0) 0:suffix5:istry --> L-ministry_name: 1.036487
+  (0) 0:suffix3:try --> O: -0.201478
+  (0) 0:suffix3:try --> L-ministry_name: 1.036487
+  (0) -1:low:ministry --> O: 0.848095
+  (0) 0:low:music --> B-ministry_name: 0.493276
+  (0) 0:prefix5:music --> B-ministry_name: 0.493276
+  (0) 0:suffix5:music --> B-ministry_name: 0.493276
+  (0) 0:suffix3:sic --> B-ministry_name: 0.493276
+  (0) 0:suffix2:ic --> B-ministry_name: 0.493276
+  (0) -1:low:music --> L-ministry_name: 0.343527
+  (0) 0:low:ushering --> B-ministry_name: 0.416191
+  (0) 0:prefix5:usher --> B-ministry_name: 0.416191
+  (0) -1:low:ushering --> L-ministry_name: 0.329030
+  (0) 0:low:women --> B-ministry_name: 0.065794
+  (0) 0:prefix5:women --> B-ministry_name: 0.065794
+  (0) 0:suffix5:women --> B-ministry_name: 0.065794
+  (0) 0:suffix3:men --> B-ministry_name: 0.791791
+  (0) -1:low:women --> I-ministry_name: 0.094752
+  (0) 0:low:men --> B-ministry_name: 0.139063
+  (0) 0:prefix5:men --> B-ministry_name: 0.139063
+  (0) 0:suffix5:men --> B-ministry_name: 0.139063
+  (0) -1:low:men --> I-ministry_name: 0.115671
+  (0) 0:low:children --> B-ministry_name: 0.402609
+  (0) 0:prefix5:child --> B-ministry_name: 0.402609
+  (0) 0:suffix5:ldren --> B-ministry_name: 0.402609
+  (0) 0:suffix3:ren --> B-ministry_name: 0.402609
+  (0) -1:low:children --> I-ministry_name: 0.126942
+  (0) 0:low:outreach --> B-ministry_name: 0.146953
+  (0) 0:prefix5:outre --> B-ministry_name: 0.146953
+  (0) -1:low:outreach --> L-ministry_name: 0.016928
+  (0) -1:low:than --> O: 0.130874
+  (0) 0:low:another --> O: 0.077455
+  (0) 0:prefix5:anoth --> O: 0.077455
+  (0) 0:suffix5:other --> O: 0.100534
+  (0) 0:suffix3:her --> O: 0.402580
+  (0) -1:low:another --> O: 0.154762
+  (0) -1:low:leads --> O: -0.158743
+  (0) -1:low:leads --> B-branch_name: 0.220749
+  (0) -1:low:oversees --> O: -0.132750
+  (0) -1:low:oversees --> U-branch_name: 0.166869
+  (0) 0:prefix2:ga --> O: -0.510837
+  (0) 0:prefix2:ga --> L-pastor_name: 0.743363
+  (0) 0:suffix3:yes --> O: -0.383070
+  (0) 0:suffix3:yes --> L-pastor_name: 0.433552
+  (0) 0:low:metro --> B-region_name: 0.583902
+  (0) 0:prefix5:metro --> B-region_name: 0.583902
+  (0) 0:suffix5:metro --> B-region_name: 0.583902
+  (0) 0:suffix3:tro --> B-region_name: 0.583902
+  (0) 0:suffix2:ro --> B-region_name: 0.583361
+  (0) 0:suffix2:ro --> B-pastor_name: 0.166446
+  (0) 1:low:manila --> B-region_name: 0.583902
+  (0) -1:low:metro --> L-region_name: 0.643114
+  (0) 0:low:manila --> L-region_name: 0.643114
+  (0) 0:prefix5:manil --> L-region_name: 0.643114
+  (0) 0:suffix5:anila --> L-region_name: 0.643114
+  (0) 0:suffix3:ila --> L-region_name: 0.643114
+  (0) 0:suffix2:la --> L-region_name: 0.638446
+  (0) 0:suffix2:la --> I-pastor_name: 0.654307
+  (0) 0:low:baguio --> U-region_name: 1.083418
+  (0) 0:prefix5:bagui --> U-region_name: 1.083418
+  (0) 0:suffix5:aguio --> U-region_name: 1.083418
+  (0) 0:suffix3:uio --> U-region_name: 1.083418
+  (0) 0:suffix2:io --> U-region_name: 1.083418
+  (0) 1:low:assigned --> O: -0.141507
+  (0) 1:low:assigned --> L-pastor_name: 0.167128
+  (0) -1:low:2 --> O: 0.053128
+  (0) 1:low:congregation --> O: -0.016818
+  (0) 1:low:congregation --> L-branch_name: 0.080959
+  (0) 1:low:juan --> O: -0.000037
+  (0) 1:low:juan --> B-branch_name: 0.412580
+  (0) 0:low:juan --> L-branch_name: 0.529794
+  (0) 0:prefix5:juan --> L-branch_name: 0.529794
+  (0) 0:suffix5:juan --> L-branch_name: 0.529794
+  (0) 0:suffix3:uan --> L-branch_name: 0.529794
+  (0) 0:low:joel --> B-pastor_name: 0.714567
+  (0) 0:prefix5:joel --> B-pastor_name: 0.714567
+  (0) 0:suffix5:joel --> B-pastor_name: 0.714567
+  (0) 0:suffix3:oel --> B-pastor_name: 0.714567
+  (0) 1:low:gabatin --> B-pastor_name: 0.714567
+  (0) -1:low:joel --> L-pastor_name: 0.754838
+  (0) 0:low:gabatin --> L-pastor_name: 0.754838
+  (0) 0:prefix5:gabat --> L-pastor_name: 0.754838
+  (0) 0:suffix5:batin --> L-pastor_name: 0.754838
+  (0) 0:suffix3:tin --> L-pastor_name: 0.754838
+  (0) 0:low:john --> B-pastor_name: 0.279889
+  (0) 0:prefix5:john --> B-pastor_name: 0.279889
+  (0) 0:suffix5:john --> B-pastor_name: 0.279889
+  (0) 0:suffix3:ohn --> B-pastor_name: 0.279889
+  (0) 0:suffix2:hn --> B-pastor_name: 0.279889
+  (0) 1:low:smith --> B-pastor_name: 0.279889
+  (0) -1:low:john --> L-pastor_name: 0.305910
+  (0) 0:low:smith --> L-pastor_name: 0.305910
+  (0) 0:prefix5:smith --> L-pastor_name: 0.305910
+  (0) 0:prefix2:sm --> L-pastor_name: 0.305910
+  (0) 0:suffix5:smith --> L-pastor_name: 0.305910
+  (0) 0:low:mark --> B-pastor_name: 0.246617
+  (0) 0:prefix5:mark --> B-pastor_name: 0.246617
+  (0) 0:suffix5:mark --> B-pastor_name: 0.246617
+  (0) 0:suffix3:ark --> B-pastor_name: 0.246617
+  (0) 1:low:dela --> B-pastor_name: 0.246617
+  (0) -1:low:mark --> I-pastor_name: 0.657370
+  (0) 0:low:dela --> I-pastor_name: 0.657370
+  (0) 0:prefix5:dela --> I-pastor_name: 0.657370
+  (0) 0:suffix5:dela --> I-pastor_name: 0.657370
+  (0) 0:suffix3:ela --> I-pastor_name: 0.657370
+  (0) 1:low:cruz --> B-pastor_name: 0.047029
+  (0) 1:low:cruz --> I-pastor_name: 0.656914
+  (0) -1:low:dela --> L-pastor_name: 0.207026
+  (0) 0:low:cruz --> L-pastor_name: 0.717437
+  (0) 0:prefix5:cruz --> L-pastor_name: 0.717437
+  (0) 0:suffix5:cruz --> L-pastor_name: 0.717437
+  (0) 0:suffix3:ruz --> L-pastor_name: 0.717437
+  (0) 0:suffix2:uz --> L-pastor_name: 0.717437
+  (0) -1:low:named --> B-pastor_name: 0.357141
+  (0) 1:low:pastoring --> L-pastor_name: 0.506632
+  (0) 0:low:ana --> B-pastor_name: 0.220189
+  (0) 0:prefix5:ana --> B-pastor_name: 0.220189
+  (0) 0:suffix5:ana --> B-pastor_name: 0.220189
+  (0) 0:suffix3:ana --> B-pastor_name: 0.220189
+  (0) 0:suffix2:na --> B-pastor_name: 0.220189
+  (0) -1:low:ana --> L-pastor_name: 0.150021
+  (0) 0:low:ben --> B-pastor_name: 0.190480
+  (0) 0:prefix5:ben --> B-pastor_name: 0.190480
+  (0) 0:suffix5:ben --> B-pastor_name: 0.190480
+  (0) 0:suffix3:ben --> B-pastor_name: 0.190480
+  (0) 1:low:santos --> B-pastor_name: 0.679101
+  (0) -1:low:ben --> L-pastor_name: 0.186219
+  (0) 0:low:santos --> L-pastor_name: 0.681223
+  (0) 0:prefix5:santo --> L-pastor_name: 0.681223
+  (0) 0:suffix5:antos --> L-pastor_name: 0.681223
+  (0) 0:suffix3:tos --> L-pastor_name: 0.681223
+  (0) 0:low:maria --> B-pastor_name: 0.269757
+  (0) 0:prefix5:maria --> B-pastor_name: 0.269757
+  (0) 0:suffix5:maria --> B-pastor_name: 0.269757
+  (0) 0:suffix3:ria --> B-pastor_name: 0.269757
+  (0) 1:low:reyes --> B-pastor_name: 0.269757
+  (0) -1:low:maria --> L-pastor_name: 0.455434
+  (0) 0:low:reyes --> L-pastor_name: 0.455434
+  (0) 0:prefix5:reyes --> L-pastor_name: 0.455434
+  (0) 0:suffix5:reyes --> L-pastor_name: 0.455434
+  (0) 0:low:pedro --> B-pastor_name: 0.169358
+  (0) 0:prefix5:pedro --> B-pastor_name: 0.169358
+  (0) 0:suffix5:pedro --> B-pastor_name: 0.169358
+  (0) 0:suffix3:dro --> B-pastor_name: 0.169358
+  (0) -1:low:pedro --> L-pastor_name: 0.168080
+  (0) 1:low:lim --> B-pastor_name: 0.427765
+  (0) 0:low:lim --> L-pastor_name: 0.398709
+  (0) 0:prefix5:lim --> L-pastor_name: 0.398709
+  (0) 0:suffix5:lim --> L-pastor_name: 0.398709
+  (0) 0:suffix3:lim --> L-pastor_name: 0.398709
+  (0) 0:prefix5:testi --> O: 0.285854
+}
+

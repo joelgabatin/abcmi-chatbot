@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_login_account_types
+  examples: |
+    - what type of account do I use to log in?
+    - is there a member login?
+    - admin login vs member login
+    - what is the difference between admin and member login?
+    - should I use the member login or admin login?
+    - do members and admins have different logins?
+    - which login is for regular members?
+    - which account should I use to sign in?
