@@ -1,0 +1,12 @@
+version: "3.1"
+
+nlu:
+- intent: ask_expired_reset_link
+  examples: |
+    - my reset link expired
+    - the password reset link is no longer valid
+    - reset link not working
+    - link already expired
+    - can I request a new reset link?
+    - my reset password link has expired
+    - the forgot password link does not work anymore

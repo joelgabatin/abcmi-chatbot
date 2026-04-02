@@ -1,0 +1,12 @@
+version: "3.1"
+
+nlu:
+- intent: ask_check_spam_for_reset_email
+  examples: |
+    - maybe the email went to spam?
+    - what should I check?
+    - I entered my email but nothing came
+    - should I check my junk folder?
+    - maybe the reset email is in promotions
+    - what do I do if the reset email is missing?
+    - could the password reset email be in spam?
