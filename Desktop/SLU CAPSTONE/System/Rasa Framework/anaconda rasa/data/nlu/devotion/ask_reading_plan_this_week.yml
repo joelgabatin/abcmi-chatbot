@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_reading_plan_this_week
+  examples: |
+    - what is this week's reading plan?
+    - give me the reading plan for this week
+    - what are the bible readings this week?
+    - this week's reading plan please
+    - what do I read this week?
+    - what is this week's bible reading plan?
+    - show me this week's reading plan
+    - what readings are scheduled this week?
+    - weekly reading plan for this week?
+    - what bible passages are for this week?

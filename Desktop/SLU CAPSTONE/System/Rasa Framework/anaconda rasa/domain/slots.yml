@@ -160,6 +160,59 @@ slots:
         conditions:
           - active_loop: counseling_request_form
             requested_slot: counseling_concern
+  # Testimony form
+  testimony_name:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: testimony_form
+            requested_slot: testimony_name
+  testimony_title:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: testimony_form
+            requested_slot: testimony_title
+  testimony_category:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: testimony_form
+            requested_slot: testimony_category
+  testimony_content:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: testimony_form
+            requested_slot: testimony_content
+  testimony_branch:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: testimony_form
+            requested_slot: testimony_branch
+  testimony_is_member:
+    type: bool
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: testimony_form
+            requested_slot: testimony_is_member
+
+  # Devotion subscription form
+  devotion_subscriber_email:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: devotion_subscribe_form
+            requested_slot: devotion_subscriber_email
+
   last_contact_topic:
     type: text
     mappings:

@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_page_url
+  examples: |
+    - can I search past devotionals?
+    - where can I find old devotions?
+    - how can I look up past devotionals?
+    - is there a page for daily devotions?
+    - where can I browse all devotionals?
+    - is there a devotional archive?
+    - how do I find past devotions?
+    - where are all the devotions stored?
+    - can I search through old devotionals?
+    - give me a link to the devotions page

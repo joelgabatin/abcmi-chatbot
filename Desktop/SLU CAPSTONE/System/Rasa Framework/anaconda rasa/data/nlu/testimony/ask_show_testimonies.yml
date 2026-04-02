@@ -1,0 +1,25 @@
+version: "3.1"
+
+nlu:
+- intent: ask_show_testimonies
+  examples: |
+    - Show me all the testimonies
+    - show me testimonies from the church
+    - can I see the testimonies here?
+    - display testimonies
+    - show me some testimonies
+    - can I see testimonies from church members?
+    - list the testimonies
+    - show me featured testimonies
+    - what testimonies are available?
+    - show me church testimonies
+    - display the featured testimonies
+    - can you show me testimonies?
+    - I want to see testimonies here in the chat
+    - show me some stories from the church
+    - can I view testimonies here?
+    - list featured testimonies
+    - give me some testimonies to read
+    - show testimonies from the congregation
+    - I want to see what people have shared
+    - display all available testimonies

@@ -1,0 +1,25 @@
+version: "3.1"
+
+nlu:
+- intent: ask_testimony_moderation
+  examples: |
+    - Will my testimony be shown immediately?
+    - how long before my testimony appears?
+    - when will my testimony be published?
+    - is my testimony posted right away?
+    - does it take time for my testimony to show?
+    - will my submission be reviewed first?
+    - does the church review testimonies before posting?
+    - is there an approval process for testimonies?
+    - how long does it take for a testimony to be approved?
+    - will someone check my testimony before it goes live?
+    - does my testimony need to be approved?
+    - is there a review process for testimonies?
+    - will my testimony appear instantly?
+    - when does my testimony get posted?
+    - does a pastor approve testimonies?
+    - how does the testimony review process work?
+    - is there moderation for testimonies?
+    - can I know when my testimony gets approved?
+    - how soon will my testimony be visible?
+    - will my story be checked before publishing?

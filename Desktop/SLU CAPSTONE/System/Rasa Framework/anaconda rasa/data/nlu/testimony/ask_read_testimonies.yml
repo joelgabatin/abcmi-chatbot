@@ -1,0 +1,25 @@
+version: "3.1"
+
+nlu:
+- intent: ask_read_testimonies
+  examples: |
+    - Can I read testimonies?
+    - where can I read church testimonies?
+    - how do I view testimonies?
+    - is there a page where I can read testimonies?
+    - can I browse testimonies?
+    - where are the church testimonies?
+    - I want to read testimonies from the church
+    - can I access testimonies online?
+    - is there a testimony page?
+    - how do I find testimonies?
+    - where can I view stories from church members?
+    - give me the link to read testimonies
+    - where are the testimonies stored?
+    - can I see the church testimony archive?
+    - how do I browse testimonies?
+    - is there a place to read testimonies on the website?
+    - link to the testimony page please
+    - where can I find testimonies of healing and miracles?
+    - I want to be inspired by church testimonies
+    - how can I access community testimonies?

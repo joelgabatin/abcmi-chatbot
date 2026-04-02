@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_subscribe
+  examples: |
+    - how do I subscribe to daily devotions?
+    - how can I get daily devotion emails?
+    - how do I sign up for daily devotionals?
+    - I want to subscribe to devotions
+    - how do I receive daily devotions?
+    - can I subscribe to get devotions by email?
+    - how do I get daily devotional notifications?
+    - sign me up for daily devotions
+    - how to subscribe to devotion emails?
+    - I want to receive daily devotions in my inbox

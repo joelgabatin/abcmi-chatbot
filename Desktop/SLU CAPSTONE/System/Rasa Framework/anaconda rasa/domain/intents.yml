@@ -91,3 +91,45 @@ intents:
   - ask_counseling_support
   - ask_counseling_membership
   - ask_counseling_time_slots
+
+  # Devotion & Bible Reading Plan — data/nlu/devotion/
+  # Daily Devotion (features 1–11)
+  - ask_devotion_author_today
+  - ask_devotion_author_by_date
+  - ask_devotion_scripture_today
+  - ask_devotion_scripture_by_date
+  - ask_devotion_title_today
+  - ask_devotion_title_by_date
+  - ask_devotion_reflection_today
+  - ask_devotion_reflection_by_date
+  - ask_devotion_full_today
+  - ask_devotion_full_by_date
+  - ask_devotion_page_url
+
+  # Subscription & Access (features 12–16)
+  - ask_devotion_subscribe
+  - ask_devotion_unsubscribe
+  - ask_devotion_page_link
+  - ask_reading_plan_page_url
+  - ask_devotion_email_notifications
+
+  # Bible Study / Reading Plan (features 17–23)
+  - ask_reading_plan_today
+  - ask_reading_plan_by_date
+  - ask_reading_plan_this_week
+  - ask_reading_plan_this_month
+  - ask_reading_plan_by_month
+  - ask_reading_plan_this_year
+  - ask_reading_plan_by_year
+  - ask_devotion_subscribe_via_chat
+
+  # Testimony — data/nlu/testimony/
+  - ask_share_testimony
+  - ask_submit_testimony
+  - ask_submit_testimony_anonymously
+  - ask_testimony_moderation
+  - ask_testimony_types
+  - ask_testimony_website_submission
+  - ask_read_testimonies
+  - ask_show_testimonies
+  - ask_submit_testimony_form

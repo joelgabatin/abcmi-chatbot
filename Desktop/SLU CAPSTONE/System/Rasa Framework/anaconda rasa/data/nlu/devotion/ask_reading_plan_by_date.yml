@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_reading_plan_by_date
+  examples: |
+    - what is the [September 8, 2026](reading_period) reading plan?
+    - what is the bible reading for [October 1, 2026](reading_period)?
+    - give me the reading plan for [January 15, 2026](reading_period)
+    - what should I read on [March 20, 2026](reading_period)?
+    - reading plan for [December 25, 2025](reading_period)?
+    - what is the [April 10, 2026](reading_period) reading plan?
+    - what is the bible reading on [July 4, 2026](reading_period)?
+    - give me the [February 14, 2026](reading_period) reading plan
+    - [November 11, 2026](reading_period) reading plan?
+    - what is the reading plan for [August 15, 2026](reading_period)?

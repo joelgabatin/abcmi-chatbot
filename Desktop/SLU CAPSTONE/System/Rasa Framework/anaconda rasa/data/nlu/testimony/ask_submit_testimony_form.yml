@@ -1,0 +1,23 @@
+version: "3.1"
+
+nlu:
+- intent: ask_submit_testimony_form
+  examples: |
+    - submit my testimony
+    - I want to submit my testimony now
+    - let's start the testimony form
+    - start testimony submission
+    - I'm ready to submit my testimony
+    - go ahead and take my testimony
+    - I want to fill out the testimony form
+    - take my testimony now
+    - proceed with testimony submission
+    - begin testimony form
+    - I'm ready to share my testimony in chat
+    - start the form to submit my testimony
+    - let me go ahead and submit
+    - yes I want to submit my testimony here
+    - let's do the testimony submission
+    - I want to submit right now
+    - walk me through submitting my testimony
+    - help me submit my testimony

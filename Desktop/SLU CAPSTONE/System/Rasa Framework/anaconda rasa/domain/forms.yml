@@ -19,6 +19,17 @@ forms:
   counseling_confirmation_form:
     required_slots:
       - counseling_continue_confirmation
+  testimony_form:
+    required_slots:
+      - testimony_name
+      - testimony_title
+      - testimony_category
+      - testimony_content
+      - testimony_branch
+      - testimony_is_member
+  devotion_subscribe_form:
+    required_slots:
+      - devotion_subscriber_email
   counseling_request_form:
     required_slots:
       - counseling_name

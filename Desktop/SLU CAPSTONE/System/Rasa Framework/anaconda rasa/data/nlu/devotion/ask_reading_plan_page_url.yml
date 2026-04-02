@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_reading_plan_page_url
+  examples: |
+    - where is the bible reading plan?
+    - where can I find the bible reading plan?
+    - give me the link to the bible reading plan
+    - where is the reading plan page?
+    - what is the URL for the bible reading plan?
+    - where do I access the reading plan?
+    - link to bible reading plan?
+    - where is the bible reading plan on your website?
+    - how do I find the reading plan?
+    - send me the bible reading plan page

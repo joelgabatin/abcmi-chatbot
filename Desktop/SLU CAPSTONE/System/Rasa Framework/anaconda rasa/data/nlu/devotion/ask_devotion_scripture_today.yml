@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_scripture_today
+  examples: |
+    - what is today's scripture passage?
+    - what is the bible verse for today's devotion?
+    - what scripture is today's devotion based on?
+    - what is today's devotional verse?
+    - give me today's scripture
+    - what verse is today's devotion?
+    - what is the scripture reading for today?
+    - today's bible verse for devotion?
+    - what is the bible passage for today?
+    - what verse does today's devotion use?

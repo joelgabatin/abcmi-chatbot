@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_full_today
+  examples: |
+    - read me the full devotional for today
+    - give me today's full devotion
+    - show me the complete devotion for today
+    - I want to read today's full devotional
+    - give me the full devotion for today
+    - read the complete devotional for today
+    - what is today's full devotion including reflection and verse?
+    - show me everything about today's devotion
+    - read me today's devotion title verse and reflection
+    - complete devotional for today please

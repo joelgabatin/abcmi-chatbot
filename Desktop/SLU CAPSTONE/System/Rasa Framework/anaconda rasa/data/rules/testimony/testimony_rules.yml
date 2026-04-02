@@ -1,0 +1,59 @@
+version: "3.1"
+
+rules:
+  - rule: show share testimony options
+    steps:
+      - intent: ask_share_testimony
+      - action: action_get_testimony_submit_options
+
+  - rule: show featured testimonies from database
+    steps:
+      - intent: ask_show_testimonies
+      - action: action_get_featured_testimonies
+
+  - rule: explain testimony submit options
+    steps:
+      - intent: ask_submit_testimony
+      - action: action_get_testimony_submit_options
+
+  - rule: explain anonymous testimony submission
+    steps:
+      - intent: ask_submit_testimony_anonymously
+      - action: action_get_testimony_anonymous_info
+
+  - rule: explain testimony moderation
+    steps:
+      - intent: ask_testimony_moderation
+      - action: action_get_testimony_visibility
+
+  - rule: explain testimony types
+    steps:
+      - intent: ask_testimony_types
+      - action: action_get_testimony_types
+
+  - rule: provide testimony website link
+    steps:
+      - intent: ask_testimony_website_submission
+      - action: action_get_testimony_website_link
+
+  - rule: provide testimony page link
+    steps:
+      - intent: ask_read_testimonies
+      - action: action_get_testimony_page_link
+
+  - rule: activate testimony form
+    steps:
+      - intent: ask_submit_testimony_form
+      - action: utter_ask_testimony_submit_welcome
+      - action: testimony_form
+      - active_loop: testimony_form
+
+  - rule: submit testimony form
+    condition:
+      - active_loop: testimony_form
+    steps:
+      - action: testimony_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_process_testimony

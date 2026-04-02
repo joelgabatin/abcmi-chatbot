@@ -1,0 +1,9 @@
+{
+  "rule_only_slots": [],
+  "rule_only_loops": [
+    "counseling_request_form",
+    "contact_message_form",
+    "counseling_confirmation_form",
+    "prayer_form"
+  ]
+}

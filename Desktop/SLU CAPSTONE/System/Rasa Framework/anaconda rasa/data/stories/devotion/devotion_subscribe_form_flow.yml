@@ -1,0 +1,13 @@
+version: "3.1"
+
+stories:
+  - story: subscribe to daily devotions via chat
+    steps:
+      - intent: ask_devotion_subscribe_via_chat
+      - action: utter_ask_devotion_subscribe_welcome
+      - action: devotion_subscribe_form
+      - active_loop: devotion_subscribe_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_process_devotion_subscribe

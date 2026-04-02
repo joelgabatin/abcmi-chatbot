@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_reading_plan_by_year
+  examples: |
+    - provide the [2025](reading_period) reading plan
+    - what is the [2026](reading_period) reading plan?
+    - give me the reading plan for [2025](reading_period)
+    - reading plan for [2027](reading_period)?
+    - what is the [2024](reading_period) annual reading plan?
+    - show me the [2025](reading_period) reading schedule
+    - what is the [2026](reading_period) bible reading plan?
+    - give me [2025](reading_period) reading plan
+    - [2026](reading_period) yearly reading plan?
+    - what readings were planned for [2025](reading_period)?

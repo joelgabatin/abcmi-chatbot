@@ -1,0 +1,117 @@
+version: "3.1"
+
+rules:
+  - rule: respond to ask devotion author today
+    steps:
+      - intent: ask_devotion_author_today
+      - action: action_get_devotion_author_today
+
+  - rule: respond to ask devotion author by date
+    steps:
+      - intent: ask_devotion_author_by_date
+      - action: action_get_devotion_author_by_date
+
+  - rule: respond to ask devotion scripture today
+    steps:
+      - intent: ask_devotion_scripture_today
+      - action: action_get_devotion_scripture_today
+
+  - rule: respond to ask devotion scripture by date
+    steps:
+      - intent: ask_devotion_scripture_by_date
+      - action: action_get_devotion_scripture_by_date
+
+  - rule: respond to ask devotion title today
+    steps:
+      - intent: ask_devotion_title_today
+      - action: action_get_devotion_title_today
+
+  - rule: respond to ask devotion title by date
+    steps:
+      - intent: ask_devotion_title_by_date
+      - action: action_get_devotion_title_by_date
+
+  - rule: respond to ask devotion reflection today
+    steps:
+      - intent: ask_devotion_reflection_today
+      - action: action_get_devotion_reflection_today
+
+  - rule: respond to ask devotion reflection by date
+    steps:
+      - intent: ask_devotion_reflection_by_date
+      - action: action_get_devotion_reflection_by_date
+
+  - rule: respond to ask full devotion today
+    steps:
+      - intent: ask_devotion_full_today
+      - action: action_get_devotion_full_today
+
+  - rule: respond to ask full devotion by date
+    steps:
+      - intent: ask_devotion_full_by_date
+      - action: action_get_devotion_full_by_date
+
+  - rule: respond to ask devotion page url
+    steps:
+      - intent: ask_devotion_page_url
+      - action: action_get_devotion_page_url
+
+  - rule: respond to ask devotion subscribe
+    steps:
+      - intent: ask_devotion_subscribe
+      - action: action_get_devotion_subscribe
+
+  - rule: respond to ask devotion unsubscribe
+    steps:
+      - intent: ask_devotion_unsubscribe
+      - action: action_get_devotion_unsubscribe
+
+  - rule: respond to ask devotion page link
+    steps:
+      - intent: ask_devotion_page_link
+      - action: action_get_devotion_page_link
+
+  - rule: respond to ask reading plan page url
+    steps:
+      - intent: ask_reading_plan_page_url
+      - action: action_get_reading_plan_page_url
+
+  - rule: respond to ask devotion email notifications
+    steps:
+      - intent: ask_devotion_email_notifications
+      - action: action_get_devotion_email_notifications
+
+  - rule: respond to ask reading plan today
+    steps:
+      - intent: ask_reading_plan_today
+      - action: action_get_reading_plan_today
+
+  - rule: respond to ask reading plan by date
+    steps:
+      - intent: ask_reading_plan_by_date
+      - action: action_get_reading_plan_by_date
+
+  - rule: respond to ask reading plan this week
+    steps:
+      - intent: ask_reading_plan_this_week
+      - action: action_get_reading_plan_this_week
+
+  - rule: respond to ask reading plan this month
+    steps:
+      - intent: ask_reading_plan_this_month
+      - action: action_get_reading_plan_this_month
+
+  - rule: respond to ask reading plan by month
+    steps:
+      - intent: ask_reading_plan_by_month
+      - action: action_get_reading_plan_by_month
+
+  - rule: respond to ask reading plan this year
+    steps:
+      - intent: ask_reading_plan_this_year
+      - action: action_get_reading_plan_this_year
+
+  - rule: respond to ask reading plan by year
+    steps:
+      - intent: ask_reading_plan_by_year
+      - action: action_get_reading_plan_by_year

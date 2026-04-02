@@ -1,5 +1,7 @@
 """Database package exports for the Rasa chatbot project."""
 
+from .devotion import DailyDevotion, DevotionSubscriber, ReadingPlan
+from .testimony import Testimony
 from .about_church import (
     ChurchCoreValues,
     ChurchFounders,

@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_devotion_reflection_today
+  examples: |
+    - what is today's devotion reflection?
+    - what is today's devotion?
+    - give me today's devotion and reflection
+    - what is the reflection for today's devotion?
+    - today's devotion reflection please
+    - what does today's devotion say?
+    - give me the reflection from today's devotion
+    - what is today's devotion slash reflection?
+    - read me today's devotion reflection
+    - what is the message in today's devotion?

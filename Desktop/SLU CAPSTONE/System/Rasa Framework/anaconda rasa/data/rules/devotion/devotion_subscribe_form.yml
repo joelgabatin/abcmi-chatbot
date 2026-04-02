@@ -1,0 +1,19 @@
+version: "3.1"
+
+rules:
+  - rule: activate devotion subscribe form
+    steps:
+      - intent: ask_devotion_subscribe_via_chat
+      - action: utter_ask_devotion_subscribe_welcome
+      - action: devotion_subscribe_form
+      - active_loop: devotion_subscribe_form
+
+  - rule: submit devotion subscribe form
+    condition:
+      - active_loop: devotion_subscribe_form
+    steps:
+      - action: devotion_subscribe_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_process_devotion_subscribe

@@ -1,0 +1,25 @@
+version: "3.1"
+
+nlu:
+- intent: ask_submit_testimony
+  examples: |
+    - Can I submit a testimony through the chatbot?
+    - can I submit my testimony using this chatbot?
+    - is there a way to submit a testimony here in chat?
+    - can this chatbot accept testimony submissions?
+    - can I send my testimony through this chat?
+    - is there a way to submit testimony via chatbot?
+    - can the chatbot help me submit a testimony?
+    - can I submit a testimony in this chat?
+    - can I give my testimony through the chatbot?
+    - does the chatbot allow testimony submission?
+    - can I use this chat to submit a testimony?
+    - is it possible to submit a testimony here?
+    - can I submit via chatbot?
+    - can I send a testimony through here?
+    - does this chatbot accept testimonies?
+    - can I submit my story through this bot?
+    - is there a chatbot option for testimony submission?
+    - can I share my testimony via this chat?
+    - will the chatbot take my testimony?
+    - can I file a testimony through this conversation?
