@@ -1,0 +1,12 @@
+version: "3.1"
+
+nlu:
+- intent: ask_registration_requirements
+  examples: |
+    - what do I need to sign up?
+    - what details are required to register?
+    - do I need an email to register?
+    - what information do I need for registration?
+    - what are the requirements to sign up?
+    - what do I need before creating an account?
+    - what details do I need to enter to register?

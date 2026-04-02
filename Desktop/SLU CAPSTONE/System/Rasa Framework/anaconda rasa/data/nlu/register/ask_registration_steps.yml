@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: ask_registration_steps
+  examples: |
+    - how do I register?
+    - how do I create an account?
+    - sign up instructions
+    - how do I become a member online?
+    - where do I register?
+    - new account help
+    - how can I sign up?
+    - help me create an account
+    - how do I register with username and password?
+    - how do I create a regular account?

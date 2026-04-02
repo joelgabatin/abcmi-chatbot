@@ -3,6 +3,7 @@
 from .devotion import DailyDevotion, DevotionSubscriber, ReadingPlan
 from .forgot_password import ForgotPasswordHelp
 from .login import LoginHelp
+from .register import RegisterHelp
 from .testimony import Testimony
 from .about_church import (
     ChurchCoreValues,

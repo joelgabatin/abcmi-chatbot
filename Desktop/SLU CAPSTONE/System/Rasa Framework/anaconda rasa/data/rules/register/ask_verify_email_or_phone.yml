@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Help verify email or phone after sign up
+  steps:
+  - intent: ask_verify_email_or_phone
+  - action: action_help_verify_email_or_phone

@@ -1,0 +1,12 @@
+version: "3.1"
+
+nlu:
+- intent: ask_duplicate_registration_email
+  examples: |
+    - it says my email already exists
+    - I already have an account?
+    - why can't I register with my email?
+    - the sign up page says this email already exists
+    - why is my email already used?
+    - I cannot create an account because my email is already registered
+    - account already exists for my email

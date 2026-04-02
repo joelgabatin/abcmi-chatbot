@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Explain the available login methods
+  steps:
+  - intent: ask_login_methods
+  - action: action_explain_login_methods

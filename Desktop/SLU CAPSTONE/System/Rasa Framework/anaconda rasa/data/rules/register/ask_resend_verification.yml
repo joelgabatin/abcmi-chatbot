@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Explain how to resend verification email or code
+  steps:
+  - intent: ask_resend_verification
+  - action: action_explain_resend_verification_instructions

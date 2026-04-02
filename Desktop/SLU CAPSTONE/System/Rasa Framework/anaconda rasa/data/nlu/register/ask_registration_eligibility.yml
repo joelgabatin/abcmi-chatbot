@@ -1,0 +1,12 @@
+version: "3.1"
+
+nlu:
+- intent: ask_registration_eligibility
+  examples: |
+    - who can create an account?
+    - am I eligible to register?
+    - can anyone sign up?
+    - who is allowed to register?
+    - is registration open to everyone?
+    - can I create an account here?
+    - who can sign up on this website?

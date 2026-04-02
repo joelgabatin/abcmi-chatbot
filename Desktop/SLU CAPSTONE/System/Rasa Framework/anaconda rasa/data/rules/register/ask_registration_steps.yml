@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Explain how to register step by step
+  steps:
+  - intent: ask_registration_steps
+  - action: action_get_registration_steps
