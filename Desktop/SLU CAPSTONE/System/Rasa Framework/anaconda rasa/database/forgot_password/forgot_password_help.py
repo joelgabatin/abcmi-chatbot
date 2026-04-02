@@ -41,6 +41,14 @@ class ForgotPasswordHelp:
             "When creating a new password, make sure it follows the website's password rules.\n\n"
             "A strong password usually includes a mix of uppercase and lowercase letters, numbers, and special characters, and should be long enough to meet the minimum length requirement. If the site rejects your new password, try a stronger one and avoid reusing your old password."
         ),
+        "recover_username_or_email": (
+            "If you forgot your username or the email address registered on your account, try searching your inbox for past messages from the website or church system.\n\n"
+            "Check for welcome emails, account notifications, or password reset emails that may show which email address you used. If you still cannot find it, please contact support so they can help verify your account."
+        ),
+        "no_access_to_email_or_phone": (
+            "If you no longer have access to your registered email address or phone number, you may need manual account recovery.\n\n"
+            "Please contact support or send a message through the Contact page and explain that your email or phone number has changed. Be ready to provide account details they can use to verify your identity."
+        ),
         "support_escalation": (
             "If self-service password reset is still not working, please contact church support or the website administrator for manual account recovery.\n\n"
             "Let them know whether the reset email did not arrive, the link expired, or the new password was not accepted so they can help more quickly."

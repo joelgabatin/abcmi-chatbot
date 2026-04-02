@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Help user recover username or registered email
+  steps:
+  - intent: ask_recover_username_or_email
+  - action: action_help_recover_username_or_email

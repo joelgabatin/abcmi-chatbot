@@ -1,0 +1,13 @@
+version: "3.1"
+
+nlu:
+- intent: ask_recover_username_or_email
+  examples: |
+    - I forgot my username
+    - I forgot which email I used
+    - help me find my account
+    - I do not remember my username
+    - I forgot my registered email
+    - which email did I use for my account?
+    - help me recover my username
+    - I can't remember the email for my account
